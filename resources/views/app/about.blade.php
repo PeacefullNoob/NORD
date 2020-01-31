@@ -15,9 +15,9 @@
   <main class="myMain">
   <div class = "container-fluid">
   <div class = "row justify-content-center">
-<div class = "col-md-5 pt-3">
+<div class = "col-md-5 pt-3" >
 <figure class="figure">
-<img src="/images/album1_1579609740.jpg" class="figure-img img-fluid rounded"data-aos="fade-up">
+<img src="/images/aboutPhoto.jpg" style="width:330px; height 280px;"class="figure-img img-fluid rounded"data-aos="fade-up">
 <figcaption class="figure-caption">A caption for the above image.</figcaption>
 </figure>
 <div class="row" style="padding-top:30px;" data-aos="zoom-in">

@@ -9,12 +9,6 @@
   <script src="/js/jquery.fancybox.min.js"></script>
 
   <script src="/js/main.js"></script>
-
-  <script src="/js/parallax/parallax.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-
-
 <!-- Boje 
 Tamna
 #0A172E

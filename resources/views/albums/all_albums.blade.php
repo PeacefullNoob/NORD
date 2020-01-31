@@ -28,7 +28,7 @@ $i = 1;
        
               <div class="photo-text-more">
               <h3 class="heading">{{$album->name}}</h3>
-              <span class="meta">42 Photos</span>
+            
             </div>
   
           </a>
@@ -39,7 +39,7 @@ $i = 1;
        
               <div class="photo-text-more">
               <h3 class="heading">{{$album->name}}</h3>
-              <span class="meta">42 Photos</span>
+            
             </div>
   
           </a>

@@ -21,7 +21,7 @@ class GalleryController extends Controller
     public function store(Request $request){
         $this -> validate($request,[
         'name' => 'required',
-        'cover_image' => 'image|max:1999'
+        'cover_image' => 'image|max:8000'
 
 
         ]);
@@ -45,7 +45,7 @@ class GalleryController extends Controller
         $album ->save();
         //vraca error
 
-        return redirect('/albums/all_albums')->with('success','Album Created');
+        return redirect('/admin/albums/all_albums')->with('success','Album Created');
 }
     public function show($id){
     

@@ -172,6 +172,7 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
         font-size: 20px;
         padding: 20px;
         text-align: center;
+        height: 20%;
       }
   
 /* .picInd-text{

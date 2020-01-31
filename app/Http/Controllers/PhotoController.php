@@ -55,6 +55,6 @@ public function store(Request $request){
     $photo->save();
     //vraca error
 
-    return redirect('/albums/all_albums')->with('success','Photo uploaded');
+    return redirect('/admin/albums/all_albums')->with('success','Photo uploaded');
 }
 }

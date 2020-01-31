@@ -2,7 +2,7 @@
 
 @section('content')
  
-<section id ="myIndex" class= "heroImage" data-parralax = "scroll" data-image-src = "/images/100_0009_20191007194656_1580218428.jpg" >
+<section id ="myIndex" class= "heroImage">
 <div class = "shadow-overlay"></div>
 
 <div class="home-content"  data-aos="fade-right">
@@ -19,11 +19,11 @@ Drone Photography
 </div>
 <ul class="home-social">
 <li class="home-social-title">Follow Us</li>
-<li><a href="#0">
+<li><a href="https://www.facebook.com/pg/nordphotosandvideos/about/?ref=page_internal">
 <i class="fab fa-facebook"></i>
 <span class="home-social-text">Facebook</span>
 </a></li>
-<li><a href="#0">
+<li><a href="https://www.instagram.com/nordphotosandvideos/?fbclid=IwAR3h3gXVaK-BhBNbWXY9N3IFy9J-_5BhxMgx0prGpiya6tSwY_nsjr0xtC4">
 <i class="fab fa-instagram"></i>
 <span class="home-social-text">Instagram</span>
 </a></li>
@@ -52,7 +52,7 @@ $i = 1;
      
              <div class="overlay">
               <h3 class="heading">{{$photo->title}}</h3>
-          <!--     <span class="meta">{{$photo->media_type}}</span> -->
+       
             </div>  
             </div> 
          
@@ -65,13 +65,11 @@ $i = 1;
       </video >
       <div class="overlay">
               <h3 class="heading">{{$photo->title}}</h3>
-             <!--  <span class="meta">{{$photo->media_type}}</span> -->
+           
             </div>  
             
      
-                  <!-- <div class="playpause"> </div>  -->
-<!--                 <button id ="button1" class="active"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"></button> 
- -->                  </div> 
+                 </div> 
           @endif
           @if($i % 3 == 0)
 </div></div>

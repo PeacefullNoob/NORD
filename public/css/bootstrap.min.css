@@ -479,8 +479,11 @@ pre {
   margin-right: auto;
   margin-left: auto;
 /* padding-top: 2px; */
+/* PROMENAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
  }
+ @media(max-width: 768px){
 
+ }
 .row {
   display: -webkit-box;
   display: -ms-flexbox;

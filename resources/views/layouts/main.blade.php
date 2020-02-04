@@ -5,12 +5,11 @@
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="/css/gallery.css">
-        <link rel="stylesheet" href="/fonts/icomoon/style.css">
 
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/jquery-ui.css">
 
-        <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+        <link href="https://fonts.googleapis.com/css?family=Kanit:300,700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="/css/aos.css">
         <link rel="stylesheet" href="/css/fancybox.min.css">

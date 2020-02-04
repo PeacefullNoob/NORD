@@ -16,7 +16,12 @@ Tamna
 #0A172E
 Svetla
 #134284 -->
-      <div class="footer-copyright text-center py-2 footerTxt"><p>© 2020 Copyright:
-      <a href="#"> QQRIQ</a></p>
-      </div>
+<div class="footer-copyright py-3 copyright" style="
+    display: flex;
+    color: white;
+    padding-left: 40px;
+">
+       <p>© 2019 QQRIQ &trade; </p>
+        <span> Made with love. <i class="fa fa-heart" style="margin-left: 20px"></i></span>
+        </div>
 </footer>

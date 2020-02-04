@@ -24,7 +24,8 @@ a {
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  font-family: 'Kanit', sans-serif !important;
+}
 
 .border-2 {
   border-width: 2px; }
@@ -276,7 +277,8 @@ h1, h2, h3, h4, h5,
       left: 0;
       font-size: 20px;
       top: -.3rem;
-      font-family: "icomoon";
+      font-family: 'Kanit', sans-serif !important;
+
       content: "\e5ca";
       position: absolute; }
   .ul-check.white li:before {
@@ -356,7 +358,8 @@ h1, h2, h3, h4, h5,
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-          font-family: 'icomoon'; }
+          font-family: 'Kanit', sans-serif !important;
+ }
       .site-navbar .site-navigation .site-menu .has-children .dropdown {
         visibility: hidden;
         opacity: 0;
@@ -523,7 +526,8 @@ h1, h2, h3, h4, h5,
       .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
         font-size: 12px;
         z-index: 20;
-        font-family: "icomoon";
+        font-family: 'Kanit', sans-serif !important;
+
         content: "\f078";
         position: absolute;
         top: 50%;
@@ -645,13 +649,14 @@ h1, h2, h3, h4, h5,
 .main-content {
   float: left;
 /*   width: calc(100% - 250px);  */
+padding-bottom: 7px;
 }
   @media (max-width: 991.98px) {
     .main-content {
       width: 100%;
       position: relative;
       float: none;
-      padding-top: 5px; } }
+     /*  padding-top: 5px; */ } }
   .main-content .container-fluid {
     margin-left: 0;
     margin-right: 0;
@@ -659,9 +664,9 @@ h1, h2, h3, h4, h5,
     padding-right: 0; }
     @media (max-width: 991.98px) {
       .main-content .container-fluid {
-        padding-left: 5px;
+        /* padding-left: 5px;
        
-        padding-right: 5px; } }
+        padding-right: 5px; */ } }
   .main-content .photos .photo-item {
     position: relative; }
     .main-content .photos .photo-item:after {

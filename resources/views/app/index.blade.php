@@ -1,10 +1,12 @@
 @extends('layouts.main')
 
 @section('content')
- 
-<section id ="myIndex" class= "heroImage">
-      <div class = "shadow-overlay"></div>
-
+<div class="site-wrap" >  
+<div id ="myIndex" class= "herovideo">
+    <!--  <div class = "shadow-overlay"></div>  -->
+      <video playsinline autoplay muted loop  id="bgvideo" width="x" height="y">
+<source src="/images/00002.mp4" type="video/mp4">
+</video>
     <div class="home-content"  data-aos="fade-right">
       <div class="row home-content__main">
           <h1>
@@ -28,8 +30,8 @@
     <span class="home-social-text">Instagram</span>
     </a></li>
   </ul>
-</section>
-<div class="site-wrap">  
+</div>
+
 
 
     @if(count($photos)>0)
@@ -37,6 +39,8 @@
           $colcount = count($photos);
           $i = 1;
           ?>
+
+
     <main class="main-content">
         <div class="container-fluid photos">
           <div class="row align-items-stretch glavniR">
@@ -50,8 +54,8 @@
                             <h4 class="heading">{{$photo->title}}</h4>
                             </div>
                             <div class = "col-md-6 bodyOver">
-                            <p class="locationPic">lokacija</p>
-                            <p class="datumPic">{{$photo->updated_at}}</p>
+                            <p class="locationPic"> lokacija <i class="fa fa-map-marker" aria-hidden="true"></i></p>
+                            <p class="datumPic">  {{$photo->updated_at}} <i class="fa fa-calendar" aria-hidden="true"></i></p>
                             </div>
                           </div>  
                     </div> 
@@ -65,8 +69,8 @@
                             <h4 class="heading">{{$photo->title}}</h4>
                             </div>
                             <div class = "col-md-6 bodyOver">
-                            <p class="locationPic">lokacija</p>
-                            <p class="datumPic">{{$photo->updated_at}}</p>
+                            <p class="locationPic"><i class="fa fa-map-marker" aria-hidden="true"></i>lokacija</p>
+                            <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
                             </div>
                           </div>   
                   </div> 

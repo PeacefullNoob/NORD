@@ -48,7 +48,7 @@ $(document).ready(function() {
     });
 
     function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("mySidenav").style.width = "240px";
       document.body.style.backgroundColor = "rgba(19, 66, 123, 0.5)";
     
     }

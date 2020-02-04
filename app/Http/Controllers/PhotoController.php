@@ -43,12 +43,12 @@ public function store(Request $request){
 
 
     $photo = new Photo;
-
     $photo->album_id= $request->input('album_id');
     $photo->title = $request-> input('title');
     $photo->description = $request-> input('description');
     $photo->size=200;
     $photo->media_type = $extension;
+    $photo->location = $request-> input('location');
     $photo->photo = $filenameToStore;
     $photo->user_id = auth()->user()->id;
  

@@ -170,11 +170,24 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
         opacity:0;
         color: white;
         font-size: 20px;
-        padding: 20px;
+        padding: 2px;
         text-align: center;
-        height: 20%;
+        height: auto;
+        display: flex;
       }
-  
+.overlay .headOver {
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 8px;
+   
+  }
+  .overlay .bodyOver {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 15px;
+
+  }
 /* .picInd-text{
     position: absolute;
     z-index: 3;
@@ -352,7 +365,9 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
   min-width: 100%;
   min-height: 100%;
 } */
-
+.form-control input{
+  border-radius: 3px;
+}
 .myLogoSvg{
 
   top: 50%;
@@ -394,7 +409,7 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .4;
+    opacity: .1;
     background: linear-gradient(to right,#0A172E 0%,#0A172E 20%,transparent 100%);
 }
 .home-social {
@@ -488,11 +503,19 @@ padding-top:2px;
 .footerTxt p {
   margin-top: 5px !important;
        }
+/*  .glavniR{
+  height: 50%;
+} */
+ 
+/*  .col-4{
+   height: 50%;
+ } */
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav .nava li a {font-size: 18px;}
 }
-@media (max-width: 768px){
+@media (max-width: 769px){
 .home-content h1 {
   font-size: 30px;
 }
@@ -503,6 +526,7 @@ padding-top:2px;
 .home-social {
   font-size: 9px;
   bottom: 0.6rem;
+  left: 0;
 }
 .myLogo p{
   font-size: 5px;
@@ -515,13 +539,18 @@ padding-top:2px;
   padding:0px;
 }
 .overlay {
-  font-size: 10px;
   padding: 5px;
-  height: 50%;
+  height: auto;
 
 }
-.overlay h3{
+.overlay h4{
   font-size: 15px !important;
+}
+.overlay .headOver {
+  font-size: 15px !important;
+}
+.overlay .bodyOver {
+  font-size: 10px !important;
 }
 .row{
   flex-direction: column !important;
@@ -542,4 +571,27 @@ padding-top: 35%;
   height: 180;
 
  }
+ .modal{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+
+   }
+   .modal-footer{
+   height: auto;
+   padding: 3px !important;
+}
+.modal-dialog{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px 20px 20px;
+  overflow: auto;
+}
+
 }

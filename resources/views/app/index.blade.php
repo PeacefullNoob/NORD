@@ -4,8 +4,8 @@
 <div class="site-wrap" >  
 <div id ="myIndex" class= "herovideo">
     <!--  <div class = "shadow-overlay"></div>  -->
-      <video playsinline autoplay muted loop  id="bgvideo" width="x" height="y">
-<source src="/images/00002.mp4" type="video/mp4">
+      <video playsinline autoplay="autoplay" loop  muted id="bgvideo" width="x" height="y">
+<source src="/images/timelapse.mp4" type="video/mp4">
 </video>
     <div class="home-content"  data-aos="fade-right">
       <div class="row home-content__main">
@@ -41,12 +41,17 @@
           ?>
 
 
+
+
+</div>
     <main class="main-content">
         <div class="container-fluid photos">
-          <div class="row align-items-stretch glavniR">
+          <div class="glavniR">
             @foreach($photos as $photo)
             @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg') 
-              <div class="col-4 col-sm-4 col-md-4" data-aos="fade-up" >
+        
+            <div class="mojCol" data-aos="fade-up" >
+            <div>
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 
                         <img class="picInd" onclick="changeIt(this)"  src="/images/{{$photo->photo}}" alt="{{$photo->title}}"  >
                         <div class=" overlay">
@@ -58,11 +63,14 @@
                             <p class="datumPic">  {{$photo->updated_at}} <i class="fa fa-calendar" aria-hidden="true"></i></p>
                             </div>
                           </div>  
-                    </div> 
+                          </div>  
+                          </div>  
 @else 
-                <div class="col-4 col-sm-4 col-md-4" data-aos="fade-up">  
+                <div class="mojCol" data-aos="fade-up">  
+                 <div>
                     <div id="mediaContainer" class= "mediaDiv  "> 
-                        <video class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/{{$photo->photo}}" > 
+                    <div>
+                        <video class="videoInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/{{$photo->photo}}" > 
                           </video >
                           <div class=" overlay">
                           <div class = "col-md-6 headOver" >
@@ -72,8 +80,11 @@
                             <p class="locationPic"><i class="fa fa-map-marker" aria-hidden="true"></i>lokacija</p>
                             <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
                             </div>
+                            </div>
                           </div>   
-                  </div> 
+                          </div>  
+                  
+</div>
     @endif
    @if($i % 3 == 0)
    @if($i==$colcount)
@@ -81,7 +92,7 @@
    @else
           </div>
               </div>
-            <div class="row align-items-stretch glavniR" >
+            <div class="glavniR" >
             @endif 
         @else
             </div>

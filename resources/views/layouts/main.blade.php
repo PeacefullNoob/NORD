@@ -2,6 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/css/normalize.css"> 
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="/css/gallery.css">
@@ -9,7 +10,7 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/jquery-ui.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Kanit:300,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kanit:300,900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="/css/aos.css">
         <link rel="stylesheet" href="/css/fancybox.min.css">
@@ -36,12 +37,13 @@
                         <iframe id = "iframeModal" class="embed-responsive-item" src=""
                         allowfullscreen></iframe>
                         </div>
-
+                        <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" style = "color: white;
+    background: black;position: absolute;top: 2; right: 2;"data-dismiss="modal">Close</button>
                    </div>
-                 <div class="modal-footer justify-content-center">   
+               <!--   <div class="modal-footer justify-content-center">   
                      <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" data-dismiss="modal">Close</button>
                     </div>
-
+ -->
                </div>
 
 

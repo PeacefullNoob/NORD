@@ -5,9 +5,7 @@ let windowWidth = window.innerWidth;
 function changeIt(img)
     {
 
-
 let getFullImgUrl = img.src;;
-/* alert(getFullImgUrl); */
 let container = document.body;
 let newImgWindow = document.createElement("div");
 container.appendChild(newImgWindow);
@@ -47,14 +45,15 @@ $(document).ready(function() {
     });
     });
 
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "240px";
-      document.body.style.backgroundColor = "rgba(19, 66, 123, 0.5)";
-    
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.body.style.backgroundColor = "#0A172E";
-    }
-    
+ const span = document.getElementById("piid");
+
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", "+382 69 215 455");
+  }
+}); 

@@ -21,7 +21,7 @@ Svetla
     color: white;
     padding-left: 40px;
 ">
-       <p>© 2019 QQRIQ &trade; </p>
-        <span> Made with love. <i class="fa fa-heart" style="margin-left: 20px"></i></span>
+       <p>© 2019 QQRIQ&trade; Made with love.</p>
+        <span> <i class="fa fa-heart" style="margin-left: 20px"></i></span>
         </div>
 </footer>

@@ -51,10 +51,9 @@
             @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg') 
         
             <div class="mojCol" data-aos="fade-up" >
-            <div>
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 
                         <img class="picInd" onclick="changeIt(this)"  src="/images/{{$photo->photo}}" alt="{{$photo->title}}"  >
-                        <div class=" overlay">
+                        <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>
                             </div>
@@ -64,15 +63,12 @@
                             </div>
                           </div>  
                           </div>  
-                          </div>  
 @else 
-                <div class="mojCol" data-aos="fade-up">  
-                 <div>
-                    <div id="mediaContainer" class= "mediaDiv  "> 
-                    <div>
+                <div class="mojCol" data-aos="fade-up">           
+                    <div id="mediaContainer" class= "mediaDiv  ">                 
                         <video class="videoInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/{{$photo->photo}}" > 
                           </video >
-                          <div class=" overlay">
+                          <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>
                             </div>
@@ -80,11 +76,10 @@
                             <p class="locationPic"><i class="fa fa-map-marker" aria-hidden="true"></i>lokacija</p>
                             <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
                             </div>
-                            </div>
-                          </div>   
+                            </div>                       
                           </div>  
                   
-</div>
+
     @endif
    @if($i % 3 == 0)
    @if($i==$colcount)
@@ -92,7 +87,7 @@
    @else
           </div>
               </div>
-            <div class="glavniR" >
+            <div class="glavniR">
             @endif 
         @else
             </div>

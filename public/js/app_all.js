@@ -41,7 +41,6 @@ let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
 $(document).ready(function() {
     setTimeout(function(){
       $('body').addClass('loaded');
-      
     });
     });
 
@@ -57,3 +56,16 @@ span.addEventListener("copy", function(event) {
     event.clipboardData.setData("text/plain", "+382 69 215 455");
   }
 }); 
+const span1 = document.getElementById("piidm");
+
+span1.onclick = function() {
+  document.execCommand("copy");
+}
+
+span1.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", "+382 69 215 455");
+  }
+}); 
+

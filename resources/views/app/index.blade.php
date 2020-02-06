@@ -44,7 +44,7 @@
 
 
 </div>
-    <main class="main-content">
+   <main class="main-content">
         <div class="container-fluid photos">
           <div class="glavniR">
             @foreach($photos as $photo)
@@ -77,9 +77,9 @@
                             <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
                             </div>
                             </div>                       
-                          </div>  
-                  
-
+                          </div>   
+                         
+                   
     @endif
    @if($i % 3 == 0)
    @if($i==$colcount)
@@ -97,7 +97,8 @@
 @endforeach
 </div>
 </div>
-</main>
+</main>  
+
 @else 
 <p style = "color:white">No photos</p>
 @endif

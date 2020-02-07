@@ -23,12 +23,14 @@
 
 <title> Nord </title>
 </head>
-  <body >
+  <body onload="myFunction()" >
       <div id="loader-wrapper">     
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div> 
       </div>
+
+
       <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
              <div class="modal-content">
@@ -52,7 +54,7 @@
 
         @include('layouts.header')
         <!-- class="row" je stojao  -->
-          <div class = "container-fluid">
+          <div id = "glavniDiv" class = "container-fluid">
             @include('layouts.messages')
             @yield('content')
             </div>

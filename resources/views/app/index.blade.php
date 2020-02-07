@@ -65,9 +65,15 @@
                           </div>  
 @else 
                 <div class="mojCol" data-aos="fade-up">           
-                    <div id="mediaContainer" class= "mediaDiv  ">                 
+                    <div id="mediaContainer" class= "mediaDivV">                 
                         <video class="videoInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/{{$photo->photo}}" > 
                           </video >
+                          <span class="ikonica"></span>
+                          <div id="duration">
+                            <p>
+00:00
+</p>
+                          </div>
                           <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>
@@ -97,7 +103,7 @@
 @endforeach
 </div>
 </div>
-</main>  
+</main>   
 
 @else 
 <p style = "color:white">No photos</p>

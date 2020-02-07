@@ -73,14 +73,27 @@ body{
 }
 
 .mediaDiv { 
-
+height: 100%;
+  display: flex;
   position: relative;
   color: inherit;
   text-decoration: none;
   overflow: hidden; 
       }
+
+      .mediaDivV { 
+        height: 100%;
+            display: flex;
+          position: relative;
+          color: inherit;
+          text-decoration: none;
+          overflow: hidden; 
+              }
+            
     
 .picInd{
+
+  height: 100%;
   width: 100%;
   vertical-align: middle;
   border-style: none;
@@ -105,15 +118,21 @@ body{
 }
 #mediaContainer:hover img,
 #mediaContainer:hover video { 
+
     transform: scale(1.09);
     transform-origin: 50% 50%;
     opacity: 1;
       }
+
 #mediaContainer:hover  .overlay,
 #mediaContainer:hover  .overlay { 
         
           opacity: 1;
             }
+
+  .mediaDivV:hover #duration {
+   display: none;
+  }
 .overlay {
         position: absolute; 
         bottom: 0; 
@@ -214,7 +233,22 @@ body{
   border-radius: 3px;
 }
  
+#duration{
+  width: 50px;
+    height: 25px;
+    background-color: black;
+    bottom: 0;
+    right: 0;
+    transform: translate(-11%, -17%);
+    position: absolute;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+#duration p {
 
+  color: white;
+  margin-left: 3px;
+}
 .myLogoSvg{
   top: 50%;
   left: 50%;
@@ -518,40 +552,44 @@ padding-top:2px;
 }
 
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 10px;
+  height: 29px;
+  background: #b0c4e0; 
 }
 
 
 ::-webkit-scrollbar-track {
-  background: #134284; 
-}p
+  -webkit-border-radius: 10px;
+   border-radius: 10px;
+}
  
 
 ::-webkit-scrollbar-thumb {
   background: #0A172E; 
+  border-radius: 10px;
+  
 }
 
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background:#0A172E; 
-}
+} */
 
 
 /*MOJ NACIN GALERIJE  */
 .glavniR{
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
 box-sizing: border-box;
 margin-bottom: 0px;
 padding-bottom: 0px;
 margin-top: 0px;
 }
 .mojCol{
-  -ms-flex: 33%; /* IE10 */
-  flex: 33%;
-  max-width: 33%;
+-ms-flex: 33%; /* IE10 */
+flex: 33%;
 position: relative;
 width: 100%;
 min-height: 1px;
@@ -592,9 +630,16 @@ font-size: 12px;
   .sidenav .nava li a {font-size: 18px;}
 }
 /* Extra small devices (phones, 600px and down) */
+
 @media (max-width: 600px){
+  /* @media screen and (orientation:portrait) {
+    #modal1 {
+        transform: rotate(-90deg);
+        transform-origin: 80% 35%;
+    }
+  } */
   .img-window img {
-    max-height: 60vh !important;
+    max-height: 41vh !important;
   }
 .home-content h1 {
   font-size: 30px;
@@ -635,13 +680,15 @@ font-size: 12px;
 
 }
 .overlay h4{
-  font-size: 15px !important;
+  font-size: 22px !important;
 }
 .overlay .headOver {
-  font-size: 15px !important;
+  font-size: 22px !important;
 }
 .overlay .bodyOver {
-  font-size: 10px !important;
+  
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .glavniR{
   flex-direction: column !important;
@@ -755,22 +802,18 @@ padding-top: 35%;
   
   }
   .overlay h4{
-    font-size: 15px !important;
+    font-size: 22px !important;
   }
-  .overlay .headOver {
-    font-size: 15px !important;
-  }
+
   .overlay .bodyOver {
-    font-size: 10px !important;
+    font-size: 13px !important;
   }
  
   .mojCol {
     width: auto;
-    
+    flex: 50%;
   }
-  .videoInd {
-    height: auto;
-  }
+  
   .col-md-5{
   width: 100%;
       margin: auto;
@@ -810,7 +853,7 @@ padding-top: 35%;
     font-size: 16px;
   }
   }
-}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -825,4 +868,17 @@ padding-top: 35%;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
+}
+
+
+.ikonica{
+position: absolute;
+top: calc(50% - 32px);
+left: calc(50% - 24px);
+font-family: 'MobiriseIcons' !important;
+font-size: 3rem !important;
+color: #fff;
+opacity: 0;
+transition: .2s opacity ease-in-out;
+z-index: 5;
 }

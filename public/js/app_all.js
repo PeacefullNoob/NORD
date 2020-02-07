@@ -36,13 +36,22 @@ let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
 }); 
   
 
+var myVar;
 
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader-wrapper").style.display = "none";
+  document.getElementById("glavniDiv").style.display = "block";
+}
 //PRELOADER
-$(document).ready(function() {
+/* $(document).ready(function() {
     setTimeout(function(){
       $('body').addClass('loaded');
     });
-    });
+    }); */
 
  const span = document.getElementById("piid");
 
@@ -69,3 +78,18 @@ span1.addEventListener("copy", function(event) {
   }
 }); 
 
+$('img').bind('contextmenu', function(e) {
+  return false;
+});
+$('video').bind('contextmenu', function(e) {
+  return false;
+});
+
+/* $(function() {
+  $('.mediaDivV').hover(function() {
+    $('.duration').css('display', 'none');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('#duration').css('display', 'block');
+  });
+}); */

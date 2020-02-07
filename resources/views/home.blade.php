@@ -16,6 +16,7 @@
                     <ul>
                     <li> <a href="/admin/create"><i class="fa fa-file-o"></i>Create Album</a></li>
                     <li> <a href="/admin/albums/all_albums">Albums</a>
+                    <li> <a href="/admin/photos/allPhotos">All Media</a>
                     </ul>
                 </div>
             </div>

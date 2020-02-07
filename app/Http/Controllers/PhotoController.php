@@ -9,11 +9,10 @@ class PhotoController extends Controller
 {
    public function upload($album_id){
        return view('photos.upload_p')->with('album_id',$album_id);
-   }
+}
    public function index(){
     $photos =DB::table('photos')->latest('created_at')->get();
-    return view('app.index')->with ('photos',$photos);
-   
+    return view('app.index')->with ('photos',$photos);  
 }
 //store phooto
 public function store(Request $request){
@@ -21,9 +20,6 @@ public function store(Request $request){
     $this -> validate($request,[
     'title' => 'required',
     'photo' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
-    
-
-
     ]);
     //Get filename w extension
     $filenameWithExt = $request->file('photo')->getClientOriginalName();
@@ -39,9 +35,6 @@ public function store(Request $request){
     $path = $request->file('photo')->move(public_path('images'), $filenameToStore);;
 //dd($path);
     //Create photo
-
-
-
     $photo = new Photo;
     $photo->album_id= $request->input('album_id');
     $photo->title = $request-> input('title');
@@ -56,5 +49,11 @@ public function store(Request $request){
     //vraca error
 
     return redirect('/admin/albums/all_albums')->with('success','Photo uploaded');
+}
+
+public function allPhotos() {
+    $photos =DB::table('photos')->latest('created_at')->get();
+    return view('photos.allPhotos')->with ('photos',$photos);  
+
 }
 }

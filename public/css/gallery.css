@@ -503,13 +503,14 @@ padding-top:2px;
   top: 0;
   right: 0;
   width: 0;
-  height: 100%;
-  visibility: hidden;
+    visibility: hidden;
   overflow: hidden;
-  align-items: center;
-  justify-content: center;
+  align-items: right  ;
+  justify-content: right;
   background-color: #0A172E;
   transition: 0.5s;
+  height: 80%;
+  border-radius: 55px;
 }
 
 .menu-wrap .menu > div {
@@ -548,6 +549,11 @@ padding-top:2px;
   font-size: 20px;
   color: #ffffff;
   display: block;
+  transition: 0.6s;
+}
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  font-size: 22px;
+  color: #a9ced3;
   transition: 0.6s;
 }
 
@@ -607,158 +613,199 @@ margin-bottom: 0px;
 .glry-img{
   color: inherit;
 }
-@media screen and (max-width: 320px) {
-  .home-social li {
-    display: flex !important;
-}
-#picAbout {
-  
-  padding: 10px !important;
-}
-.col-5 {
-  width: 100% !important;
 
-}
-.copyright p {
-padding-left: 10px;
-font-size: 12px;
-}
-}
+
+.ikonica{
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 24px);
+  font-family: 'MobiriseIcons' !important;
+  font-size: 3rem !important;
+  color: #fff;
+  opacity: 0;
+  transition: .2s opacity ease-in-out;
+  z-index: 5;
+  }
+  
+  
+  .tbody th, .tbody td {
+    font-weight: 300 !important;
+  }
+  .main-content1{
+  width: 100%;
+  padding-top: 10%;
+  }
+  .allAlimg{
+    width: 100%;
+    height: 40vh;
+  }
+  .allAlCol{
+    float: left;
+      width: 25%;
+      
+  }
+  .allAlRow{
+    display: flex;
+  }
+  .photo-text-more{
+    text-align: center;
+  }
+
+  
+  @media screen and (max-width: 320px) {
+    .home-social li {
+      display: flex !important;
+  }
+  #picAbout {
+    
+    padding: 10px !important;
+  }
+  .col-5 {
+    width: 100% !important;
+  
+  }
+  .copyright p {
+  padding-left: 10px;
+  font-size: 12px;
+  }
+  }
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav .nava li a {font-size: 18px;}
 }
-/* Extra small devices (phones, 600px and down) */
 
+
+/* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px){
   /* @media screen and (orientation:portrait) {
-    #modal1 {
-        transform: rotate(-90deg);
-        transform-origin: 80% 35%;
-    }
+  #modal1 {
+  transform: rotate(-90deg);
+  transform-origin: 80% 35%;
+  }
   } */
   .img-window img {
     max-height: 41vh !important;
   }
-.home-content h1 {
-  font-size: 30px;
-}
+  .home-content h1 {
+    font-size: 30px;
+  }
 
 
-.home-content h1+p {
-  font-size: 17px;
-  padding-left: 0rem;
-}
+  .home-content h1+p {
+    font-size: 17px;
+    padding-left: 0rem;
+  }
 
-#piidm i{
-  display: block !important;
-  font-size: 25px;
-}
-#piid{ 
-  display:none !important;
-}
-.home-social {
-  font-size: 14px;
-  bottom: 0.6rem;
-  left: 0;
-}
-.myLogo #piid{
-  font-size: 12px;
-}
+  #piidm i{
+   display: block !important;
+   font-size: 25px;
+  }
+  #piid{ 
+    display:none !important;
+  }
+  .home-social {
+    font-size: 14px;
+    bottom: 0.6rem;
+    left: 0;
+  }
+  .myLogo #piid{
+    font-size: 12px;
+  }
 
-.footerTxt p{
-  font-size: 8px;
-  margin-bottom:0px !important;
-}
-.footerTxt{
-  padding:0px;
-}
-.overlay {
-  padding: 5px;
-  height: auto;
+  .footerTxt p{
+    font-size: 8px;
+    margin-bottom:0px !important;
+  }
+  .footerTxt{
+    padding:0px;
+  }
+  .overlay {
+   padding: 5px;
+    height: auto;
 
-}
-.overlay h4{
-  font-size: 22px !important;
-}
-.overlay .headOver {
-  font-size: 22px !important;
-}
-.overlay .bodyOver {
-  
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.glavniR{
-  flex-direction: column !important;
-  -webkit-column-count: 1;
-  -moz-column-count: 1;
-  column-count: 1;
-  -webkit-column-width: 100%;
-  -moz-column-width: 100%;
-  column-width: 100%;
-}
-.mojCol {
-  max-width: 100% !important;
-  flex:auto !important;
-  -webkit-box-flex: auto; 
-  
-}
-.videoInd {
-  height: auto;
-}
-.col-md-5{
-width: 100%;
-    margin: auto;
-}
+  }
+  .overlay h4{
+   font-size: 22px !important;
+  }
+  .overlay .headOver {
+    font-size: 22px !important;
+  }
+  .overlay .bodyOver {
 
-.myMain{
-padding-top: 35%;
-}
-#picAbout{
-  width: 100%;
-  height: 180;
+   margin: 0 !important;
+   padding: 0 !important;
+  }
+  .glavniR{
+    flex-direction: column !important;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+     column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+     column-width: 100%;
+  }
+  .mojCol {
+   max-width: 100% !important;
+   flex:auto !important;
+    -webkit-box-flex: auto; 
 
- }
- .modal{
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
+  }
+  .videoInd {
+    height: auto;
+  }
+  .col-md-5{
+   width: 100%;
+   margin: auto;
+  }
 
-   }
-   .modal-footer{
+  .myMain{
+   padding-top: 35%;
+  }
+  #picAbout{
+   width: 100%;
+   height: 180;
+
+  }
+  .modal{
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0,0,0,0.8);
+   justify-content: center;
+   align-items: center;
+
+  }
+  .modal-footer{
    height: auto;
-   padding: 3px !important;
-}
-.modal-dialog{
+    padding: 3px !important;
+  }
+  .modal-dialog{
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  padding: 20px 50px 20px 20px;
-  overflow: auto;
-}
-/* #myIndex{
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+   height: auto;
+   padding: 20px 50px 20px 20px;
+   overflow: auto;
+  }
+  /* #myIndex{
 
   background-image: url(/images/100_0009_20191007194656_1580218428.jpg);
   background-size: cover;
   background-position: center top;
-}
-#bgvideo {
-    display: none;
-} */
-.sidenav {
-  padding-top: 15px;
-}
-.sidenav .nava li a {
-  font-size: 16px;
-}
-}
+  }
+  #bgvideo {
+  display: none;
+  } */
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav .nava li a {
+    font-size: 16px;
+  }
+  }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -768,27 +815,27 @@ padding-top: 35%;
     max-width: 88vw;
     width: 90vw;
     height: 90vh;
-}
+  }
   .home-content h1 {
     font-size: 2.6rem;
   }
-  
-  
+
+
   .home-content h1+p {
     font-size: 20px;
     padding-left: 0rem;
   }
-  
- 
+
+
   .home-social {
     font-size: 14px;
-    bottom: 0.6rem;
+    bottom: 0.6rem; 
     left: 0;
   }
   .myLogo #piid{
     font-size: 15px;
   }
-  
+
   .footerTxt p{
     font-size: 8px;
     margin-bottom:0px !important;
@@ -799,7 +846,7 @@ padding-top: 35%;
   .overlay {
     padding: 5px;
     height: auto;
-  
+
   }
   .overlay h4{
     font-size: 22px !important;
@@ -808,35 +855,34 @@ padding-top: 35%;
   .overlay .bodyOver {
     font-size: 13px !important;
   }
- 
+
   .mojCol {
     width: auto;
     flex: 50%;
   }
-  
+
   .col-md-5{
-  width: 100%;
-      margin: auto;
-  }
-  
-  .myMain{
-  padding-top: 35%;
+    width: 100%;
+    margin: auto;
   }
 
-   .modal{
+  .myMain{
+    padding-top: 35%;
+  }
+
+  .modal{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.1);
     justify-content: center;
     align-items: center;
-  
-     }
-     .modal-footer{
-     height: auto;
-     padding: 3px !important;
+
+  }
+  .modal-footer{
+    height: auto;
+    padding: 3px !important;
   }
   .modal-dialog{
-  
     position: absolute;
     top: 0;
     left: 0;
@@ -852,33 +898,37 @@ padding-top: 35%;
   .sidenav .nava li a {
     font-size: 16px;
   }
-  }
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1900px) {
+  .home-content h1+p {
+    font-size: 2.5rem;
 
-}
+  }
+  .home-content h1 {
+    font-size: 4rem;
+  }
+  .home-social {
+    list-style: none;
+    font-size: 22px;
+  }
+  .myLogo p {
+    font-size: 22px;
+  }
+  .myLogoSvg {
 
+    width: 90px;
+    height: 45px;
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+    padding: 15px 30px 13px 0px;
+    font-size: 26px;
+  }
+  .menu-wrap .menu > div {
 
-.ikonica{
-position: absolute;
-top: calc(50% - 32px);
-left: calc(50% - 24px);
-font-family: 'MobiriseIcons' !important;
-font-size: 3rem !important;
-color: #fff;
-opacity: 0;
-transition: .2s opacity ease-in-out;
-z-index: 5;
-}
+    padding-top: 40%;
+  }
+
+} 
+

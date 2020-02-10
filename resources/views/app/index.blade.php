@@ -5,7 +5,7 @@
 <div id ="myIndex" class= "herovideo">
     <!--  <div class = "shadow-overlay"></div>  -->
       <video playsinline autoplay="autoplay" loop  muted id="bgvideo" width="x" height="y">
-<source src="/images/timelapse.mp4" type="video/mp4">
+<source src="/images/00004b.mp4" type="video/mp4">
 </video>
     <div class="home-content"  data-aos="fade-right">
       <div class="row home-content__main">
@@ -58,7 +58,7 @@
                             <h4 class="heading">{{$photo->title}}</h4>
                             </div>
                             <div class = "col-md-6 bodyOver">
-                            <p class="locationPic"> lokacija <i class="fa fa-map-marker" aria-hidden="true"></i></p>
+                            <p class="locationPic"> {{$photo->location}} <i class="fa fa-map-marker" aria-hidden="true"></i></p>
                             <p class="datumPic">  {{$photo->updated_at}} <i class="fa fa-calendar" aria-hidden="true"></i></p>
                             </div>
                           </div>  
@@ -79,7 +79,7 @@
                             <h4 class="heading">{{$photo->title}}</h4>
                             </div>
                             <div class = "col-md-6 bodyOver">
-                            <p class="locationPic"><i class="fa fa-map-marker" aria-hidden="true"></i>lokacija</p>
+                            <p class="locationPic"><i class="fa fa-map-marker" aria-hidden="true"></i>{{$photo->location}}</p>
                             <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
                             </div>
                             </div>                       

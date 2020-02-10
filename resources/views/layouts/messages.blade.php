@@ -5,7 +5,6 @@
 </div>
 .@endforeach
 @endif
-
 @if(session('success'))
 <div class = 'container-fluid callout success'>
 {{session('success')}}

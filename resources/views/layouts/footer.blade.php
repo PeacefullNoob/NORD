@@ -8,7 +8,6 @@
     <script src="/js/aos.js"></script>
     <script src="/js/app_all.js"></script>
 
-    <script src="/js/jquery.fancybox.min.js"></script>
 
     <script src="/js/main.js"></script>
 <!-- Boje 
@@ -21,7 +20,7 @@ Svetla
     color: white;
     padding-left: 40px;
 ">
-       <p>© 2019 QQRIQ&trade; Made with love.</p>
+       <p>© 2020 QQRIQ&trade; Made with love.</p>
         <span> <i class="fa fa-heart" style="margin-left: 20px"></i></span>
         </div>
 </footer>

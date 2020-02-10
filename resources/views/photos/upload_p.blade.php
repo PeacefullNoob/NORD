@@ -42,7 +42,9 @@
       <div class="invalid-feedback">
                Please choose a file.
       </div></div>
+    
       {{Form::hidden('album_id',$album_id)}}
+     
       <button type="submit" class="btn btn-primary" id ="uploadB">Upload</button>
 
      <input type="hidden" value="{{ csrf_token() }}" name="_token">

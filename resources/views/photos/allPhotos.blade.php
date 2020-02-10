@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<main class="myMain">
+<main class="myMain mem">
         <div class="container-fluid photos">
 <table class="table table-hover">
     <thead>
@@ -26,11 +26,14 @@
         <th>{{$photo->album_id}}</th> 
         <th>{{$photo->title}}</th>
         <th>{{$photo->description}}</th>
-        <th>{{$photo->photo}}</th>
+        <th><img src = "/images/{{$photo->photo}}" style="
+        height: 73px;
+    width: 100px;
+"/></th>
         <th>{{$photo->size}}</th> 
         <th>{{$photo->created_at}}</th> 
         <th>{{$photo->updated_at}}</th> 
-        <th><button type="button" class="btn btn-success">Edit</button></th>
+        <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btn-success">Edit</button></th>
   </tr>
   @endforeach
   </tbody>

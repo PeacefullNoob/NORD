@@ -73,8 +73,8 @@ body{
 }
 
 .mediaDiv { 
-height: 100%;
-  display: flex;
+/* height: 45vh;
+ */  display: flex;
   position: relative;
   color: inherit;
   text-decoration: none;
@@ -82,7 +82,7 @@ height: 100%;
       }
 
       .mediaDivV { 
-        height: 100%;
+       /*  height: 45vh; */
             display: flex;
           position: relative;
           color: inherit;
@@ -92,8 +92,6 @@ height: 100%;
             
     
 .picInd{
-
-  height: 100%;
   width: 100%;
   vertical-align: middle;
   border-style: none;
@@ -101,14 +99,6 @@ height: 100%;
        
     }
    
-    .videoInd{
-      height: 100%;
-      width: 100%;
-      vertical-align: middle;
-      border-style: none;
-      object-fit: fill !important;
-     
-  }
  
 #mediaContainer img,
 #mediaContainer video{
@@ -234,20 +224,19 @@ height: 100%;
 }
  
 #duration{
-  width: 50px;
-    height: 25px;
+  
     background-color: black;
-    bottom: 0;
-    right: 0;
-    transform: translate(-11%, -17%);
+    bottom: 5px;
+    right: 5px;
     position: absolute;
-    padding-right: 50px;
-    padding-bottom: 30px;
+    opacity: 0.7;
+    padding: 0px 2px 0px 2px;
+
 }
 #duration p {
-
+  letter-spacing: 1.5px;
   color: white;
-  margin-left: 3px;
+  margin:auto;
 }
 .myLogoSvg{
   top: 50%;
@@ -260,10 +249,10 @@ height: 100%;
  
 }
 .myMain{
-  height: auto;
+  height: 100%;
   width: 90%;
   margin: auto;
-  padding-top: 10%;
+  margin-top: 10%;
 }
  /*Pocetna strana */
 /*    #myIndex{
@@ -272,7 +261,13 @@ height: 100%;
   background-size: cover;
   background-position: center top;
 }  */
-
+.divEditphoto{
+  width: 150px;
+  height: 160px;
+  position: relative;
+  align-content: center;
+  margin: auto;
+}
 .heroVideo{
     width: 100%;
     height: 100%;
@@ -509,8 +504,8 @@ padding-top:2px;
   justify-content: right;
   background-color: #0A172E;
   transition: 0.5s;
-  height: 80%;
-  border-radius: 55px;
+  height: 75%;
+ 
 }
 
 .menu-wrap .menu > div {
@@ -616,17 +611,20 @@ margin-bottom: 0px;
 
 
 .ikonica{
-  position: absolute;
+/*   background-image: url('http://wptf.com/wp-content/uploads/2014/05/play-button.png');
+ */  position: absolute;
   top: calc(50% - 32px);
   left: calc(50% - 24px);
-  font-family: 'MobiriseIcons' !important;
   font-size: 3rem !important;
-  color: #fff;
-  opacity: 0;
+  opacity: 0.6;
   transition: .2s opacity ease-in-out;
   z-index: 5;
-  }
   
+  }
+  .ikonica img{
+    width: 80px;
+    height: 80px;
+  }
   
   .tbody th, .tbody td {
     font-weight: 300 !important;
@@ -752,9 +750,7 @@ margin-bottom: 0px;
     -webkit-box-flex: auto; 
 
   }
-  .videoInd {
-    height: auto;
-  }
+ 
   .col-md-5{
    width: 100%;
    margin: auto;
@@ -809,7 +805,7 @@ margin-bottom: 0px;
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
   .img-window img {
     max-height: 76vh;
     max-width: 88vw;
@@ -931,4 +927,10 @@ margin-bottom: 0px;
   }
 
 } 
+.mem{
+  height: 100% !important;
+}
 
+.memd{
+  width: 65% !important;
+}

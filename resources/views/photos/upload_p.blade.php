@@ -2,19 +2,11 @@
 
 @section('content')
 <div class="site-wrap">
-
-  <div class="site-mobile-menu">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
   <main class="myMain">
   <div class = "container-fluid">
-
+  <div class = "row" style ="padding-bottom:20px">
+        <a class = "btn btn-info" href = "/home">Go Back</a>
+</div>
 <div class = "row justify-content-center">
 
 <div class = "col-md-5 pt-3">
@@ -39,6 +31,13 @@
           <label style="color:white">Select file to upload:</label>
           <div class="form-group col-md-6"> 
           <input type="file"  name="photo" id="photo" required>
+      <div class="invalid-feedback">
+               Please choose a file.
+      </div></div>
+      <div class="form-group">
+          <label style="color:white">Select THUMBNAIL to upload:</label>
+          <div class="form-group col-md-6"> 
+          <input type="file"  name="thumbnail" id="thumbnail" required>
       <div class="invalid-feedback">
                Please choose a file.
       </div></div>

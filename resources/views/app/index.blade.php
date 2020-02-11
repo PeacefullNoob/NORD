@@ -66,9 +66,9 @@
 @else 
                 <div class="mojCol" data-aos="fade-up">           
                     <div id="mediaContainer" class= "mediaDivV">                 
-                        <video class="videoInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/{{$photo->photo}}" > 
-                          </video >
-                          <span class="ikonica"></span>
+                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                      
+                        <span class="ikonica"><img src="http://wptf.com/wp-content/uploads/2014/05/play-button.png" ></span>
                           <div id="duration">
                             <p>
 00:00

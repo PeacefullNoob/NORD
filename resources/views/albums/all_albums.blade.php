@@ -5,6 +5,9 @@
 @if(count($albums)>0)
 <main class="main-content1">
         <div class="container-fluid photos">
+        <div class = "row" style ="padding-bottom:20px">
+        <a class = "btn btn-info" href = "/home">Go Back</a>
+</div>
       <div class="allAlRow">
         @foreach($albums as $album)
    
@@ -16,6 +19,7 @@
 </div>
  </a>   
 </div>
+
 @endforeach
       </div>
       </div>

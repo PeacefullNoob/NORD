@@ -3,6 +3,9 @@
 @section('content')
 <main class="myMain mem">
         <div class="container-fluid photos">
+        <div class = "row" style ="padding-bottom:20px">
+        <a class = "btn btn-info" href = "/home">Go Back</a>
+</div>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -10,8 +13,8 @@
         <th>AlbumID</th> 
         <th>Title</th>
         <th>Description</th>
-        <th>Photo</th>
-        <th>Size</th> 
+        <th>Media</th>
+        <th>Thumbnail</th> 
         <th>created_at</th> 
         <th>updated_at</th> 
         <th>Options</th>
@@ -30,7 +33,10 @@
         height: 73px;
     width: 100px;
 "/></th>
-        <th>{{$photo->size}}</th> 
+<th><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="
+        height: 73px;
+    width: 100px;
+"/></th>
         <th>{{$photo->created_at}}</th> 
         <th>{{$photo->updated_at}}</th> 
         <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btn-success">Edit</button></th>

@@ -3,18 +3,11 @@
 @section('content')
 <div class="site-wrap">
 
-  <div class="site-mobile-menu">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
   <main class="myMain">
   <div class = "container-fluid">
-
+  <div class = "row" style ="padding-bottom:20px">
+        <a class = "btn btn-info" href = "/home">Go Back</a>
+</div>
 <div class = "row justify-content-center">
 
 <div class = "col-md-5 pt-3">

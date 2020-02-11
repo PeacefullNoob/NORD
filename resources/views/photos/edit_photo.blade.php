@@ -3,6 +3,11 @@
 @section('content')
 <main class="myMain mem">
         <div class="container-fluid memd">
+        <div class= "divEditphoto">
+            <p>THUMBNAIL</p>
+<img class="videoInd"   src="/images/thumbnail/{{$data->thumbnail}}" /> 
+</div>
+
 <form action=" /admin/photos/updatePhoto/{{$data->id}}" method="POST" enctype="multipart/form-data" style="
 padding: 20px;
 ">
@@ -19,7 +24,16 @@ padding: 20px;
     <div class="form-group">
         <label style="color:white" for="location">Location</label>     
                 <input type="text" style="background-color: white; color:black" value="{{$data->location}}" name="location" id = "location" required></div>
-                
+
+                <div class="form-group">
+          <label style="color:white">Select THUMBNAIL to upload:</label>
+          <div class="form-group col-md-6"> 
+          <input type="file"  name="thumbnail" id="thumbnail" required>
+      <div class="invalid-feedback">
+               Please choose a file.
+      </div> 
+</div>   
+      <div class="form-group">       
             <button type="submit" class="btn btn-primary" id ="uploadB">Upload</button>
             </div>
 </form>

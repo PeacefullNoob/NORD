@@ -13,10 +13,6 @@
 
 Route::get('/', 'PhotoController@index');
 
-Route::resource('gallery','GalleryController');
-
-Route::resource('photo','PhotoController');
-
 Route::get('/about', function(){
     return view('app.about');
 });
@@ -31,14 +27,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
     Route::get('/photos/upload_p/{id}', 'PhotoController@upload');
     Route::post('/photos/upload_p', 'PhotoController@store');
-
     Route::get('/photos/allPhotos', 'PhotoController@allPhotos');
+    Route::post('/photos/updatePhoto/{id}', 'PhotoController@updatePhoto');
+    Route::get( '/photos/edit_photo/{id}', 'PhotoController@edit');
+    
+
+
 
     Route::get('/create', 'GalleryController@create');
     Route::get('/albums/all_albums', 'GalleryController@view_albums');
     Route::get('/albums/{id}', 'GalleryController@show');
     Route::post('/create', 'GalleryController@store');
-
-    Route::resource('photo','PhotoController');
+   
  }
 ); 

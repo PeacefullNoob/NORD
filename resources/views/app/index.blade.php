@@ -48,7 +48,7 @@
         <div class="container-fluid photos">
           <div class="glavniR">
             @foreach($photos as $photo)
-            @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg') 
+            @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG') 
         
             <div class="mojCol" data-aos="fade-up" >
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 

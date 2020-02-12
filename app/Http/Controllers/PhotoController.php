@@ -38,7 +38,7 @@ public function store(Request $request){
 
     //Upload image
     $path = $request->file('photo')->move(public_path('images'), $filenameToStore);;
-//THUMBNAIL
+   //THUMBNAIL
   //Get filename w extension
   $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
   //Samo ime

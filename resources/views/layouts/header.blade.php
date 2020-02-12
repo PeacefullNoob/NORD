@@ -16,10 +16,10 @@
     <div class="menu" id="myMenu">
       <div>
         <div >
-          <ul>
-          <li> <a href="/"><i class="fa fa-fw fa-home"></i>Home</a></li>
-            <li><a href="/about"><i class="fa fa-info-circle"></i>About</a></li>
-               <li> <a href="/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+          <ul style = "text-align: right;">
+          <li> <a href="/" class="menu__link"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="/about" class="menu__link"><i class="fa fa-info-circle"></i>About</a></li>
+               <li> <a href="/contact" class="menu__link"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
           </ul>
         </div>
       </div>

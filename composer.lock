@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b02b91942369a603053ce0fb53d72d64",
+    "content-hash": "51dd9cd922eb9f5489fb170b98831d47",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -420,6 +420,69 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "james-heinrich/getid3",
+            "version": "v1.9.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JamesHeinrich/getID3.git",
+                "reference": "c6fd499a690ae67eea2eec6b2edba5df13f60f6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/c6fd499a690ae67eea2eec6b2edba5df13f60f6f",
+                "reference": "c6fd499a690ae67eea2eec6b2edba5df13f60f6f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "^0.9 || ^1.0"
+            },
+            "suggest": {
+                "ext-SimpleXML": "SimpleXML extension is required to analyze RIFF/WAV/BWF audio files (also requires `ext-libxml`).",
+                "ext-com_dotnet": "COM extension is required when loading files larger than 2GB on Windows.",
+                "ext-ctype": "ctype extension is required when loading files larger than 2GB on 32-bit PHP (also on 64-bit PHP on Windows) or executing `getid3_lib::CopyTagsToComments`.",
+                "ext-dba": "DBA extension is required to use the DBA database as a cache storage.",
+                "ext-exif": "EXIF extension is required for graphic modules.",
+                "ext-iconv": "iconv extension is required to work with different character sets (when `ext-mbstring` is not available).",
+                "ext-json": "JSON extension is required to analyze Apple Quicktime videos.",
+                "ext-libxml": "libxml extension is required to analyze RIFF/WAV/BWF audio files.",
+                "ext-mbstring": "mbstring extension is required to work with different character sets.",
+                "ext-mysql": "MySQL extension is required to use the MySQL database as a cache storage (deprecated in PHP 5.5, removed in PHP >= 7.0, use `ext-mysqli` instead).",
+                "ext-mysqli": "MySQLi extension is required to use the MySQL database as a cache storage.",
+                "ext-rar": "RAR extension is required for RAR archive module.",
+                "ext-sqlite3": "SQLite3 extension is required to use the SQLite3 database as a cache storage.",
+                "ext-xml": "XML extension is required for graphic modules to analyze the XML metadata.",
+                "ext-zlib": "Zlib extension is required for archive modules and compressed metadata."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "getid3/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-1.0-or-later",
+                "LGPL-3.0-only",
+                "MPL-2.0"
+            ],
+            "description": "PHP script that extracts useful information from popular multimedia file formats",
+            "homepage": "https://www.getid3.org/",
+            "keywords": [
+                "codecs",
+                "php",
+                "tags"
+            ],
+            "time": "2019-12-17T21:17:26+00:00"
         },
         {
             "name": "laravel/framework",
@@ -894,16 +957,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.63",
+            "version": "1.0.64",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8132daec326565036bc8e8d1876f77ec183a7bd6"
+                "reference": "d13c43dbd4b791f815215959105a008515d1a2e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8132daec326565036bc8e8d1876f77ec183a7bd6",
-                "reference": "8132daec326565036bc8e8d1876f77ec183a7bd6",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d13c43dbd4b791f815215959105a008515d1a2e0",
+                "reference": "d13c43dbd4b791f815215959105a008515d1a2e0",
                 "shasum": ""
             },
             "require": {
@@ -915,7 +978,7 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7.10"
+                "phpunit/phpunit": "^5.7.26"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -974,7 +1037,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-01-04T16:30:31+00:00"
+            "time": "2020-02-05T18:14:17+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2334,16 +2397,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.13.1",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3"
+                "reference": "fbdeaec0df06cf3d51c93de80c7eb76e271f5a38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
-                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/fbdeaec0df06cf3d51c93de80c7eb76e271f5a38",
+                "reference": "fbdeaec0df06cf3d51c93de80c7eb76e271f5a38",
                 "shasum": ""
             },
             "require": {
@@ -2355,7 +2418,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13-dev"
+                    "dev-master": "1.14-dev"
                 }
             },
             "autoload": {
@@ -2388,7 +2451,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-11-27T13:56:44+00:00"
+            "time": "2020-01-13T11:15:53+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -2685,16 +2748,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.2",
+            "version": "v4.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "b84501ad50adb72a94fb460a5b5c91f693e99c9b"
+                "reference": "f5697ab4cb14a5deed7473819e63141bf5352c36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/b84501ad50adb72a94fb460a5b5c91f693e99c9b",
-                "reference": "b84501ad50adb72a94fb460a5b5c91f693e99c9b",
+                "url": "https://api.github.com/repos/symfony/process/zipball/f5697ab4cb14a5deed7473819e63141bf5352c36",
+                "reference": "f5697ab4cb14a5deed7473819e63141bf5352c36",
                 "shasum": ""
             },
             "require": {
@@ -2730,7 +2793,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-12-06T10:06:46+00:00"
+            "time": "2020-01-09T09:50:08+00:00"
         },
         {
             "name": "symfony/routing",

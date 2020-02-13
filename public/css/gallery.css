@@ -621,10 +621,8 @@ padding-bottom: 0px;
 margin-top: 0px;
 }
 .mojCol{
--ms-flex: 33%; /* IE10 */
-flex: 33%;
+width: 33.33%;
 position: relative;
-width: 100%;
 min-height: 1px;
 padding-right: 0px;
 padding-left: 0px;
@@ -980,4 +978,26 @@ margin-bottom: 0px;
 
 .memd{
   width: 65% !important;
+}
+
+.R{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0;
+}
+.C{
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0;
+}
+.MD{
+width: auto;
+position: relative;
+}
+.p{
+  vertical-align: middle;
+  width: 100%;
 }

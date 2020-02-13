@@ -4,8 +4,7 @@ let windowWidth = window.innerWidth;
 
 function changeIt(img)
     {
-
-let getFullImgUrl = img.src;;
+let getFullImgUrl = img.getAttribute("name");
 let container = document.body;
 let newImgWindow = document.createElement("div");
 container.appendChild(newImgWindow);
@@ -85,11 +84,6 @@ $('video').bind('contextmenu', function(e) {
   return false;
 });
 
-/* $(function() {
-  $('.mediaDivV').hover(function() {
-    $('.duration').css('display', 'none');
-  }, function() {
-    // on mouseout, reset the background colour
-    $('#duration').css('display', 'block');
-  });
-}); */
+const myLazyLoad = new LazyLoad({
+  elements_selector:".picInd"
+});

@@ -32,7 +32,7 @@ padding: 20px;
                 <div class="form-group">
           <label style="color:white">Select THUMBNAIL to upload:</label>
           <div class="form-group col-md-6"> 
-          <input type="file"  name="thumbnail" id="thumbnail" required>
+          <input type="file"  name="thumbnail" id="thumbnail" >
       <div class="invalid-feedback">
                Please choose a file.
       </div> 

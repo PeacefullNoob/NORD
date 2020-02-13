@@ -5,6 +5,8 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Photo;
 use Illuminate\Support\Facades\DB;
+use FFMpeg;
+
 class PhotoController extends Controller
 {
     public function index(){
@@ -32,13 +34,17 @@ public function store(Request $request){
     $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
     //samo extension
     $extension = $request-> file('photo') ->getclientOriginalExtension();
-    
     //create new filename
     $filenameToStore = $filename.'_'.time().'.'.$extension;
-
     //Upload image
-    $path = $request->file('photo')->move(public_path('images'), $filenameToStore);;
-   //THUMBNAIL
+ $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
+
+
+ $getID3 = new \getID3;
+$file = $getID3->analyze($path);
+$duration = date('I:s', $file['playtime_seconds']);
+
+    //THUMBNAIL
   //Get filename w extension
   $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
   //Samo ime
@@ -48,8 +54,9 @@ public function store(Request $request){
   //create new filename
   $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
   //Upload thumbnail
-  $path = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);;
-//dd($path);
+  $path1 = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);
+
+
     //Create photo
     $photo = new Photo;
     $photo->album_id= $request->input('album_id');
@@ -57,6 +64,7 @@ public function store(Request $request){
     $photo->description = $request-> input('description');
     $photo->size=200;
     $photo->media_type = $extension;
+    $photo->duration = $duration;
     $photo->location = $request-> input('location');
     $photo->photo = $filenameToStore;
     $photo->thumbnail = $filenameToStore1;
@@ -64,7 +72,6 @@ public function store(Request $request){
  
     $photo->save();
     //vraca error
-
     return redirect('/admin/albums/all_albums')->with('success','Photo uploaded');
 }
 
@@ -78,20 +85,8 @@ public function edit($id){
     return view('photos.edit_photo', compact('data'));
 }
 public function updatePhoto(Request $request, $id){
-/* $image_name = $request->hidden_image;
-$image = $request->fle('image');
-if($image != '')
-{
-
-}
-else{
-
-
-}
- */
-
 $photos = DB::table('photos')->where('id', '=', $id)->get();
-
+$data = Photo::findOrFail($id);
  $photoId = $id;
     $request->validate([
         'title' => 'required',
@@ -104,7 +99,11 @@ $photos = DB::table('photos')->where('id', '=', $id)->get();
     $title =  $request->title;
     $description = $request->description;
     $location= $request->location;
+
+
     //THUMBNAIL
+    if ($request->hasFile('thumbnail')) {
+
   //Get filename w extension
   $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
   //Samo ime
@@ -115,7 +114,13 @@ $photos = DB::table('photos')->where('id', '=', $id)->get();
   $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
   //Upload thumbnail
   $path = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);;
+        //
 
+    }
+    else{
+        $filenameToStore1 = $data->thumbnail;
+
+    } 
     DB::table('photos')->where('id', $photoId)->update([
         'title' => $title,
         'description' => $description,

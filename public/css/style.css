@@ -648,7 +648,7 @@ h1, h2, h3, h4, h5,
 
 .main-content {
   float: left;
-/*   width: calc(100% - 250px);  */
+width:100%;
 padding-bottom: 7px;
 }
   @media (max-width: 991.98px) {

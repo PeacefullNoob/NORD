@@ -52,7 +52,7 @@
         
             <div class="mojCol" data-aos="fade-up" >
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 
-                        <img class="picInd" onclick="changeIt(this)"  src="/images/{{$photo->photo}}" alt="{{$photo->title}}"  >
+                        <img class="picInd" onclick="changeIt(this)"  data-src="/images/thumbnail/{{$photo->thumbnail}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}"  >
                         <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>
@@ -66,12 +66,12 @@
 @else 
                 <div class="mojCol" data-aos="fade-up">           
                     <div id="mediaContainer" class= "mediaDivV">                 
-                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
                       
-                        <span class="ikonica"><img src="http://wptf.com/wp-content/uploads/2014/05/play-button.png" ></span>
-                          <div id="duration">
+<!--                         <span class="ikonica"><img src="http://wptf.com/wp-content/uploads/2014/05/play-button.png" ></span>
+ -->                          <div id="duration">
                             <p>
-00:00
+                            {{$photo->duration}}
 </p>
                           </div>
                           <div class="overlay">

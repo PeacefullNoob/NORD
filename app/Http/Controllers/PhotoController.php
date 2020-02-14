@@ -43,6 +43,7 @@ public function store(Request $request){
  $getID3 = new \getID3;
 $file = $getID3->analyze($path);
 $duration = date('I:s', $file['playtime_seconds']);
+//tatratra
 
     //THUMBNAIL
   //Get filename w extension

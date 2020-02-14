@@ -16,9 +16,11 @@ Route::get('/', 'PhotoController@index');
 Route::get('/about', function(){
     return view('app.about');
 });
-Route::get('/contact', function(){
+/* Route::get('/contact', function(){
     return view('app.contact');
-});
+}); */
+Route::get('/contact',"ContactMessageController@create");
+Route::post('/contact',"ContactMessageController@store");
 
 Auth::routes();
 
@@ -38,6 +40,5 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/albums/all_albums', 'GalleryController@view_albums');
     Route::get('/albums/{id}', 'GalleryController@show');
     Route::post('/create', 'GalleryController@store');
-   
  }
 ); 

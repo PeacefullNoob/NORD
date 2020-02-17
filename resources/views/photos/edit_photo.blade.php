@@ -4,7 +4,7 @@
 <main class="myMain">
         <div class="container-fluid memd">
         <div class = "row" style ="padding-bottom:20px">
-        <a class = "btn btn-info" href = "/home">Go Back</a>
+        <a class = "btn btn-info" href = "/admin/photos/allPhotos">Go Back</a>
 </div>
         <div class= "divEditphoto">
             <p>THUMBNAIL</p>

@@ -13,13 +13,24 @@
    
         <div class="allAlCol" data-aos="fade-up">
         <a href="/admin/photos/upload_p/{{$album->id}}" >
-            <img src="/images/{{$album->cover_image}}" alt="{{$album->name}}" class="allAlimg">       
-              <div class="photo-text-more">
+            <img src="/images/{{$album->cover_image}}" alt="{{$album->name}}" class="allAlimg">   
+            </a>      
+            <div class="row">
+              <div class="col-6 photo-text-more" style="
+    margin-top: 5px;
+">
               <h3 class="heading">{{$album->name}}</h3>
+              
 </div>
- </a>   
-</div>
+ 
+ 
+ <div class="col-6 editAlbum " > 
+  <a href="/admin/albums/edit_album/{{$album->id}}" >
+  <button type="button" class="btnEdit">Edit</button>
+ </div>
 
+</div>
+</div>
 @endforeach
       </div>
       </div>

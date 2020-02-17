@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Album;
+use Illuminate\Support\Facades\DB;
+
 
 class GalleryController extends Controller
 {
@@ -54,5 +56,57 @@ class GalleryController extends Controller
     return view('albums.show', compact('album'));
 
     }
+ /*    public function destroy(){
+        $album = Album::find($id);
+
+        if($album->cover_image != 'noimage.jpg'){
+            // Delete Image
+            Storage::delete('/images/'.$album->cover_image);
+        }
+    
+        $album->delete();
+        return redirect('/admin/albums/all_albums')->with('success', 'Album Removed');
+    } */
+    public function edit($id){
+        $data = Album::findOrFail($id);
+        return view('albums.edit_album', compact('data'));
+    }
+     public function updateAlbum(Request $request, $id){
+        $albums = DB::table('albums')->where('id', '=', $id)->get();
+        $data = Album::findOrFail($id);
+         $albumId = $id;
+            $request->validate([
+                'name' => 'required',
+                'description' => 'required',
+                'cover_image' => 'jpeg,png,jpg,svg'
+        
+            ]);
+            $name =  $request->name;
+            $description = $request->description;
+            //cover_image
+            if ($request->hasFile('cover_image')) {
+          //Get filename w extension
+          $filenameWithExt1 = $request->file('cover_image')->getClientOriginalName();
+          //Samo ime
+          $filename1 = pathinfo($filenameWithExt1,PATHINFO_FILENAME);
+          //samo extension
+          $extension1 = $request-> file('cover_image') ->getclientOriginalExtension();
+          //create new filename
+          $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
+          //Upload cover_image
+          $path = $request->file('cover_image')->move(public_path('images/cover_image'), $filenameToStore1);;
+
+            }else{
+                $filenameToStore1 = $data->cover_image;
+        
+            } 
+            DB::table('albums')->where('id', $albumId)->update([
+                'name' => $name,
+                'description' => $description,
+                'cover_image' => $filenameToStore1
+            ]);
+        
+           return redirect()->back()-> with('success', 'Data is successfully updated');
+        } 
  
 }

@@ -666,9 +666,10 @@ display: none; /* Hide all elements by default */
     font-weight: 300 !important;
   }
   .main-content1{
-  width: 100%;
+ 
   padding-top: 10%;
   height: 100%;
+  margin: 20px;
 
   }
   .allAlimg{
@@ -678,6 +679,11 @@ display: none; /* Hide all elements by default */
   .allAlCol{
     float: left;
       width: 20%;
+      border-color: #cec7ff;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    margin: 5px;
       
   }
   .allAlRow{
@@ -685,6 +691,7 @@ display: none; /* Hide all elements by default */
   }
   .photo-text-more{
     text-align: center;
+    color: white;
   }
 
   
@@ -1025,4 +1032,36 @@ margin: auto;
   background: #1e1e1e;
   border: 1px solid #1e1e1e;
   color: #f9f9f9 !important;
+}
+.editAlbum{
+  text-align: right;
+  margin-top: 5px;
+}
+.btnEdit{
+  border-color: cornsilk;
+  background-color: #415b81;
+  color: white;
+  border-width:1px;
+
+}
+.btnEdit:hover{
+
+  background-color: #627692;
+
+
+}
+.btnError{
+  border-width: 1px !important;
+  border-color: red !important;
+}
+.btnError:hover{
+ background-color:  #d1b2b2;
+}
+.btnSuccess{
+  border-width: 1px !important;
+  border-color: green !important;
+}
+.btnSuccess:hover{
+  background-color:  #9edf9e;
+
 }

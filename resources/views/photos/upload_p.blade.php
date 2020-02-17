@@ -4,7 +4,7 @@
 <div class="site-wrap">
     <main class="myMain" style="width:65%">
         <div class = "row" style ="padding-bottom:20px">
-            <a class = "btn btn-info" href = "/home">Go Back</a>
+            <a class = "btn btn-info" href = "/admin/albums/all_albums">Go Back</a>
             </div>
         <div class="col-12" style="margin:5px 0px 35px 0px;">
                 <h1 style="color:white;text-align: center;"> Upload media </h1>

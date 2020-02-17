@@ -9,13 +9,14 @@
     <div class="home-content"  data-aos="fade-right">
       <div class="row home-content__main">
           <h1>
-          We are here for you!
+          Welcome to Nord Media
+
           </h1>
 
-          <p>  Professional Drone Filming
+          <p>  Outdoor & real estate
+
           <br>
-          Drone Photography
-          & Video Production</p>
+          photos and video productions</p>
         </div> 
       </div>
   <ul class="home-social">

@@ -34,8 +34,8 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::get( '/photos/edit_photo/{id}', 'PhotoController@edit');
     
 
-
-
+    Route::post('/albums/updateAlbum/{id}', 'GalleryController@updateAlbum');
+    Route::get( '/albums/edit_album/{id}', 'GalleryController@edit');
     Route::get('/create', 'GalleryController@create');
     Route::get('/albums/all_albums', 'GalleryController@view_albums');
     Route::get('/albums/{id}', 'GalleryController@show');

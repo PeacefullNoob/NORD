@@ -18,7 +18,7 @@
         <th>created_at</th> 
         <th>updated_at</th> 
         <th>Options</th>
-
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
@@ -29,17 +29,14 @@
         <th>{{$photo->album_id}}</th> 
         <th>{{$photo->title}}</th>
         <th>{{$photo->description}}</th>
-        <th><img src = "/images/{{$photo->photo}}" style="
-        height: 73px;
-    width: 100px;
-"/></th>
-<th><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="
-        height: 73px;
-    width: 100px;
-"/></th>
+        <th><img src = "/images/{{$photo->photo}}" style="height: 73px;width: 100px;"/></th>
+        
+      
+<th><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>
         <th>{{$photo->created_at}}</th> 
         <th>{{$photo->updated_at}}</th> 
-        <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btn-success">Edit</button></th>
+        <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btnSuccess">Edit</button></th>
+        <th>  <a href="/admin/photos/destroy/{{$photo->id}}" ><button type="button" class="btn btnError">Delete</button></th>
   </tr>
   @endforeach
   </tbody>

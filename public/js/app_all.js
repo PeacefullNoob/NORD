@@ -1,3 +1,4 @@
+//PRIKAZ SLIKE NA KLIK
 let galleryImages = document.querySelectorAll(".glry-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
@@ -37,7 +38,7 @@ let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
         $("#iframeModal").attr('src', getFullVideoUrl);
 }); 
   
-
+//PRELOADER
 var myVar;
 
 function myFunction() {
@@ -54,7 +55,7 @@ function showPage() {
       $('body').addClass('loaded');
     });
     }); */
-
+//KOPIRANJE BROJA
  const span = document.getElementById("piid");
 
 span.onclick = function() {
@@ -86,24 +87,24 @@ $('img').bind('contextmenu', function(e) {
 $('video').bind('contextmenu', function(e) {
   return false;
 });
-
+//LAZY LOADER
 const myLazyLoad = new LazyLoad({
   elements_selector:".picInd"
 });
 
-
+//FILTER ALBUMA
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("mojCol");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    removeClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
   }
 }
 
-function w3AddClass(element, name) {
+function addClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -112,7 +113,7 @@ function w3AddClass(element, name) {
   }
 }
 
-function w3RemoveClass(element, name) {
+function removeClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -123,9 +124,6 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-
-
-// Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {

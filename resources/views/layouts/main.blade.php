@@ -29,13 +29,11 @@
                         <iframe id = "iframeModal" class="embed-responsive-item" src=""
                         allowfullscreen></iframe>
                         </div>
-                        <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" style = "color: white;
-    background: black;position: absolute;top: 2; right: 2;"data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" style = "font-size: 20px;color: white;
+    background: black;position: absolute;top: 2; right: 2;"data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i>
+</button>
                    </div>
-               <!--   <div class="modal-footer justify-content-center">   
-                     <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" data-dismiss="modal">Close</button>
-                    </div>
- -->
+          
                </div>
 
 

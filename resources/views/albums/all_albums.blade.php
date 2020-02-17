@@ -12,7 +12,7 @@
         @foreach($albums as $album)
    
         <div class="allAlCol" data-aos="fade-up">
-        <a href="/admin/albums/{{$album->id}}" >
+        <a href="/admin/photos/upload_p/{{$album->id}}" >
             <img src="/images/{{$album->cover_image}}" alt="{{$album->name}}" class="allAlimg">       
               <div class="photo-text-more">
               <h3 class="heading">{{$album->name}}</h3>

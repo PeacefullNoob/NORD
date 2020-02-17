@@ -218,7 +218,7 @@ textarea {
 button,
 input {
   overflow: visible; 
-  border-radius: 3px !important;}
+  border-radius: 3px ;}
 #cover_image{
  background-color: #f2f2f2 ;
  border-radius: 4px;

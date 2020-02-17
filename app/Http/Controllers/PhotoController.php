@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Photo;
+use App\Album;
 use Illuminate\Support\Facades\DB;
 use FFMpeg;
 
@@ -11,7 +12,8 @@ class PhotoController extends Controller
 {
     public function index(){
         $photos =DB::table('photos')->latest('created_at')->get();
-        return view('app.index')->with ('photos',$photos);  
+        $albums =Album::with('Photos')->get();
+        return view('app.index' , compact("photos","albums"));  
     }
 
    public function upload($album_id){
@@ -39,10 +41,13 @@ public function store(Request $request){
     //Upload image
  $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
 
-
+if($extension=='mp4'){
  $getID3 = new \getID3;
 $file = $getID3->analyze($path);
 $duration = date('I:s', $file['playtime_seconds']);
+} else {
+    $duration='00:00';
+}
 //tatratra
 
     //THUMBNAIL

@@ -1,5 +1,4 @@
 @extends('layouts.main')
-
 @section('content')
 <div class="site-wrap" >  
 <div id ="myIndex" class= "herovideo">
@@ -31,28 +30,28 @@
     </a></li>
   </ul>
 </div>
-
-
-
     @if(count($photos)>0)
-          <?php 
-          $colcount = count($photos);
-          $i = 1;
-          ?>
-
-
-
-
+         
 </div>
    <main class="main-content">
         <div class="container-fluid photos">
+        
+        <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  @if(count($albums)>0)
+  @foreach($albums as $album)
+  <button class="btn" onclick="filterSelection('{{$album->id}}')">{{$album->name}} </button>
+
+  @endforeach
+@endif
+</div>
           <div class="glavniR">
             @foreach($photos as $photo)
             @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG') 
-        
-            <div class="mojCol" data-aos="fade-up" >
+
+            <div class="mojCol {{$photo->album_id}}" data-aos="fade-up" >
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 
-                        <img class="picInd" onclick="changeIt(this)"  data-src="/images/thumbnail/{{$photo->thumbnail}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}"  >
+                        <img class="picInd" onclick="changeIt(this)"  data-src="/images/thumbnail/{{$photo->thumbnail}}" name="/images/{{$photo->photo}}" nameDesc="{{$photo->description}}" alt="{{$photo->title}}"  >
                         <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>
@@ -62,9 +61,9 @@
                             <p class="datumPic">  {{$photo->updated_at}} <i class="fa fa-calendar" aria-hidden="true"></i></p>
                             </div>
                           </div>  
-                          </div>  
+                          </div>     </div>  
 @else 
-                <div class="mojCol" data-aos="fade-up">           
+                <div class="mojCol {{$photo->album_id}}" data-aos="fade-up">           
                     <div id="mediaContainer" class= "mediaDivV">                 
                         <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
                       
@@ -83,23 +82,10 @@
                             <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
                             </div>
                             </div>                       
-                          </div>   
-                         
-                   
-    @endif
-   @if($i % 3 == 0)
-   @if($i==$colcount)
-   </div> 
-   @else
-          </div>
-              </div>
-            <div class="glavniR">
-            @endif 
-        @else
-            </div>
-      @endif 
-      
-      <?php $i++;?>
+                          </div>    
+                          </div>  
+
+      @endif    
 @endforeach
 </div>
 </div>

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header" style="font-size: 30px;">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,9 +14,9 @@
                         </div>
                     @endif
                     <ul>
-                    <li> <a href="/admin/create"><i class="fa fa-file-o"></i>Create Album</a></li>
-                    <li> <a href="/admin/albums/all_albums">Albums</a>
-                    <li> <a href="/admin/photos/allPhotos">All Media</a>
+           <li style="font-size: 20px;"><a href="/admin/create" style="color: #caddff;"><i class="fa fa-file-o"></i>Create Album</a></li>
+           <li style="font-size: 20px;"><a href="/admin/albums/all_albums" style="color: #caddff;">Albums</a>
+           <li style="font-size: 20px;"> <a href="/admin/photos/allPhotos" style="color: #caddff;">All Media</a>
                     </ul>
                 </div>
             </div>

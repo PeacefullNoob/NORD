@@ -5,6 +5,7 @@
 @if(count($albums)>0)
 <main class="main-content1">
         <div class="container-fluid photos">
+          
         <div class = "row" style ="padding-bottom:20px">
         <a class = "btn btn-info" href = "/home">Go Back</a>
 </div>
@@ -15,7 +16,9 @@
         <a href="/admin/photos/upload_p/{{$album->id}}" >
             <img src="/images/{{$album->cover_image}}" alt="{{$album->name}}" class="allAlimg">   
             </a>      
-            <div class="row">
+            <div class="row" style="
+    padding: 4px 2px 0px 0px;
+">
               <div class="col-6 photo-text-more" style="
     margin-top: 5px;
 ">

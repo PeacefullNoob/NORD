@@ -67,8 +67,7 @@
                     <div id="mediaContainer" class= "mediaDivV">                 
                         <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
                       
-<!--                         <span class="ikonica"><img src="http://wptf.com/wp-content/uploads/2014/05/play-button.png" ></span>
- -->                          <div id="duration">
+                         <div id="duration">
                             <p>
                             {{$photo->duration}}
 </p>

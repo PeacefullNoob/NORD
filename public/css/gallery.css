@@ -345,6 +345,14 @@ body{
   margin-top: 0;
   color: #fff;
 }
+.home-content h1:hover{
+  color: #9fbadf;
+
+}
+.home-content h1+p:hover {
+  color: #9fbadf;
+
+}
 .home-content h1+p {
   font-family: 'Kanit', sans-serif;
   font-size: 1.8rem;
@@ -640,15 +648,15 @@ display: none; /* Hide all elements by default */
 }
 
 
-.ikonica{
-/*   background-image: url('http://wptf.com/wp-content/uploads/2014/05/play-button.png');
- */  position: absolute;
+/* .ikonica{
+   background-image: url('http://wptf.com/wp-content/uploads/2014/05/play-button.png');
+   position: absolute;
   top: calc(50% - 32px);
   left: calc(50% - 24px);
   opacity: 0.6;
   z-index: 5;
   
-  }
+  } */
   .ikonica img{
     width: 80px;
     height: 80px;
@@ -715,6 +723,8 @@ display: none; /* Hide all elements by default */
   } */
   #myBtnContainer{
     display: none;
+    -moz-appearance: none;
+-webkit-appearance: none;
   }
   .img-window img {
     max-height: 41vh !important;

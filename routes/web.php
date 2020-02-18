@@ -32,8 +32,10 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/photos/allPhotos', 'PhotoController@allPhotos');
     Route::post('/photos/updatePhoto/{id}', 'PhotoController@updatePhoto');
     Route::get( '/photos/edit_photo/{id}', 'PhotoController@edit');
-    
+    Route::post('/photos/delete/{id}', 'PhotoController@delete');
 
+    
+    Route::post('/albums/delete/{id}', 'GalleryController@delete');
     Route::post('/albums/updateAlbum/{id}', 'GalleryController@updateAlbum');
     Route::get( '/albums/edit_album/{id}', 'GalleryController@edit');
     Route::get('/create', 'GalleryController@create');

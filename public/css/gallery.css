@@ -676,6 +676,12 @@ display: none; /* Hide all elements by default */
     width: 100%;
     height: 35vh;
   }
+  .allAlimg:hover{
+    opacity: 0.8;
+  }
+  .allAlCol:hover .tekstPreko{
+    display: block;
+  }
   .allAlCol{
     float: left;
       width: 20%;
@@ -998,8 +1004,6 @@ display: none; /* Hide all elements by default */
   }
 
 } 
-
-
 .memd{
   width: 65% !important;
 }
@@ -1009,7 +1013,6 @@ margin: auto;
     padding: 10px;
     height: 100%;
 }
-
 .show {
   display: block;
 }
@@ -1035,20 +1038,19 @@ margin: auto;
 }
 .editAlbum{
   text-align: right;
-  margin-top: 5px;
+
 }
 .btnEdit{
   border-color: cornsilk;
   background-color: #415b81;
   color: white;
   border-width:1px;
+  width: 75px;
+  height: auto;
 
 }
 .btnEdit:hover{
-
   background-color: #627692;
-
-
 }
 .btnError{
   border-width: 1px !important;
@@ -1065,3 +1067,24 @@ margin: auto;
   background-color:  #9edf9e;
 
 }
+.deleteAlbum{
+margin:auto;
+}
+.btnError1{
+  border-width: 1px !important;
+  border-color: red !important;
+  width: 75px;
+  height: auto;
+}
+.btnError1:hover{
+  background-color:  #d1b2b2;
+ }
+ .tekstPreko{
+ position: absolute;
+ right: 50%;
+ bottom: 50%;
+ transform: translate(50%, -10%);
+ color: white;
+ font-size: 30px;
+ display: none;
+ }

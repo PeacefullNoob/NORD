@@ -36,7 +36,12 @@
         <th>{{$photo->created_at}}</th> 
         <th>{{$photo->updated_at}}</th> 
         <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btnSuccess">Edit</button></th>
-        <th>  <a href="/admin/photos/destroy/{{$photo->id}}" ><button type="button" class="btn btnError">Delete</button></th>
+        <th> 
+        <form action="/admin/photos/delete/{{$photo->id}}" method="POST" enctype="multipart/form-data">
+        <input type="hidden" value="{{ csrf_token() }}" name="_token">
+         <button type="submit" class="btn btnError">Delete</button>
+         </form>
+         </th>
   </tr>
   @endforeach
   </tbody>

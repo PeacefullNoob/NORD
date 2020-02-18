@@ -7,7 +7,7 @@ use App\Photo;
 use App\Album;
 use Illuminate\Support\Facades\DB;
 use FFMpeg;
-
+use Storage;
 class PhotoController extends Controller
 {
     public function index(){
@@ -135,5 +135,17 @@ $data = Photo::findOrFail($id);
     ]);
 
    return redirect()->back()-> with('success', 'Data is successfully updated');
+}
+
+public function delete($id){
+    $photo = Photo::find($id);
+
+     if($photo->photo != 'noimage.jpg'){
+        // Delete Image
+        Storage::delete('/public/images/'.$photo->photo);
+    }
+
+    $photo->delete();
+    return redirect()->back()->with('success', 'Photo Removed');
 }
 }

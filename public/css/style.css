@@ -24,7 +24,8 @@ a {
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-  font-family: 'Kanit', sans-serif !important;
+  font-family: 'Fira Sans', sans-serif!important;
+
 }
 
 .border-2 {

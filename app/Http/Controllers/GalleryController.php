@@ -10,7 +10,7 @@ use Storage;
 class GalleryController extends Controller
 {
     // List Galleries
-    public function view_albums(){
+    public function index(){
         $albums =Album::with('Photos')->get();
         return view('albums.all_albums')->with ('albums',$albums);
     }
@@ -56,7 +56,7 @@ class GalleryController extends Controller
     return view('albums.show', compact('album'));
 
     }
-     public function delete($id){
+     public function destroy($id){
         $album = Album::find($id);
 
         if($album->cover_image != 'noimage.jpg'){
@@ -70,7 +70,7 @@ class GalleryController extends Controller
         $data = Album::findOrFail($id);
         return view('albums.edit_album', compact('data'));
     }
-     public function updateAlbum(Request $request, $id){
+     public function update(Request $request, $id){
         $albums = DB::table('albums')->where('id', '=', $id)->get();
         $data = Album::findOrFail($id);
          $albumId = $id;

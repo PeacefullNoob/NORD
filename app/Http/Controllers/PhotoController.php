@@ -90,7 +90,7 @@ public function edit($id){
     $data = Photo::findOrFail($id);
     return view('photos.edit_photo', compact('data'));
 }
-public function updatePhoto(Request $request, $id){
+public function update(Request $request, $id){
 $photos = DB::table('photos')->where('id', '=', $id)->get();
 $data = Photo::findOrFail($id);
  $photoId = $id;
@@ -137,7 +137,7 @@ $data = Photo::findOrFail($id);
    return redirect()->back()-> with('success', 'Data is successfully updated');
 }
 
-public function delete($id){
+public function destroy($id){
     $photo = Photo::find($id);
 
      if($photo->photo != 'noimage.jpg'){

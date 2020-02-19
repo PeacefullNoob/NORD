@@ -1,4 +1,5 @@
 @extends('layouts.main')
+
 @section('content')
 <div class="site-wrap" >  
 <div id ="myIndex" class= "herovideo">
@@ -8,15 +9,16 @@
 </video>
     <div class="home-content"  data-aos="fade-right">
       <div class="row home-content__main">
+      <div class ="naslov">
           <h1>
-          Welcome to Nord Media
+          Outdoor & real estate 
 
           </h1>
+          <h3>photos and video productions
 
-          <p>  Outdoor & real estate
-
-          <br>
-          photos and video productions</p>
+          </h3>
+</div>
+          <p>At Nord we specialize in photo sessions and video productions for outdoor</br> & real estate experiences. With our knowledge, creativity and experience</br> we can always bring beautiful, exciting and compelling visual stories for your brand.</p>
         </div> 
       </div>
   <ul class="home-social">

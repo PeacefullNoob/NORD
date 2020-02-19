@@ -62,7 +62,8 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 }
 
 body{
-  font-family: 'Kanit', sans-serif !important;
+ /*  font-family: 'Kanit', sans-serif !important; */
+  font-family: 'Fira Sans', sans-serif!important;
 
 }
 
@@ -328,18 +329,27 @@ body{
 }
 
 .home-content__main {
-  padding-top: 15rem;
+  padding-top: 11rem;
   padding-right: 2rem;
   position: relative;
   animation-duration: 2s;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  padding-left: 12%;
+  padding-left: 10%;
   display: inherit !important;
-
+  color: white;
+}
+.naslov{
+  text-align:right;
+  width: 555px;;
+}
+.home-content__main p{
+  opacity: 0.8;
+}
+.naslov h3{
+  opacity: 0.9;
 }
 .home-content h1 {
-  font-family: 'Kanit', sans-serif;
   font-size: 3.5rem;
   line-height: 1.1;
   margin-top: 0;
@@ -354,7 +364,6 @@ body{
 
 }
 .home-content h1+p {
-  font-family: 'Kanit', sans-serif;
   font-size: 1.8rem;
   line-height: 1.421;
   color: rgba(255,255,255,.8);

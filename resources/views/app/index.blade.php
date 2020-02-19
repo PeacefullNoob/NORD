@@ -18,7 +18,8 @@
 
           </h3>
 </div>
-          <p>At Nord we specialize in photo sessions and video productions for outdoor</br> & real estate experiences. With our knowledge, creativity and experience</br> we can always bring beautiful, exciting and compelling visual stories for your brand.</p>
+          <p>At Nord we specialize in photo sessions and video productions for outdoor</br> & real estate experiences. With our knowledge, creativity and experience
+          </br> we can always bring beautiful, exciting and compelling visual stories for your brand.</p></br>
         </div> 
       </div>
   <ul class="home-social">

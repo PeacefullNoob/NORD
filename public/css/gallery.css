@@ -330,7 +330,6 @@ body{
 
 .home-content__main {
   padding-top: 11rem;
-  padding-right: 2rem;
   position: relative;
   animation-duration: 2s;
   -webkit-animation-name: fadeIn;
@@ -340,8 +339,9 @@ body{
   color: white;
 }
 .naslov{
-  text-align:right;
-  width: 555px;;
+ margin-bottom: 25px;
+ letter-spacing: 1px;
+
 }
 .home-content__main p{
   opacity: 0.8;
@@ -354,14 +354,7 @@ body{
   line-height: 1.1;
   margin-top: 0;
   color: #fff;
-}
-.home-content h1:hover{
-  color: #9fbadf;
-
-}
-.home-content h1+p:hover {
-  color: #9fbadf;
-
+  font-weight: 600;
 }
 .home-content h1+p {
   font-size: 1.8rem;
@@ -711,8 +704,8 @@ display: none; /* Hide all elements by default */
 
   
   @media screen and (max-width: 320px) {
-    .home-social li {
-      display: flex !important;
+    .home-social {
+      font-size: 10px !important;
   }
   #picAbout {
     
@@ -752,8 +745,9 @@ display: none; /* Hide all elements by default */
     max-height: 41vh !important;
   }
   .home-content h1 {
-    font-size: 30px;
+    font-size: 34px;
   }
+
   #duration p {
 
     font-size: 10px;
@@ -762,9 +756,12 @@ display: none; /* Hide all elements by default */
   left: calc(50% - 35px);
 
 }
-  .home-content h1+p {
-    font-size: 17px;
-    padding-left: 0rem;
+  .home-content p {
+    font-size: 14px !important;
+  }
+  .home-content h3 {
+    font-size: 23px;
+
   }
 
   #piidm i{
@@ -807,12 +804,12 @@ display: none; /* Hide all elements by default */
    padding: 0 !important;
   }
   .mediaDiv { 
-    height: 40vh;
+    height: 40vh !important;
 
         }
   
         .mediaDivV { 
-           height: 40vh; 
+           height: 40vh !important; 
  
                 }
               
@@ -898,9 +895,11 @@ display: none; /* Hide all elements by default */
   }
 
 
-  .home-content h1+p {
-    font-size: 20px;
-    padding-left: 0rem;
+  .home-content p {
+    font-size: 17px;
+  }
+  .home-content h3 {
+    font-size: 24px;
   }
 
 
@@ -980,8 +979,18 @@ display: none; /* Hide all elements by default */
         width: 70% !important; 
        
     }
-}
 
+}
+@media (max-width: 1500px) {
+
+.mediaDiv{
+  height: 25vh;
+      }
+      .mediaDivV{
+        height: 25vh;
+  
+      }
+    }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1900px) {
   .home-content h1+p {
@@ -1046,13 +1055,11 @@ margin: auto;
   color: #f9f9f9 !important;
 }
 .editAlbum{
-  text-align: right;
+  text-align: center;
 
 }
 .btnEdit{
-  border-color: cornsilk;
-  background-color: #415b81;
-  color: white;
+  border-color:#415b81 ;
   border-width:1px;
   width: 75px;
   height: auto;
@@ -1077,8 +1084,7 @@ margin: auto;
 
 }
 .deleteAlbum{
-margin:auto;
-}
+text-align: center;}
 .btnError1{
   border-width: 1px !important;
   border-color: red !important;
@@ -1096,4 +1102,11 @@ margin:auto;
  color: white;
  font-size: 30px;
  display: none;
+ }
+
+ .adminMain{
+   margin-top:20px !important;
+ }
+ .card{
+   color:white;
  }

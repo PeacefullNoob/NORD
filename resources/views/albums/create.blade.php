@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
 <div class="site-wrap">
 
-  <main class="myMain">
+  <main class="myMain adminMain">
   <div class = "container-fluid">
   <div class = "row" style ="padding-bottom:20px">
         <a class = "btn btn-info" href = "/home">Go Back</a>

@@ -1,7 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
-<main class="myMain">
+<main class="myMain adminMain">
         <div class="container-fluid memd">
         <div class = "row" style ="padding-bottom:20px">
         <a class = "btn btn-info" href = "/admin/albums/all_albums">Go Back</a>

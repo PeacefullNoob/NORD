@@ -1,8 +1,8 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
 <div class="site-wrap">
-    <main class="myMain" style="width:65%">
+    <main class="myMain adminMain" style="width:65%">
         <div class = "row" style ="padding-bottom:20px">
             <a class = "btn btn-info" href = "/admin/albums/all_albums">Go Back</a>
             </div>
@@ -41,7 +41,7 @@
           <hr>
           {{Form::hidden('album_id',$album_id)}}
           <div class="row form-group">
-                      <div class="col-md-12" style="text-align:center">        
+                      <div class="col-md-12" style="text-align:right">        
             <button type="submit" class="btn btn-primary" id ="uploadB">Upload</button>
             </div> 
             </div> 

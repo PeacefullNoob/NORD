@@ -1,7 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
-<main class="myMain mem">
+<main class="myMain adminMain mem">
         <div class="container-fluid photos">
         <div class = "row" style ="padding-bottom:20px">
         <a class = "btn btn-info" href = "/home">Go Back</a>

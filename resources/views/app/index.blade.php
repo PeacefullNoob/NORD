@@ -11,10 +11,10 @@
       <div class="row home-content__main">
       <div class ="naslov">
           <h1>
-          Outdoor & real estate 
+          Outdoor & Real estate 
 
           </h1>
-          <h3>photos and video productions
+          <h3>Photos & Video productions
 
           </h3>
 </div>

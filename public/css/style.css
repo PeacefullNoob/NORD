@@ -1,7 +1,6 @@
 /* Base */
 body {
   line-height: 1.7;
-  color: gray;
   font-weight: 400;
   font-size: 1rem;
   background-color: #0A172E;
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5,
 .form-control {
   border: none;
   border-bottom: 2px solid gray;
-  border-radius: 0;
+  border-radius: 2px;
   background: #fff;
   color: #fff;
   padding-left: 0;

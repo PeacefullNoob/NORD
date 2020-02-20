@@ -55,21 +55,21 @@ Even if you think you have a really hard one for us, bring it on because one thi
 
                   <div class="card-deck about">
   <div class="card" style="    background-color: transparent;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="/images/aleksandarseter.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Aleksandar</h5>
       <p class="text-muted">Drone pilot, video editor, hiker, biker, nature lover. Love eating domestic food, can wake up at 4:30am if needed to take a great shot.</p>
     </div>
   </div>
   <div class="card" style="    background-color: transparent;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="/images/andrej.jpeg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Andrej</h5>
       <p class="text-muted">Camera man, photography guru. There is a belief that he could tell story of a lifetime in one single frame.</p>
     </div>
   </div>
   <div class="card" style="    background-color: transparent;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="/images/NadaVojinovic.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Nada</h5>
       <p class="text-muted">Visual storyteller, creative director, snowboarder, crossfiter. Should spend less time injuring himself by doing sports.</p>

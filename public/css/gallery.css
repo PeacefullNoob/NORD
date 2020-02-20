@@ -1118,3 +1118,7 @@ text-align: center;}
   margin-bottom: 20px !important;
 
 }
+.card-img-top{
+height: 40vh;
+    object-fit: cover;
+} 

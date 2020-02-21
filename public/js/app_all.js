@@ -47,7 +47,7 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader-wrapper").style.display = "none";
-  document.getElementById("glavniDiv").style.display = "block";
+  document.getElementById("glavniDiv").style.display = "grid";
 }
 //PRELOADER
 /* $(document).ready(function() {

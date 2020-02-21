@@ -345,7 +345,7 @@ body{
   animation-duration: 2s;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  padding-left: 10%;
+  padding-left: 15%;
   display: inherit !important;
   color: white;
 }
@@ -733,7 +733,11 @@ display: none; /* Hide all elements by default */
   font-size: 12px;
   }
   }
-
+  @media (max-width: 330px) {
+body{
+  width: 105% !important;
+}
+  }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

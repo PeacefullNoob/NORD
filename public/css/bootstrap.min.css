@@ -4428,8 +4428,7 @@ button.close {
   outline: 0; }
 
 .modal-dialog {
-  position: relative;
-  width: auto;
+ 
   margin: 0.5rem;
   pointer-events: none; }
   .modal.fade .modal-dialog {
@@ -4473,7 +4472,7 @@ button.close {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 110%;
+  width: 100%;
   pointer-events: auto;
   background-clip: padding-box;
   border-radius: 0.3rem;

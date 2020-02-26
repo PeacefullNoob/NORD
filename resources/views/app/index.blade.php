@@ -41,19 +41,22 @@
         <div class="container-fluid photos">
         
         <div id="myBtnContainer">
+        <div class="dx">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   @if(count($albums)>0)
   @foreach($albums as $album)
+
   <button class="btn" onclick="filterSelection('{{$album->id}}')">{{$album->name}} </button>
 
   @endforeach
 @endif
-</div>
-          <div class="glavniR">
+</div> 
+</div> 
+          <div class="glavniR" id="glavni">
             @foreach($photos as $photo)
             @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG') 
 
-            <div class="mojCol {{$photo->album_id}}" data-aos="fade-up" >
+            <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true" >
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 
                         <img class="picInd" onclick="changeIt(this)"  data-src="/images/thumbnail/{{$photo->thumbnail}}" name="/images/{{$photo->photo}}" nameDesc="{{$photo->description}}" alt="{{$photo->title}}"  >
                         <div class="overlay">
@@ -67,15 +70,10 @@
                           </div>  
                           </div>     </div>  
 @else 
-                <div class="mojCol {{$photo->album_id}}" data-aos="fade-up">           
+                <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true">           
                     <div id="mediaContainer" class= "mediaDivV">                 
                         <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
-                      
-                         <div id="duration">
-                            <p>
-                            {{$photo->duration}}
-</p>
-                          </div>
+                        <span class="ikonica"><img src="/images/Play-BUTTON.svg" ></span>
                           <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>

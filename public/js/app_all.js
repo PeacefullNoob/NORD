@@ -1,3 +1,6 @@
+AOS.init({offset: 120});
+
+
 //PRIKAZ SLIKE NA KLIK
 let galleryImages = document.querySelectorAll(".glry-img");
 let getLatestOpenedImg;
@@ -34,7 +37,6 @@ $('#modal1').on('hidden.bs.modal', function (e) {
     { */
   $("#modal1").on('show.bs.modal', function(e){
 let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
-    console.log(getFullVideoUrl);
         $("#iframeModal").attr('src', getFullVideoUrl);
 }); 
   
@@ -47,14 +49,9 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader-wrapper").style.display = "none";
-  document.getElementById("glavniDiv").style.display = "block";
+  document.getElementById("glavniDiv").style.display = "grid";
 }
-//PRELOADER
-/* $(document).ready(function() {
-    setTimeout(function(){
-      $('body').addClass('loaded');
-    });
-    }); */
+
 //KOPIRANJE BROJA
  const span = document.getElementById("piid");
 
@@ -97,13 +94,12 @@ filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("mojCol");
-  if (c == "all") c = "";
+  if (c == "all")  c = "";
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
   }
 }
-
 function addClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -112,7 +108,6 @@ function addClass(element, name) {
     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
   }
 }
-
 function removeClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -133,3 +128,25 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+$(".btn").click(function() {
+  AOS.refresh();
+}); 
+
+
+
+$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+
+  for (var i=0;i<4;i++) {
+    next=next.next();
+    if (!next.length) {
+      next=$(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+  }
+});

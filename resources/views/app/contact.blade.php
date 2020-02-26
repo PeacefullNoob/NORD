@@ -7,11 +7,11 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         
-        <div class="col-md-8 pt-4"  data-aos="fade-right">
+        <div class="col-md-8"  data-aos="fade-right">
      
 
           <div class="row justify-content-center">
-            <div class="col-md-10" style="padding:5%">
+            <div class="col-md-10" style="padding:1%">
               <h3 class="text-white mb-4" style="padding-bottom:5%" style="text-align:center">Contact us</h3>
               
 

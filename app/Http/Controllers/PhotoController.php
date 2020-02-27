@@ -29,6 +29,7 @@ public function store(Request $request){
     'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
     ]);
+    if ($request->hasFile('photo')) {
 //PHOTO
     //Get filename w extension
     $filenameWithExt = $request->file('photo')->getClientOriginalName();
@@ -40,6 +41,10 @@ public function store(Request $request){
     $filenameToStore = $filename.'_'.time().'.'.$extension;
     //Upload image
  $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
+    }else{
+        $filenameToStore="null";
+        $extension="null";
+    }
 
 if($extension=='mp4'){
  $getID3 = new \getID3;
@@ -48,8 +53,8 @@ $duration = date('I:s', $file['playtime_seconds']);
 } else {
     $duration='00:00';
 }
-//tatratra
 
+//
     //THUMBNAIL
   //Get filename w extension
   $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
@@ -71,11 +76,11 @@ $duration = date('I:s', $file['playtime_seconds']);
     $photo->$description;
     $photo->size=200;
     $photo->media_type = $extension;
-    $photo->duration = $duration;
     $photo->location = $request-> input('location');
     $photo->photo = $filenameToStore;
     $photo->thumbnail = $filenameToStore1;
     $photo->user_id = auth()->user()->id;
+    $photo->url = $request-> input('url');
  
     $photo->save();
     //vraca error
@@ -148,5 +153,11 @@ public function destroy($id){
 
     $photo->delete();
     return redirect()->back()->with('success', 'Photo Removed');
+}
+
+
+public function views(Request $request){
+    $photo = Photo::findOrFail($request->id);
+    DB::table('photos')->where('id', $photo->id)->increment('views');
 }
 }

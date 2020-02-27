@@ -18,6 +18,7 @@ Route::get('/about', function(){
 });
 Route::get('/contact',"ContactMessageController@create");
 Route::post('/contact',"ContactMessageController@store");
+Route::post('/views',"PhotoController@views");
 
 Auth::routes();
 

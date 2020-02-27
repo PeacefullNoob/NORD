@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDuration1ToPhotos extends Migration
+class AddViewsColumnToPhotos extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddDuration1ToPhotos extends Migration
     public function up()
     {
         Schema::table('photos', function (Blueprint $table) {
-            $table->string('duration1')->nullable();
+            $table->bigIncrements('views')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddDuration1ToPhotos extends Migration
     public function down()
     {
         Schema::table('photos', function (Blueprint $table) {
-            $table->dropColumn('duration1');
+                $table->dropColumn('views');
         });
     }
 }

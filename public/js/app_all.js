@@ -8,6 +8,7 @@ let windowWidth = window.innerWidth;
 
 function changeIt(img)
     {
+      
 let getFullImgUrl = img.getAttribute("name");
 let container = document.body;
 let newImgWindow = document.createElement("div");
@@ -22,6 +23,20 @@ let newImg = document.createElement("img");
 newImgWindow.appendChild(newImg);
 newImg.setAttribute("src", getFullImgUrl); 
 newImg.id="myPic";
+$.ajax({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  },
+  method: "post",
+  url: "/views",
+  data:  {id: indexx},
+  dataType: "JSON",
+  
+  success: function(data){
+    console.log(data);
+  }
+});
+
 }
 
 function closeImg(){
@@ -37,6 +52,20 @@ $('#modal1').on('hidden.bs.modal', function (e) {
     { */
   $("#modal1").on('show.bs.modal', function(e){
 let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
+let indexx=$(e.relatedTarget).data('index');
+$.ajax({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  },
+  method: "post",
+  url: "/views",
+  data:  {id: indexx},
+  dataType: "JSON",
+  
+  success: function(data){
+    console.log(data);
+  }
+});
         $("#iframeModal").attr('src', getFullVideoUrl);
 }); 
   

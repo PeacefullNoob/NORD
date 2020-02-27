@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" >
         <nav class="navbar navbar-expand-md  shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="/home">
@@ -83,7 +83,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" >
             @yield('content')
         </main>
     </div>

@@ -23,10 +23,14 @@
           <label style="color:white" for="description">Media Description</label>
                 <textarea class = "form-control"  style="background-color: white; color:black" name="description" rows="3"  id="description" >  </textarea>
           </div>
+          <div class="form-group ">
+          <label style="color:white" for="url">Media URL</label>
+          <input type="text"  class="form-control" placeholder="Enter video URL" style="background-color: white; color:black" name="url" id = "url" >   
+          </div>
           <hr>
           <div class="form-group mt-3">
           <label style="color:white">Select file to upload:</label>
-                    <input type="file"  name="photo" id="photo" required>
+                    <input type="file"  name="photo" id="photo" >
                     <div class="invalid-feedback">
                     Please choose a file.
                     </div>

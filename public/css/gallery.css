@@ -353,30 +353,17 @@ body{
 }
 .naslov{
  margin-bottom: 25px;
-<<<<<<< HEAD
  letter-spacing: 1px;
  color: white;
 
-=======
- letter-spacing: 1.4px;
-color: white;
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
 }
 .home-content__main p{
   opacity: 0.95;
   color: white;
-<<<<<<< HEAD
-=======
-
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
 }
 .naslov h3{
   opacity: 0.95;
   color: white;
-<<<<<<< HEAD
-=======
-
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
 }
 .home-content h1 {
   font-size: 3.5rem;
@@ -746,6 +733,7 @@ body{
 }
   }
 
+
 @media screen and (max-height: 430px) {
   .sidenav {padding-top: 15px;}
   .sidenav .nava li a {font-size: 18px;}
@@ -791,9 +779,8 @@ body{
     height: 100%;
     opacity: 0.95;
   }
-<<<<<<< HEAD
-=======
-  } */
+
+  } 
 
   .menu-wrap .menu > div > div > ul > li > a {
 
@@ -806,7 +793,7 @@ body{
     height: 100%;
     opacity: 0.95;
   }
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
+
   #myBtnContainer{
     /* display: none;
     -moz-appearance: none;
@@ -830,16 +817,13 @@ body{
   left: calc(50% - 35px);
 }
   .home-content p {
-<<<<<<< HEAD
+
     font-size: 14px !important;
-=======
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
+
     display: none;
   }
   .home-content h3 {
     font-size: 23px;
-<<<<<<< HEAD
-=======
   }
   .home-content__main {
     padding-top:90%;
@@ -848,14 +832,7 @@ body{
     letter-spacing: 2px;
 
     
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
-  }
-  .home-content__main {
-    padding-top:90%;
-    padding-left: 25%;
-    padding-right: 20%;
-    letter-spacing: 2px;
-  }	  
+  }  
   #piidm i{
    display: block !important;
    font-size: 25px;
@@ -942,8 +919,7 @@ body{
    height: auto;
     padding: 3px !important;
   }
-<<<<<<< HEAD
-=======
+
   .modal-dialog{
 
    position: absolute;
@@ -955,7 +931,7 @@ body{
    overflow: auto;
   }
 
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
+
   .sidenav {
     padding-top: 15px;
   }
@@ -972,9 +948,7 @@ body{
   padding-right: 3px !important;
 
 }
-  }
-
-
+  
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 880px) {
   .img-window img {
@@ -1206,7 +1180,7 @@ text-align: center;}
 height: 40vh;
     object-fit: cover;
 } 
-<<<<<<< HEAD
+
 .dx {
   overflow-y: hidden;
   white-space: nowrap;
@@ -1233,5 +1207,4 @@ height: 40vh;
     margin-top: -50%;
     margin-left: -50%;
   }
-=======
->>>>>>> 80fc804d1a66ad24a31b65f89a5f16bf22c38bf9
+

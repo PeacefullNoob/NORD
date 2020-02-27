@@ -9,7 +9,6 @@
 <table class="table table-hover">
     <thead>
     <tr>
-        <th>ID</th> 
         <th>AlbumID</th> 
         <th>Title</th>
         <th>Description</th>
@@ -24,8 +23,6 @@
     <tbody>
 @foreach($photos as $photo)
 <tr>
-   
-    <th>{{$photo->id}}</th> 
         <th>{{$photo->album_id}}</th> 
         <th>{{$photo->title}}</th>
         <th>{{$photo->description}}</th>

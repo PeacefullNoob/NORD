@@ -7,7 +7,7 @@
       <video playsinline autoplay="autoplay" loop  muted id="bgvideo" width="x" height="y">
 <source src="/images/00004b.mp4" type="video/mp4">
 </video>
-    <div class="home-content"  data-aos="fade-right">
+    <div class="home-content">
       <div class="row home-content__main">
       <div class ="naslov">
           <h1>

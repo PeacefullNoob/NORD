@@ -21,7 +21,7 @@
           </div>
           <div class="form-group ">
           <label style="color:white" for="description">Media Description</label>
-                <textarea class = "form-control"  style="background-color: white; color:black" name="description" rows="3"  id="description" required>  </textarea>
+                <textarea class = "form-control"  style="background-color: white; color:black" name="description" rows="3"  id="description" >  </textarea>
           </div>
           <hr>
           <div class="form-group mt-3">

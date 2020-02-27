@@ -38,11 +38,12 @@ class GalleryController extends Controller
 
         //Upload image
         $path = $request->file('cover_image')->move(public_path('images'),$filenameToStore);
-
-        //Create album
+        $description = $request-> input('description');
+   
+       //Create album
         $album = new Album;
         $album->name = $request-> input('name');
-        $album->description = $request-> input('description');
+        $album->$description;
         $album->cover_image = $filenameToStore;
         $album ->save();
         //vraca error

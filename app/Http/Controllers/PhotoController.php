@@ -62,12 +62,13 @@ $duration = date('I:s', $file['playtime_seconds']);
   //Upload thumbnail
   $path1 = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);
 
-
+  
+  $description = $request-> input('description');
     //Create photo
     $photo = new Photo;
     $photo->album_id= $request->input('album_id');
     $photo->title = $request-> input('title');
-    $photo->description = $request-> input('description');
+    $photo->$description;
     $photo->size=200;
     $photo->media_type = $extension;
     $photo->duration = $duration;

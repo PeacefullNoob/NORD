@@ -103,12 +103,12 @@ h1, h2, h3, h4, h5,
   border: none;
   border-bottom: 2px solid gray;
   border-radius: 2px;
-  background: #fff;
-  color: #fff;
+  background: white;
+  color: black;
   padding-left: 10px;
   padding-right: 10px; }
   .form-control:active, .form-control:focus {
-    color: #fff;
+    color: white;
     background: none;
     -webkit-box-shadow: none;
     box-shadow: none;

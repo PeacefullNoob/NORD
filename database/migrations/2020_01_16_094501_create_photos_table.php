@@ -18,7 +18,7 @@ class CreatePhotosTable extends Migration
             $table->integer('album_id');
             $table->string('title');
             $table->string('size');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('photo');
             $table->string('media_type');
             $table->timestamps();

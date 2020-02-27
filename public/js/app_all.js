@@ -41,15 +41,19 @@ let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
 }); 
   
 //PRELOADER
+
 var myVar;
 
 function myFunction() {
-  myVar = setTimeout(showPage, 1500);
+  myVar = setTimeout(showPage, 300);
 }
 
 function showPage() {
   document.getElementById("loader-wrapper").style.display = "none";
   document.getElementById("glavniDiv").style.display = "grid";
+  /* document.body.style.overflow = "auto";
+  document.body.style.height = "auto"; */
+
 }
 
 //KOPIRANJE BROJA

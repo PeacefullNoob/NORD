@@ -58,7 +58,7 @@
 
             <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true" >
                   <div id="mediaContainer" class= "mediaDiv glry-img"> 
-                        <img class="picInd" onclick="changeIt(this)"  data-src="/images/thumbnail/{{$photo->thumbnail}}" name="/images/{{$photo->photo}}" nameDesc="{{$photo->description}}" alt="{{$photo->title}}"  >
+                        <img class="picInd" onclick="changeIt(this)"  data-src="/images/thumbnail/{{$photo->thumbnail}}" data-value="{{$photo->id}}" name="/images/{{$photo->photo}}"  alt="{{$photo->title}}"  >
                         <div class="overlay">
                           <div class = "col-md-6 headOver" >
                             <h4 class="heading">{{$photo->title}}</h4>
@@ -73,7 +73,7 @@
 @else 
                 <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true">           
                     <div id="mediaContainer" class= "mediaDivV">                 
-                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
                         <span class="ikonica"><img src="/images/Play-BUTTON.svg" ></span>
                           <div class="overlay">
                           <div class = "col-md-6 headOver" >

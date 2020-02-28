@@ -270,19 +270,31 @@
   margin: auto;
   margin-top: 10%;
   }
-  /*Pocetna strana */
-  /*    #myIndex{
 
-  background-image: url(/images/100_0009_20191007194656_1580218428.jpg);
-  background-size: cover;
-  background-position: center top;
-  }  */
-  .divEditphoto{
-  width: 150px;
-  height: 160px;
+  
+  .divEditAlbum{
+  width: 35%;
+  padding-right: 3%;
+  border-right: solid;
+  border-width: 2px;
   position: relative;
-  align-content: center;
   margin: auto;
+  }
+  .divEditAlbum h3{
+    text-align: center;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border-radius: 3px;
+    }
+    .divEditAlbum img{
+      border-radius: 5px;
+
+    }
+  .divEditAl{
+    padding-left: 3%;
+    width: 60%;
+    position: relative;
+    margin: auto;
   }
   .heroVideo{
   width: 100%;
@@ -1023,14 +1035,27 @@
 
       } 
   .memd{
-  width: 65% !important;
+  width: 70% !important;
   }
   .uploadPDiv{
-  margin: auto;
   width: 60%;
-  padding: 10px;
   height: 100%;
+  padding-right: 5%;
+  border-right: solid;
+  margin: 15px 0px 15px 5px;
   }
+  .uploadPDiv2{
+    width: 38%;
+    height: 100%;
+    position: relative;
+    padding-left: 5%;
+    margin: 15px 5px 15px 0px;
+
+    }
+    .fas{
+      padding-bottom: 2%;
+    }
+
 
   #myBtnContainer{
   padding-bottom: 30px;
@@ -1050,7 +1075,7 @@
   #myBtnContainer .active{
   background: #1e1e1e;
   border: 1px solid #1e1e1e;
-  color: #f9f9f9 !important;
+  color: #c4a7a7 !important;
   }
   .editAlbum{
   text-align: center;
@@ -1141,4 +1166,15 @@
   margin-top: -50%;
   margin-left: -50%;
   }
-
+.formaUpload{
+  
+    background-color: rgba(0,0,0,0.1);
+    margin: auto;
+    padding: 2%;
+}
+.form-group h3{
+  text-align: center;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border-radius: 3px;
+}

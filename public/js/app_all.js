@@ -12,6 +12,7 @@ function changeIt(img)
 let getFullImgUrl = img.getAttribute("name");
 let container = document.body;
 let newImgWindow = document.createElement("div");
+let id = img.getAttribute("data-value");
 /* var para = document.createElement("P");              
 para.innerText =img.getAttribute("nameDesc"); ;         */       
 container.appendChild(newImgWindow);
@@ -29,7 +30,7 @@ $.ajax({
   },
   method: "post",
   url: "/views",
-  data:  {id: indexx},
+  data:  {id: id},
   dataType: "JSON",
   
   success: function(data){
@@ -52,7 +53,9 @@ $('#modal1').on('hidden.bs.modal', function (e) {
     { */
   $("#modal1").on('show.bs.modal', function(e){
 let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
+let urlPocetni = "https://www.youtube.com/embed/";
 let indexx=$(e.relatedTarget).data('index');
+
 $.ajax({
   headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

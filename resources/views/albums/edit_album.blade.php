@@ -6,10 +6,17 @@
         <div class = "row" style ="padding-bottom:20px">
         <a class = "btn btn-info" href = "/admin/albums/all_albums">Go Back</a>
 </div>
-        <div class= "divEditphoto">
+<div class = "row" >
+<div class="col-12" style="margin:5px 0px 35px 0px;">
+                <h1 style="color:white;text-align: center;"> Edit Album </h1>
+                </div>
+        <div class= "divEditAlbum">
+        <h3>Photo
+</h3>      
 <img    src="/images/{{$data->cover_image}}" style="    width: 100%;
 "/> 
 </div>
+<div class= "divEditAl">
 <form action=" /admin/albums/updateAlbum/{{$data->id}}" method="POST" enctype="multipart/form-data" style="
 padding: 20px;
 ">
@@ -38,6 +45,8 @@ padding: 20px;
             </div>
             </div>
 </form>
+</div>
+</div>
         </div>
 </main>
 

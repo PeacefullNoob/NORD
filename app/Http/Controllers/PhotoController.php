@@ -11,7 +11,7 @@ use Storage;
 class PhotoController extends Controller
 {
     public function index(){
-        $photos =DB::table('photos')->latest('created_at')->get();
+        $photos =DB::table('photos')->orderBy('views', 'desc')->get();
         $albums =Album::with('Photos')->get();
         return view('app.index' , compact("photos","albums"));  
     }

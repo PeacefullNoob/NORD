@@ -6,12 +6,16 @@
         <div class = "row" style ="padding-bottom:20px">
         <a class = "btn btn-info" href = "/admin/photos/allPhotos">Go Back</a>
 </div>
-        <div class= "divEditphoto">
-            <p>THUMBNAIL</p>
+<div class = "row" >
+<div class="col-12" style="margin:5px 0px 35px 0px;">
+                <h1 style="color:white;text-align: center;"> Edit Album </h1>
+                </div>
+        <div class= "divEditAlbum">
+            <h3>THUMBNAIL</h3>
 <img    src="/images/thumbnail/{{$data->thumbnail}}" style="    width: 100%;
 "/> 
 </div>
-
+<div class= "divEditAl">
 <form action=" /admin/photos/updatePhoto/{{$data->id}}" method="POST" enctype="multipart/form-data" style="
 padding: 20px;
 ">
@@ -43,7 +47,10 @@ padding: 20px;
             </div>
             </div>
 </form>
+</div>
         </div>
+        </div>
+
 </main>
 
 @endsection

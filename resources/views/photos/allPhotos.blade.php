@@ -12,6 +12,7 @@
         <th>AlbumID</th> 
         <th>Title</th>
         <th>Description</th>
+        <th>Url</th>
         <th>Media</th>
         <th>Thumbnail</th> 
         <th>created_at</th> 
@@ -23,9 +24,13 @@
     <tbody>
 @foreach($photos as $photo)
 <tr>
-        <th>{{$photo->album_id}}</th> 
+        @php
+        $album = DB::table('albums')->where('id', $photo->album_id)->first();
+        @endphp
+        <th>{{$album->name}}</th> 
         <th>{{$photo->title}}</th>
         <th>{{$photo->description}}</th>
+        <th>{{$photo->url}}</th>
         <th><img src = "/images/{{$photo->photo}}" style="height: 73px;width: 100px;"/></th>
         
       

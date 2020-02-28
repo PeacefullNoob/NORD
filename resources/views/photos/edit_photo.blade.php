@@ -8,17 +8,31 @@
 </div>
 <div class = "row" >
 <div class="col-12" style="margin:5px 0px 35px 0px;">
-                <h1 style="color:white;text-align: center;"> Edit Album </h1>
+                <h1 style="color:white;text-align: center;"> Edit Media </h1>
                 </div>
+                <form action=" /admin/photos/updatePhoto/{{$data->id}}" method="POST" enctype="multipart/form-data" style="
+padding: 20px;
+    display: flex;
+    width: 100%;
+
+">
         <div class= "divEditAlbum">
             <h3>THUMBNAIL</h3>
 <img    src="/images/thumbnail/{{$data->thumbnail}}" style="    width: 100%;
 "/> 
+<div class="form-group">
+          <label style="color:white">Select THUMBNAIL to upload:</label>
+          <div class="form-group"> 
+          <input type="file"  name="thumbnail" id="thumbnail" >
+      <div class="invalid-feedback">
+               Please choose a file.
+      </div> 
+</div>   
+</div>  
 </div>
+
 <div class= "divEditAl">
-<form action=" /admin/photos/updatePhoto/{{$data->id}}" method="POST" enctype="multipart/form-data" style="
-padding: 20px;
-">
+
 @csrf
 
     <div class="form-group">   
@@ -31,23 +45,22 @@ padding: 20px;
             </div>
     <div class="form-group">
         <label style="color:white" for="location">Location</label>     
-                <input type="text" class="form-control" style="background-color: white; color:black" value="{{$data->location}}" name="location" id = "location" required></div>
+                <input type="text" class="form-control" style="background-color: white; color:black" value="{{$data->location}}" name="location" id = "location" required>
+            </div>
+            <div class="form-group">
+        <label style="color:white" for="location">Video Url</label>     
+                <input type="text" class="form-control" style="background-color: white; color:black" value="{{$data->url}}" name="url" id = "url" required>
+            </div>
 
-                <div class="form-group">
-          <label style="color:white">Select THUMBNAIL to upload:</label>
-          <div class="form-group col-md-6"> 
-          <input type="file"  name="thumbnail" id="thumbnail" >
-      <div class="invalid-feedback">
-               Please choose a file.
-      </div> 
-</div>   
+               
 <div class="row form-group">
                       <div class="col-md-12" style="text-align:center">               
             <button type="submit" class="btn btn-primary" id ="uploadB">Upload</button>
             </div>
             </div>
-</form>
+
 </div>
+</form>
         </div>
         </div>
 

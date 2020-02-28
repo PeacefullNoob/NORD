@@ -73,7 +73,7 @@
 @else 
                 <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true">           
                     <div id="mediaContainer" class= "mediaDivV">                 
-                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
                         <span class="ikonica"><img src="/images/Play-BUTTON.svg" ></span>
                           <div class="overlay">
                           <div class = "col-md-6 headOver" >

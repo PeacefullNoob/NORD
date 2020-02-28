@@ -88,7 +88,9 @@ $duration = date('I:s', $file['playtime_seconds']);
 }
 
 public function allPhotos() {
+    
     $photos =DB::table('photos')->latest('created_at')->get();
+    ;
     return view('photos.allPhotos')->with ('photos',$photos);  
 
 }

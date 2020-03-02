@@ -10,17 +10,19 @@
     <title>{{ config('app.name', 'Nord') }}</title>
 
     <!-- Scripts -->
-  
     <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/jquery-migrate-3.0.1.min.js"></script>
   <script src="/js/jquery-ui.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+  <script src="/js/adminJs.js"></script>
+
     <!-- Fonts -->
  
 
     <!-- Styles -->
-    <style >body {background:#39393b !important}
+    <style >body {background:#1D2733 !important}
         </style>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/gallery.css">
@@ -31,12 +33,8 @@
 </head>
 <body>
     <div id="app" >
-        <nav class="navbar navbar-expand-md  shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">
             <div class="container">
-                <a class="navbar-brand" href="/home">
-                <img class="myLogoSvg"   src="/images/Nord-logotype-bijela-bez slogana.svg">
-
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -80,6 +78,14 @@
                         @endguest
                     </ul>
                 </div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbarMoj shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="/home">
+                <img class="myLogoSvg"   src="/images/Nord-logotype-bijela-bez slogana.svg">
+              </a>
             </div>
         </nav>
 

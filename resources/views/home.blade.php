@@ -1,26 +1,52 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card" style="margin-top:20%">
-                <div class="card-header" style="font-size: 30px;">Dashboard</div>
+<main class="myMain adminMain mem">
+        <div class="container-fluid photos">
+        <div class = "row" style ="padding-bottom:20px">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <ul>
-           <li style="font-size: 20px;"><a href="/admin/create" style="color: #caddff;"><i class="fa fa-file-o"></i>Create Album</a></li>
-           <li style="font-size: 20px;"><a href="/admin/albums/all_albums" style="color: #caddff;">Albums</a>
-           <li style="font-size: 20px;"> <a href="/admin/photos/allPhotos" style="color: #caddff;">All Media</a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+      <a class = "btn" href = "/admin/photos/upload_p/">+Dodaj video/fotografiju</a>
+
 </div>
-@endsection
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Naslov</th>
+        <th>Kategorija</th> 
+        <th>Lokacija</th>
+        <th>created_at</th> 
+        <th>updated_at</th> 
+        <th>Forma</th>
+      </tr>
+    </thead>
+    <tbody>
+
+@foreach($photos as $photo)
+<tr>
+    <th class="borderT">{{$photo->title}}</th>
+        @php
+        $album = DB::table('albums')->where('id', $photo->album_id)->first();
+        @endphp
+        <th class="borderT">{{$album->name}}</th> 
+      
+        <th class="borderT">{{$photo->location}}</th>
+        <th class="borderT">{{$photo->created_at}}</th> 
+        <th class="borderT">{{$photo->updated_at}}</th> 
+        <th class="borderT"><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>
+
+        <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btnSuccess">Edit</button></th>
+      
+        <form action="/admin/photos/delete/{{$photo->id}}" method="POST" enctype="multipart/form-data">
+        <input type="hidden" value="{{ csrf_token() }}" name="_token">
+<!--          
+ -->         </form>
+      
+  </tr>
+  @endforeach
+  </tbody>
+</table>
+
+</div>
+</main>
+
+@endsection 

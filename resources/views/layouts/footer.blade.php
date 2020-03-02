@@ -8,6 +8,8 @@
     <script src="/js/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
     <script src="/js/app_all.js"></script>
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+
 
 
     <script src="/js/main.js"></script>

@@ -16,8 +16,10 @@ class PhotoController extends Controller
         return view('app.index' , compact("photos","albums"));  
     }
 
-   public function upload($album_id){
-       return view('photos.upload_p')->with('album_id',$album_id);
+   public function upload(){
+    $albums =Album::all();
+
+       return view('photos.upload_p', compact("albums"));
     }
 
 
@@ -29,6 +31,8 @@ public function store(Request $request){
     'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
     ]);
+    dd($request);
+
     if ($request->hasFile('photo')) {
 //PHOTO
     //Get filename w extension
@@ -81,24 +85,19 @@ $duration = date('I:s', $file['playtime_seconds']);
     $photo->thumbnail = $filenameToStore1;
     $photo->user_id = auth()->user()->id;
     $photo->url = $request-> input('url');
- 
     $photo->save();
     //vraca error
     return redirect('/admin/albums/all_albums')->with('success','Photo uploaded');
 }
 
-public function allPhotos() {
-    
-    $photos =DB::table('photos')->latest('created_at')->get();
-    ;
-    return view('photos.allPhotos')->with ('photos',$photos);  
 
-}
 public function edit($id){
     $data = Photo::findOrFail($id);
     return view('photos.edit_photo', compact('data'));
 }
+
 public function update(Request $request, $id){
+    dd($request);
 $photos = DB::table('photos')->where('id', '=', $id)->get();
 $data = Photo::findOrFail($id);
  $photoId = $id;
@@ -152,9 +151,8 @@ public function destroy($id){
         // Delete Image
         Storage::delete('/public/images/'.$photo->photo);
     }
-
     $photo->delete();
-    return redirect()->back()->with('success', 'Photo Removed');
+    return view('home')->with('success', 'Photo Removed');
 }
 
 

@@ -25,9 +25,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
  Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
 
-    Route::get('/photos/upload_p/{id}', 'PhotoController@upload');
+    Route::get('/photos/upload_p', 'PhotoController@upload');
     Route::post('/photos/upload_p', 'PhotoController@store');
-    Route::get('/photos/allPhotos', 'PhotoController@allPhotos');
     Route::post('/photos/updatePhoto/{id}', 'PhotoController@update');
     Route::get( '/photos/edit_photo/{id}', 'PhotoController@edit');
     Route::post('/photos/delete/{id}', 'PhotoController@destroy');

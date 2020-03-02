@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Photo;
+use Illuminate\Support\Facades\DB;
+use App\Album;
+
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $photos =DB::table('photos')->latest('created_at')->get();
+    
+        return view('home')->with ('photos',$photos);  
+    
     }
 }

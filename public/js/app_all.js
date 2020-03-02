@@ -1,6 +1,5 @@
 AOS.init({offset: 120});
 
-
 //PRIKAZ SLIKE NA KLIK
 let galleryImages = document.querySelectorAll(".glry-img");
 let getLatestOpenedImg;

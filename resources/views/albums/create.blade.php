@@ -6,7 +6,8 @@
   <main class="myMain adminMain">
   <div class = "container-fluid">
   <div class = "row" style ="padding-bottom:20px">
-        <a class = "btn btn-info" href = "/home">Go Back</a>
+        <a class = "btn " href = "/admin/photos/upload_p/" style ="background-color: transparent; color:white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+
 </div>
 <div class = "row justify-content-center">
 
@@ -15,23 +16,21 @@
 
 <form action="{{ action('GalleryController@store') }}" method="POST" enctype="multipart/form-data">
       <div class="form-row">  
-      <div class="form-group col-md-6">   
-          <label style="color:white" for="name">Title</label>  
-          <div class="form-group col-md-6">               
+      <div class="form-group  formaAddAlb">   
+          <label style="color:white;width: 100%;" for="name">Title</label>  
           <input type="text" style="background-color: white; color:black" name="name" id = "name" required>
-      </div>   </div>
+      </div>   
       </div>
-      <div class="form-group">
+      <div class="form-group formaAddAlb">
           <label style="color:white" for="description">Description</label>
           <textarea class = "form-control" style="background-color: white; color:black"  name="description" rows="3"  id="description" >  </textarea>
       </div>
-      <div class="form-group">
+      <div class="form-group formaAddAlb">
           <label style="color:white">Select file to upload:</label>
-          <div class="form-group col-md-6"> 
           <input type="file" style="background-color: white; color:black"  name="cover_image" id="cover_image" required>
       <div class="invalid-feedback">
                Please choose a file.
-      </div></div>
+     </div>
         <button type="submit" class="btn btn-primary" id ="uploadB"  >Upload</button>
 
      <input type="hidden" value="{{ csrf_token() }}" name="_token">

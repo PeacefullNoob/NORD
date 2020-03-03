@@ -26,7 +26,9 @@ class GalleryController extends Controller
         'cover_image' => 'image|max:8000'
 
 
-        ]);
+        ]);  
+          if ($request->hasFile('cover_image')) {
+
         //Get filename w extension
         $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
         //Samo ime
@@ -38,6 +40,10 @@ class GalleryController extends Controller
 
         //Upload image
         $path = $request->file('cover_image')->move(public_path('images'),$filenameToStore);
+          }else{
+
+            $filenameToStore = "";
+        }
         $description = $request-> input('description');
    
        //Create album
@@ -48,7 +54,7 @@ class GalleryController extends Controller
         $album ->save();
         //vraca error
 
-        return redirect('/admin/albums/all_albums')->with('success','Album Created');
+        return redirect('/home')->with('success','Album Created');
 }
     public function show($id){
     

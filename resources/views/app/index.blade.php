@@ -72,8 +72,12 @@
                            </div>  
 @else 
                 <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true">           
-                    <div id="mediaContainer" class= "mediaDivV">                 
-                        <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                    <div id="mediaContainer" class= "mediaDivV">      
+                      @if($photo->photo == "null")                
+                      <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                      @else
+                      <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                        @endif
                         <span class="ikonica"><img src="/images/Play-BUTTON.svg" ></span>
                           <div class="overlay">
                           <div class = "col-md-6 headOver" >

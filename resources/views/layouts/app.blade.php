@@ -31,7 +31,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="myFunction()">
+<div id="loader-wrapper">     
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div> 
+      </div>
     <div id="app" >
     <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">
             <div class="container">
@@ -58,23 +63,26 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <li class="nav-item" >
+                        <a id="navbarDropdown" style="color:white;" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        </li>
+                        <li class="nav-item" style="margin: auto;">
+                            <img class="adminIkonica" src="/images/2profil.svg"/>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" style="color:white;" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Odjavi se') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
+                        </li>
+
                         @endguest
                     </ul>
                 </div>

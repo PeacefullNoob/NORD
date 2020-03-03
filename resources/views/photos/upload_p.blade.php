@@ -15,7 +15,7 @@
             </div> 
 </div>
         <div class="col-5" style=" margin: auto; " >
-            <form class="formaUpload" action="{{ action('PhotoController@store') }}" method="POST" enctype="multipart/form-data">    
+            <form class="formaUpload" action="{{ action('PhotoController@store') }}" name="{{ action('PhotoController@store') }}" method="POST" enctype="multipart/form-data">    
                  <div class="form-group fas">
                      <input type="text" class="form-control" placeholder="Naslov" style="background-color: white; color:black" name="title" id = "title" required>
                      </div>
@@ -25,10 +25,10 @@
                       </div>
 <div class= "row fas">
                       <div class="form-group col-6">
-                        <select class="form-control" id="exampleFormControlSelect1" name="album" style="background-color: white; color:black">
+                        <select class="form-control" id="exampleFormControlSelect1" name="album_id" style="background-color: white; color:black">
                         <option selected>Kategorija</option>
                         @foreach($albums as $album)
-                        <option style="background-color: white; color:black">{{$album->name}}</option>
+                        <option value="{{$album->id}}" style="background-color: white; color:black">{{$album->name}}</option>
                         @endforeach
                         </select>
                     </div>
@@ -38,14 +38,15 @@
 
 </div>
                  <div class="form-group mt-3 fas" style="text-align: center;">
-                        <label for="file-upload" class="custom-file-upload">
+                        <label  class="custom-file-upload">
                              <i class="fa fa-cloud-upload"></i> +dodaj "Thumbnail"
                          </label>
-                      <input class="up" id="file-upload" type="file"  name="thumbnail"  required/>
+                      <input type="file" class="up" name="thumbnail" required/>
                           <div class="invalid-feedback">
                                   Nijedna datoteka nije odabrana*
                              </div>
                         </div>
+
                 <div class="form-group fas " id="dodajVideo">
                   <div style="padding-top: 10px;">
                      <input type="text"  class="form-control" placeholder="Youtube link" style="background-color: white; color:black" name="url" id = "url" >   
@@ -55,10 +56,10 @@
              
             <div class="form-group fas mt-3" style="text-align: center;" id="dodajSliku">
                   <div style="padding-top: 10px; ">
-                      <label for="file-upload" class="custom-file-upload">
+                      <label class="custom-file-upload">
                          <i class="fa fa-cloud-upload"></i> +dodaj Sliku
                          </label>
-                      <input type="file" class="up" id="file-upload" name="photo" id="photo" >
+                      <input type="file" class="up" name="photo" id="photo" >
                          <div class="invalid-feedback">
                              Nijedna datoteka nije odabrana*
                              </div>

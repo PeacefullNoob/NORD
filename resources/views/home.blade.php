@@ -5,7 +5,12 @@
         <div class="container-fluid photos">
         <div class = "row" style ="padding-bottom:20px">
 
-      <a class = "btn" href = "/admin/photos/upload_p/">+Dodaj video/fotografiju</a>
+<a class = "btn btnDodajMedia" href = "/admin/albums/all_albums">Sve Kategorije</a>
+
+</div>
+        <div class = "row" style ="padding-bottom:20px">
+
+      <a class = "btn btnDodajMedia" href = "/admin/photos/upload_p/">+Dodaj video/fotografiju</a>
 
 </div>
 <table class="table table-hover">
@@ -34,8 +39,8 @@
         <th class="borderT">{{$photo->updated_at}}</th> 
         <th class="borderT"><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>
 
-        <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" ><button type="button" class="btn btnSuccess">Edit</button></th>
-      
+        <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" > <img class="imgEdit" style = "color:white;" src="/images/iconfinder_edit_2561427.svg"/></th>
+        
         <form action="/admin/photos/delete/{{$photo->id}}" method="POST" enctype="multipart/form-data">
         <input type="hidden" value="{{ csrf_token() }}" name="_token">
 <!--          

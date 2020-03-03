@@ -31,9 +31,7 @@ public function store(Request $request){
     'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
     ]);
-    dd($request);
-
-    if ($request->hasFile('photo')) {
+     if ($request->hasFile('photo')) {
 //PHOTO
     //Get filename w extension
     $filenameWithExt = $request->file('photo')->getClientOriginalName();
@@ -87,7 +85,7 @@ $duration = date('I:s', $file['playtime_seconds']);
     $photo->url = $request-> input('url');
     $photo->save();
     //vraca error
-    return redirect('/admin/albums/all_albums')->with('success','Photo uploaded');
+    return redirect('/home')->with('success','Photo uploaded');
 }
 
 
@@ -96,27 +94,41 @@ public function edit($id){
     return view('photos.edit_photo', compact('data'));
 }
 
-public function update(Request $request, $id){
-    dd($request);
+public function update(Request $request, $id){ 
+
 $photos = DB::table('photos')->where('id', '=', $id)->get();
 $data = Photo::findOrFail($id);
  $photoId = $id;
     $request->validate([
         'title' => 'required',
-        'description' => 'required',
         'location' => 'required' ,
-        'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
+        'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg',
+        'photo' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
+
 
     ]);
-
     $title =  $request->title;
-    $description = $request->description;
     $location= $request->location;
-
-
+    $url = $request->url;
     //THUMBNAIL
-    if ($request->hasFile('thumbnail')) {
+    if ($request->hasFile('photo')) {
+        //PHOTO
+            //Get filename w extension
+            $filenameWithExt = $request->file('photo')->getClientOriginalName();
+            //Samo ime
+            $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
+            //samo extension
+            $extension = $request-> file('photo') ->getclientOriginalExtension();
+            //create new filename
+            $filenameToStore = $filename.'_'.time().'.'.$extension;
+            //Upload image
+         $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
+            }else{
+                $filenameToStore = $data->photo;
 
+            }
+
+    if ($request->hasFile('thumbnail')) {
   //Get filename w extension
   $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
   //Samo ime
@@ -127,32 +139,31 @@ $data = Photo::findOrFail($id);
   $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
   //Upload thumbnail
   $path = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);;
-        //
-
     }
     else{
         $filenameToStore1 = $data->thumbnail;
-
+        $extension = $data->media_type;
     } 
     DB::table('photos')->where('id', $photoId)->update([
         'title' => $title,
-        'description' => $description,
         'location' => $location ,
-        'thumbnail' => $filenameToStore1
+        'url' => $url,
+        'thumbnail' => $filenameToStore1,
+        'photo' => $filenameToStore,
+        'media_type' => $extension
     ]);
 
-   return redirect()->back()-> with('success', 'Data is successfully updated');
+   return redirect('/home')->with('success', 'Data is successfully updated');
 }
 
 public function destroy($id){
     $photo = Photo::find($id);
-
      if($photo->photo != 'noimage.jpg'){
         // Delete Image
         Storage::delete('/public/images/'.$photo->photo);
     }
     $photo->delete();
-    return view('home')->with('success', 'Photo Removed');
+    return view('/home')->with('success', 'Photo Removed');
 }
 
 

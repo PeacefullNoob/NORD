@@ -45,7 +45,7 @@
   }
   }
 
-  #loader-wrapper .loader-section { position: absolute; top: 0; width: 51%; height: 100%; background: #222222; z-index: 2000;  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */ transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */}
+  #loader-wrapper .loader-section { position: absolute; top: 0; width: 51%; height: 100%; background: #1D2733; z-index: 2000;  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */ transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */}
 
   #loader-wrapper .loader-section.section-left { left: 0; }
 
@@ -273,7 +273,7 @@
 
   
   .divEditAlbum{
-  width: 55%;
+  width: 50%;
   padding-left: 3%;
   position: relative;
   margin: auto;
@@ -285,7 +285,7 @@
     }
   .divEditAl{
     padding-right: 3%;
-    width: 40%;
+    width: 50%;
     position: relative;
     margin: auto;
   }
@@ -533,7 +533,7 @@
   overflow: hidden;
   align-items: right  ;
   justify-content: right;
-  background-color: #0A172E;
+  background-color: #1D2733;
   transition: 0.5s;
   height: 60%;
 
@@ -676,6 +676,8 @@
   }
   .allAlRow{
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   }
   .photo-text-more{
   text-align: center;
@@ -701,32 +703,19 @@
       @media screen and (max-height: 430px) {
       .sidenav {padding-top: 15px;}
       .sidenav .nava li a {font-size: 18px;}
-      @media screen and (orientation:portrait) {
-      #modal1 {
-      left: 50% !important;
-      width: 150% !important;
-      }
-      }
+     
       }
       /* Extra small devices (phones, 600px and down) */
       @media (max-width: 600px){
-            @media screen and (orientation:portrait) {
-          #modal1 {
-          transform: rotate(-90deg) !important;
-          left: 70% !important;
-          right: 50% !important;
-          width: 110% !important;
-          height: 100% !important;
-          margin-left: -75% !important;
-          margin-bottom: -50% !important;
-            }
-          } 
           .dx{
             margin-bottom: 30px;
 
           }
           .dx button{
             height: 50px;
+          }
+          .fa-times{
+            display: none !important;
           }
       .modal-dialog{
       display: -webkit-box;
@@ -880,7 +869,6 @@
       left: 0;
       width: 100%;
       height: auto;
-      padding: 20px 50px 20px 20px;
       overflow: auto;
       }
 
@@ -967,8 +955,8 @@
       }
 
       .modal{
-
-      background-color: rgba(0,0,0,0.1);
+      position:fixed;
+      background-color: black;
       justify-content: center;
       align-items: center;
 
@@ -1219,7 +1207,8 @@ border-color: white !important;
   padding: 0px !important;
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  z-index: 20;
 }
 .navbarMoj{
   margin-top: 40px;
@@ -1252,16 +1241,13 @@ background-color: transparent;
 padding-top: 15%;
 }
 input[class="up"] {
-  /* display: none; */
-}
-.custom-file-upload {
-  display: inline-block;
-  background-color: #134284;
   border-radius: 5px;
-  padding:8px;
-  width: auto;
   color: white;
-  
+
+}
+.custom-file-upload{
+  color: white;
+
 }
 .uploadOpcija{
   margin: auto;
@@ -1288,4 +1274,12 @@ border: none !important;
   border-radius: 2px;
 
   }
-  
+  .btnDodajMedia {
+    background-color: #134284;
+    color: white;
+    border: none;
+}
+#sendMessage {
+  background-color: #134284;
+  border: none;
+}

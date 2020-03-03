@@ -49,10 +49,15 @@
                         <textarea name="message" style="background-color: white; color:black" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
                       </div>
                     </div>
+                    <div class="row form-group mb-5">
+
+                    {!! htmlFormSnippet() !!}
+    <input type="submit">
+    </div>
 
                     <div class="row form-group">
                       <div class="col-md-12" style="text-align:center">
-                        <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                        <input type="submit" id="sendMessage" value="Send Message" class="btn btn-primary btn-md text-white">
                       </div>
                     </div>
 

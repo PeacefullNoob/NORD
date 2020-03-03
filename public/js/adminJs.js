@@ -24,3 +24,23 @@
       });
       });
 });
+
+//preloader
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 300);
+}
+
+function showPage() {
+  document.getElementById("loader-wrapper").style.display = "none";
+  document.getElementById("app").style.display = "grid";
+
+
+}
+
+$(document).ready(function(){
+    $("form").on("submit", function(){
+      $("#loader-wrapper").fadeIn();
+    });//submit
+  });//document ready

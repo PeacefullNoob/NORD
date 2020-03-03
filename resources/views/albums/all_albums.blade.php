@@ -14,10 +14,10 @@
         @foreach($albums as $album)
 
         <div class="card" style="width: 22rem;    margin: 10px;">
-        <a href="/admin/photos/upload_p/{{$album->id}}" >
+       
 
   <img class="card-img-top allAlimg" src="/images/{{$album->cover_image}}" alt="Card image cap">
-  </a>
+
 
   <div class="card-body">
     <h5 class="card-title" style="text-align: center;">

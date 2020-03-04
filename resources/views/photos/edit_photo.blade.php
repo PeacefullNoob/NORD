@@ -55,7 +55,7 @@
                             </form>
                                     
                             <div class="col-4 form-group" style="margin: auto;padding-top:20px">
-                                <form action="/admin/photos/delete/{{$data->id}}" method="POST" enctype="multipart/form-data">
+                                <form action="/admin/photos/destroy/{{$data->id}}" method="POST" enctype="multipart/form-data">
                                         <input type="hidden" value="{{ csrf_token() }}" name="_token">  
                                         <button type="submit" class="btn btnError" >OBRISI</button>
                                     </form>  

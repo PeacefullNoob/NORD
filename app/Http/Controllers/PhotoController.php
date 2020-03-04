@@ -85,7 +85,7 @@ $duration = date('I:s', $file['playtime_seconds']);
     $photo->url = $request-> input('url');
     $photo->save();
     //vraca error
-    return redirect('/home')->with('success','Photo uploaded');
+    return redirect('/home')->with('success','Media uspesno kreirana');
 }
 
 
@@ -153,7 +153,7 @@ $data = Photo::findOrFail($id);
         'media_type' => $extension
     ]);
 
-   return redirect('/home')->with('success', 'Data is successfully updated');
+   return redirect('/home')->with('success', 'Azuriranje uspesno');
 }
 
 public function destroy($id){
@@ -163,7 +163,7 @@ public function destroy($id){
         Storage::delete('/public/images/'.$photo->photo);
     }
     $photo->delete();
-    return view('/home')->with('success', 'Photo Removed');
+    return redirect('/home')->with('success', 'Uspesno obrisana slika');
 }
 
 

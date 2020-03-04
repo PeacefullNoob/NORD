@@ -25,7 +25,7 @@
                       </div>
 <div class= "row fas">
                       <div class="form-group col-6">
-                        <select class="form-control" id="exampleFormControlSelect1" name="album_id" style="background-color: white; color:black">
+                        <select class="form-control" id="exampleFormControlSelect1" name="album_id" style="background-color: white; color:black" required>
                         <option selected>Kategorija</option>
                         @foreach($albums as $album)
                         <option value="{{$album->id}}" style="background-color: white; color:black">{{$album->name}}</option>

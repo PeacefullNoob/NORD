@@ -51,8 +51,8 @@
                     </div>
                     <div class="row form-group mb-5">
 
-                    {!! htmlFormSnippet() !!}
-    <input type="submit">
+                    <div class="g-recaptcha" data-sitekey="6LcYld4UAAAAAAcXi-dluX8kFRrn2G6P3vLps9Ec"></div>
+
     </div>
 
                     <div class="row form-group">
@@ -63,6 +63,7 @@
 
         
                   </form>
+   
                 </div>
                 
               </div>

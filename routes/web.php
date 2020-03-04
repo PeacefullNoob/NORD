@@ -21,16 +21,15 @@ Route::post('/contact',"ContactMessageController@store");
 Route::post('/views',"PhotoController@views");
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
- Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
+Route::get('/home', 'HomeController@index')->name('home');  
+ 
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
 
     Route::get('/photos/upload_p', 'PhotoController@upload');
     Route::post('/photos/upload_p', 'PhotoController@store');
     Route::post('/photos/updatePhoto/{id}', 'PhotoController@update');
     Route::get( '/photos/edit_photo/{id}', 'PhotoController@edit');
-    Route::post('/photos/delete/{id}', 'PhotoController@destroy');
-
+    Route::post('/photos/destroy/{id}', 'PhotoController@destroy');
     
     Route::post('/albums/delete/{id}', 'GalleryController@destroy');
     Route::post('/albums/updateAlbum/{id}', 'GalleryController@update');

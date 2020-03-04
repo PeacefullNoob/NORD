@@ -46,15 +46,15 @@ document.querySelector(".img-window").remove();
      //Video modal
 $('#modal1').on('hidden.bs.modal', function (e) {
     $("#iframeModal").attr('src',' ');
+    document.body.style.overflow = "auto";
   });
 
   /* function changeItV(video)
     { */
   $("#modal1").on('show.bs.modal', function(e){
 let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
-let urlPocetni = "https://www.youtube.com/embed/";
 let indexx=$(e.relatedTarget).data('index');
-
+document.body.style.overflow = "hidden";
 $.ajax({
   headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

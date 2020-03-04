@@ -54,7 +54,7 @@ class GalleryController extends Controller
         $album ->save();
         //vraca error
 
-        return redirect('/home')->with('success','Album Created');
+        return redirect('/home')->with('success','Kategorija kreirana');
 }
     public function show($id){
     
@@ -112,7 +112,7 @@ class GalleryController extends Controller
                 'cover_image' => $filenameToStore1
             ]);
         
-           return redirect()->back()-> with('success', 'Data is successfully updated');
+           return redirect()->back()-> with('success', 'Azuriranje uspesno');
         } 
  
 }

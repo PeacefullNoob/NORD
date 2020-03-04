@@ -12,12 +12,18 @@ class ContactMessageController extends Controller
     }
     
     public function store(Request $request){
-        Mail::send('emails.contact-message',[
-            'msg' => $request->message
-        ], function ($mail) use($request){
-        $mail->from($request->email);
-        $mail->to('petar.gajevic69@gmail.com');
-        });
-        return redirect()->back()->with('flash_message', 'Thank you for your message. ');
-    }
-}
+        $data['title'] = $request->message;
+        
+               Mail::send('emails.contact-message', $data, function($message) use($request) {
+        
+               $message->to('nordmne.info@gmail.com', 'Receiver Name')
+                   ->from( $request->email , $request->fname )
+                           ->subject('Nord Website');
+               });
+        
+              
+        
+               return redirect()->back()->with('contact', 'Uspesno ste poslali poruku! ');
+           }
+       }
+       

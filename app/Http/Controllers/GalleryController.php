@@ -54,7 +54,7 @@ class GalleryController extends Controller
         $album ->save();
         //vraca error
 
-        return redirect('/home')->with('success','Kategorija kreirana');
+        return redirect('/admin/ ')->with('success','Kategorija kreirana');
 }
     public function show($id){
     

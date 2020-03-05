@@ -19,8 +19,7 @@
         <th>Naslov</th>
         <th>Kategorija</th> 
         <th>Lokacija</th>
-        <th>created_at</th> 
-        <th>updated_at</th> 
+        <th>Kreirano</th> 
         <th>Forma</th>
       </tr>
     </thead>
@@ -33,18 +32,18 @@
         $album = DB::table('albums')->where('id', $photo->album_id)->first();
         @endphp
         <th class="borderT">{{$album->name}}</th> 
-      
         <th class="borderT">{{$photo->location}}</th>
         <th class="borderT">{{$photo->created_at}}</th> 
-        <th class="borderT">{{$photo->updated_at}}</th> 
+        @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG') 
         <th class="borderT"><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>
+        @else
+        <th class="borderT"><img src = "{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>
 
+        @endif
         <th>  <a href="/admin/photos/edit_photo/{{$photo->id}}" > <img class="imgEdit" style = "color:white;" src="/images/iconfinder_edit_2561427.svg"/></th>
-        
         <form action="/admin/photos/delete/{{$photo->id}}" method="POST" enctype="multipart/form-data">
         <input type="hidden" value="{{ csrf_token() }}" name="_token">
-<!--          
- -->         </form>
+        </form>
       
   </tr>
   @endforeach

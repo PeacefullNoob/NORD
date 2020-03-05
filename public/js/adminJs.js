@@ -6,6 +6,9 @@
     $('#dodajSliku').css({
         'display': 'none'
     });
+    $('#dodajThumb').css({
+      'display': 'none'
+  });
     $('#photoButton').click(function() {
         $('#dodajSliku').css({
             'display': 'block'
@@ -14,11 +17,17 @@
         $('#dodajVideo').css({
           'display': 'none'
       });
+      $('#dodajThumb').css({
+        'display': 'block'
+    });
       });
       $('#videoButton').click(function() {
         $('#dodajSliku').css({
             'display': 'none'
         });
+        $('#dodajThumb').css({
+          'display': 'none'
+      });
         $('#dodajVideo').css({
           'display': 'block'
       });

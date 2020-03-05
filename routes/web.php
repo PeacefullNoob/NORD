@@ -21,10 +21,10 @@ Route::post('/contact',"ContactMessageController@store");
 Route::post('/views',"PhotoController@views");
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');  
  
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
-
+    
+    Route::get('/', 'HomeController@index')->name('home');  
     Route::get('/photos/upload_p', 'PhotoController@upload');
     Route::post('/photos/upload_p', 'PhotoController@store');
     Route::post('/photos/updatePhoto/{id}', 'PhotoController@update');

@@ -31,8 +31,14 @@ public function store(Request $request){
     'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
     ]);
+
+
+    $url = $request-> input('url');
+    $description = $request-> input('description');
+
+
      if ($request->hasFile('photo')) {
-//PHOTO
+        //PHOTO
     //Get filename w extension
     $filenameWithExt = $request->file('photo')->getClientOriginalName();
     //Samo ime
@@ -42,50 +48,61 @@ public function store(Request $request){
     //create new filename
     $filenameToStore = $filename.'_'.time().'.'.$extension;
     //Upload image
- $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
+    $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
     }else{
         $filenameToStore="null";
         $extension="null";
     }
 
-if($extension=='mp4'){
+/* if($extension =='mp4'){
  $getID3 = new \getID3;
 $file = $getID3->analyze($path);
 $duration = date('I:s', $file['playtime_seconds']);
 } else {
     $duration='00:00';
 }
-
+ */
 //
     //THUMBNAIL
-  //Get filename w extension
-  $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
-  //Samo ime
-  $filename1 = pathinfo($filenameWithExt1,PATHINFO_FILENAME);
-  //samo extension
-  $extension1 = $request-> file('thumbnail') ->getclientOriginalExtension();
-  //create new filename
-  $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
-  //Upload thumbnail
-  $path1 = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);
+    if ($request->hasFile('photo')) {
 
+        //Get filename w extension
+        $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
+        //Samo ime
+        $filename1 = pathinfo($filenameWithExt1,PATHINFO_FILENAME);
+        //samo extension
+        $extension1 = $request-> file('thumbnail') ->getclientOriginalExtension();
+        //create new filename
+        $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
+        //ulaod
+        $thumbnail = $filenameToStore1;
+        //Upload thumbnail
+        $path1 = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);
+    }else{
+        
+            $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
+    }
   
-  $description = $request-> input('description');
+
+ 
+ 
+
+
     //Create photo
     $photo = new Photo;
     $photo->album_id= $request->input('album_id');
     $photo->title = $request-> input('title');
-    $photo->$description;
-    $photo->size=200;
+    $photo->description = $description;
+    $photo->size = 200;
     $photo->media_type = $extension;
     $photo->location = $request-> input('location');
     $photo->photo = $filenameToStore;
-    $photo->thumbnail = $filenameToStore1;
+    $photo->thumbnail = $thumbnail;
     $photo->user_id = auth()->user()->id;
-    $photo->url = $request-> input('url');
+    $photo->url = $url;
     $photo->save();
     //vraca error
-    return redirect('/home')->with('success','Media uspesno kreirana');
+    return redirect('/admin/ ')->with('success','Media uspesno kreirana');
 }
 
 
@@ -125,8 +142,9 @@ $data = Photo::findOrFail($id);
          $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
             }else{
                 $filenameToStore = $data->photo;
+                $extension = $data->media_type;
 
-            }
+            } 
 
     if ($request->hasFile('thumbnail')) {
   //Get filename w extension
@@ -141,8 +159,8 @@ $data = Photo::findOrFail($id);
   $path = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);;
     }
     else{
-        $filenameToStore1 = $data->thumbnail;
-        $extension = $data->media_type;
+        $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
+        $filenameToStore1 = $thumbnail;
     } 
     DB::table('photos')->where('id', $photoId)->update([
         'title' => $title,
@@ -153,7 +171,7 @@ $data = Photo::findOrFail($id);
         'media_type' => $extension
     ]);
 
-   return redirect('/home')->with('success', 'Azuriranje uspesno');
+   return redirect('/admin/ ')->with('success', 'Azuriranje uspesno');
 }
 
 public function destroy($id){
@@ -163,7 +181,7 @@ public function destroy($id){
         Storage::delete('/public/images/'.$photo->photo);
     }
     $photo->delete();
-    return redirect('/home')->with('success', 'Uspesno obrisana slika');
+    return redirect('/admin/ ')->with('success', 'Uspesno obrisana slika');
 }
 
 

@@ -3,7 +3,6 @@
 @section('content')
 <div class="site-wrap" >  
 <div id ="myIndex" class= "herovideo">
-    <!--  <div class = "shadow-overlay"></div>  -->
       <video playsinline autoplay="autoplay" loop  muted id="bgvideo" width="x" height="y">
 <source src="/images/00004bcomp.mp4" type="video/mp4">
 </video>
@@ -72,11 +71,13 @@
                            </div>  
 @else 
                 <div class="mojCol {{$photo->album_id}} animated zoomIn" data-aos="zoom-in-up" data-aos-once="true">           
-                    <div id="mediaContainer" class= "mediaDivV">      
-                      @if($photo->photo == "null")                
-                      <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                 
+                      @if($photo->photo == "null")         
+                      <div id="mediaContainer" class= "mediaDivV"  data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index ="{{$photo->id}}" >             
+                      <img class="picInd" src="{{$photo->thumbnail}}" /> 
                       @else
-                      <img class="picInd"  data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index ="{{$photo->id}}"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
+                      <div id="mediaContainer" class= "mediaDivV" data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index ="{{$photo->id}}"  >      
+                      <img class="picInd"   data-src="/images/thumbnail/{{$photo->thumbnail}}" /> 
                         @endif
                         <span class="ikonica"><img src="/images/Play-BUTTON.svg" ></span>
                           <div class="overlay">

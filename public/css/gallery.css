@@ -93,7 +93,15 @@
   overflow: hidden; 
   width: 100%;
   }
+ 
+  .mediaDiv:hover { 
+    cursor: pointer;
 
+    } 
+    .mediaDivV:hover { 
+      cursor: pointer;
+
+    }
   .mediaDivV { 
   height: 43vh; 
   display: flex;
@@ -104,12 +112,17 @@
   width: 100%;
   }
 
-
-  .picInd{
+.aPic{
   width: 100%;
   vertical-align: middle;
   border-style: none;
   object-fit: fill !important;
+
+
+}
+  .picInd{
+  width: 100%;
+ height: 100%;
 
   }
 
@@ -634,15 +647,12 @@
   margin-bottom: 0px;
   display: none;
   }
+
   .show {
   display: flex; 
   }
-  #piidm i{
-  display: none;
-  }
-  #piid {
-  display: block;
-  }
+ 
+ 
   .glry-img{
   color: inherit;
   }
@@ -683,6 +693,8 @@
   text-align: center;
   color: white;
   }
+
+
         @media screen and (max-width: 320px) {
         .home-social {
         font-size: 10px !important;
@@ -707,7 +719,50 @@
       }
       /* Extra small devices (phones, 600px and down) */
       @media (max-width: 600px){
-          .dx{
+/* Admin */
+        .main-content1 {
+        
+          margin: 0px !important; 
+          padding-bottom: 50px;
+        }
+        .editAlbum {
+          padding: 20px;
+      }
+      .adminMain {
+      
+        width: 100% !important; 
+    }
+    .memd {
+      width: 100% !important; 
+  }
+
+  .divEditAl {
+    
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 5%;
+}
+.uploadOpcija {
+  width: 100% !important;
+}
+.uploadFift{
+  max-width: 100% !important;
+}
+.divEditAlbum {
+    
+  
+  padding:0%;
+  margin-bottom: 15%
+}
+
+
+/* KRAJ ADMINA
+ */      
+ .brojMob #piid{
+  visibility: hidden;
+  }
+     .dx{
             margin-bottom: 30px;
 
           }
@@ -779,21 +834,13 @@
       padding-right: 20%;
       letter-spacing: 2px;
       }  
-      #piidm i{
-      display: block !important;
-      font-size: 25px;
-      }
-      #piid{ 
-      display:none !important;
-      }
+
       .home-social {
       font-size: 14px;
       bottom: 0.6rem;
       left: 0;
       }
-      .myLogo #piid{
-      font-size: 12px;
-      }
+   
       .footerTxt p{
       font-size: 8px;
       margin-bottom:0px !important;
@@ -916,9 +963,7 @@
       bottom: 0.6rem; 
       left: 0;
       }
-      .myLogo #piid{
-      font-size: 15px;
-      }
+  
 
       .footerTxt p{
       font-size: 8px;
@@ -1023,7 +1068,17 @@
 
       } 
   .memd{
-  width: 70% !important;
+     width: 70% ; 
+   margin: auto;
+  }
+  .uploadFift{
+      -webkit-box-flex: 0; 
+      -ms-flex: 0 0 41.66667%;
+      flex: 0 0 41.66667%; 
+      max-width: 41.66667%;
+      position: relative; 
+      width: 100%;
+
   }
   .uploadPDiv{
   width: 60%;
@@ -1281,5 +1336,18 @@ border: none !important;
 }
 #sendMessage {
   background-color: #134284;
+  border: none;
+}
+.fa-phone{
+
+  margin: auto;
+  color: white;
+}
+.brojMob{
+  display: flex;
+}
+#piid{
+  background: transparent;
+  color: white;
   border: none;
 }

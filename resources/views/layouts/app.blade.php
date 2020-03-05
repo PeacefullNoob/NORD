@@ -91,7 +91,7 @@
 
         <nav class="navbar navbarMoj shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="/admin/ ">
                 <img class="myLogoSvg"   src="/images/Nord-logotype-bijela-bez slogana.svg">
               </a>
             </div>

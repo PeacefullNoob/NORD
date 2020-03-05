@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="site-wrap">
-    <main class="" style="width:70%;margin:auto;">
+    <main class="memd" >
         <div class = "row" style ="padding-bottom:20px">
-            <a class = "btn back " href = "/home" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+            <a class = "btn back " href = "/admin/ " ><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
         </div>
         <div class = "row uploadOpcija"> 
             <div class="col-6" style="text-align:right" >
@@ -14,7 +14,7 @@
             <button id ="photoButton" >    FOTO   </button>
             </div> 
 </div>
-        <div class="col-5" style=" margin: auto; " >
+        <div class="uploadFift" style=" margin: auto; " >
             <form class="formaUpload" action="{{ action('PhotoController@store') }}" name="{{ action('PhotoController@store') }}" method="POST" enctype="multipart/form-data">    
                  <div class="form-group fas">
                      <input type="text" class="form-control" placeholder="Naslov" style="background-color: white; color:black" name="title" id = "title" required>
@@ -37,11 +37,11 @@
                     </div>
 
 </div>
-                 <div class="form-group mt-3 fas" style="text-align: center;">
+                 <div class="form-group mt-3 fas" id="dodajThumb" style="text-align: center;">
                         <label  class="custom-file-upload">
                              <i class="fa fa-cloud-upload"></i> +dodaj "Thumbnail"
                          </label>
-                      <input type="file" class="up" name="thumbnail" required/>
+                      <input type="file" class="up" name="thumbnail" />
                           <div class="invalid-feedback">
                                   Nijedna datoteka nije odabrana*
                              </div>

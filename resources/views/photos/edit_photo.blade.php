@@ -4,7 +4,7 @@
     <main style="padding-top: 20px;">
             <div class="container-fluid memd">
                     <div class = "row" style ="padding-bottom:20px">
-                      <a class = "btn back " href = "/home" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+                      <a class = "btn back " href = "/admin/" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
 
                      </div>
                       <div class="row">
@@ -24,20 +24,11 @@
                                     <label style="color:white" for="location">Video Url</label>     
                                     <input type="text" class="form-control" style="background-color: white; color:black" value="{{$data->url}}" name="url" id = "url" required>
                                     </div>
-                                    @endif
-                                    <div class="form-group mt-3 fas" style="text-align: center;">
-                                    <label  class="custom-file-upload">
-                                    <i class="fa fa-cloud-upload"></i> +dodaj "Thumbnail"
-                                    </label>
-                                    <input class="up" type="file"  name="thumbnail"  />
-                                    <div class="invalid-feedback">
-                                    Nijedna datoteka nije odabrana*
-                                    </div>
-                                    </div>
 
+                                    @else
                                     <div class="form-group mt-3 fas" style="text-align: center;">
                       <label class="custom-file-upload">
-                         <i class="fa fa-cloud-upload"></i> +dodaj Sliku
+                         <i class="fa fa-cloud-upload"></i>+dodaj Sliku
                          </label>
                       <input type="file" class="up" name="photo" id="photo" >
                          <div class="invalid-feedback">
@@ -45,6 +36,19 @@
                              </div>
                       </div>
 
+                      <div class="form-group mt-3 fas" style="text-align: center;">
+                                    <label  class="custom-file-upload">
+                                    <i class="fa fa-cloud-upload"></i>+dodaj Thumbnail
+                                    </label>
+                                    <input class="up" type="file"  name="thumbnail"  />
+                                    <div class="invalid-feedback">
+                                    Nijedna datoteka nije odabrana*
+                                    </div>
+                                    </div>
+                                    @endif
+                                  
+                     
+                   
                                     <div class= "row epb"> 
                                         <div class="col-4 form-group" style="margin: auto;">
                                         <button type="submit" class="btn editB " id ="uploadB">POTVRDI</button>
@@ -62,7 +66,12 @@
                                 </div>   
                         </div> 
                         <div class= "divEditAlbum">
-                              <img  src="/images/thumbnail/{{$data->thumbnail}}" style="width: 100%;"/> 
+                        @if($data->media_type == 'png'|| $data->media_type == 'jpg' || $data->media_type == 'svg'|| $data->media_type == 'PNG') 
+        <th class="borderT"><img src = "/images/thumbnail/{{$data->thumbnail}}" style="width: 100%;"/></th>
+        @else
+        <th class="borderT"><img src = "{{$data->thumbnail}}" style="width: 100%;"/></th>
+
+        @endif
                          </div>  
               
                          </div> 

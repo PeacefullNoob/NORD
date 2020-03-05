@@ -8,12 +8,12 @@
           
         <div class = "row" style ="padding-bottom:20px">
 
-        <a class = "btn back " href = "/home" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+        <a class = "btn back " href = "/admin/" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
 </div>
       <div class="allAlRow">
         @foreach($albums as $album)
 
-        <div class="card" style="width: 22rem;    margin: 10px;">
+        <div class="card" style="width: 22rem;    margin: auto;">
        
 
   <img class="card-img-top allAlimg" src="/images/{{$album->cover_image}}" alt="Card image cap">

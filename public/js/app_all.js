@@ -6,17 +6,13 @@ let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
 function changeIt(img)
-    {
-      
+    {     
 let getFullImgUrl = img.getAttribute("name");
 let container = document.body;
 let newImgWindow = document.createElement("div");
 let id = img.getAttribute("data-value");
-/* var para = document.createElement("P");              
-para.innerText =img.getAttribute("nameDesc"); ;         */       
 container.appendChild(newImgWindow);
-/* newImgWindow.appendChild(para);
- */newImgWindow.setAttribute("class","img-window");
+newImgWindow.setAttribute("class","img-window");
 newImgWindow.setAttribute("onclick","closeImg()");
  
 let newImg = document.createElement("img");
@@ -68,7 +64,7 @@ $.ajax({
     console.log(data);
   }
 });
-        $("#iframeModal").attr('src', getFullVideoUrl);
+        $("#iframeModal").attr('src', getFullVideoUrl+"?autoplay=1");
 }); 
   
 //PRELOADER
@@ -88,7 +84,21 @@ function showPage() {
 }
 
 //KOPIRANJE BROJA
- const span = document.getElementById("piid");
+function copyToClip() {
+  /* Get the text field */
+  var copyText = document.getElementById("piid");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Broj kopiran: " + copyText.value);
+}
+/*  const span = document.getElementById("brojMob");
 
 span.onclick = function() {
   document.execCommand("copy");
@@ -99,8 +109,8 @@ span.addEventListener("copy", function(event) {
   if (event.clipboardData) {
     event.clipboardData.setData("text/plain", "+382 69 215 455");
   }
-}); 
-const span1 = document.getElementById("piidm");
+});  */
+/* const span1 = document.getElementById("brojMob");
 
 span1.onclick = function() {
   document.execCommand("copy");
@@ -112,7 +122,7 @@ span1.addEventListener("copy", function(event) {
     event.clipboardData.setData("text/plain", "+382 69 215 455");
   }
 }); 
-
+ */
 $('img').bind('contextmenu', function(e) {
   return false;
 });

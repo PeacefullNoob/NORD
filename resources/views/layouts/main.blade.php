@@ -46,7 +46,7 @@
                  <div class="modal-body mb-0 p-0">
                      <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
                         <iframe id = "iframeModal" class="embed-responsive-item" src=""
-                        allowfullscreen></iframe>
+                        allowfullscreen ></iframe>
                         </div>
                         <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" style = "font-size: 20px;color: white;
   border:none;  position: absolute;top: 2; right: 2;"data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i>

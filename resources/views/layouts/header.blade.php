@@ -2,8 +2,9 @@
   
 
       <div class="myLogo">
-       <p id = "piid"> <i class="fa fa-phone" aria-hidden="true"></i>+382 69 215 455 </p>
-       <p id = "piidm"> <i class="fa fa-phone" aria-hidden="true"></i> </p>
+        <a id="brojMob" onclick="copyToClip()" class= "brojMob" > <i class="fa fa-phone" aria-hidden="true"></i> <input id = "piid" value=" +382 69 215 455" > </input> </a>
+       <!-- <p id = "piid"> <i class="fa fa-phone" aria-hidden="true"></i>+382 69 215 455 </p>
+       <p id = "piidm"> <i class="fa fa-phone" aria-hidden="true"></i> </p> -->
 <a href="/">
 <img class="myLogoSvg"   src="/images/Nord-logotype-bijela-bez slogana.svg">
 </a>

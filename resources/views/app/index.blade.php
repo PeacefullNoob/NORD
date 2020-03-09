@@ -4,7 +4,7 @@
 <div class="site-wrap" >  
 <div id ="myIndex" class= "herovideo">
       <video playsinline autoplay="autoplay" loop  muted id="bgvideo" width="x" height="y">
-<source src="/images/00004bcomp.mp4" type="video/mp4">
+<source src="/images/Tajmlaps2.mp4" type="video/mp4">
 </video>
     <div class="home-content">
       <div class="row home-content__main">
@@ -17,8 +17,10 @@
 
           </h3>
 </div>
-          <p>At Nord we specialize in photo sessions and video productions for outdoor</br> & real estate experiences. With our knowledge, creativity and experience
-          </br> we can always bring beautiful, exciting and compelling visual stories for your brand.</p></br>
+          <p style="
+    width: 60%;
+">At Nord we specialize in photo sessions and video productions for outdoor & real estate experiences. With our knowledge, creativity and experience
+          we can always bring beautiful, exciting and compelling visual stories for your brand.</p></br>
         </div> 
       </div>
   <ul class="home-social">
@@ -30,6 +32,10 @@
     <li><a href="https://www.instagram.com/nordphotosandvideos/?fbclid=IwAR3h3gXVaK-BhBNbWXY9N3IFy9J-_5BhxMgx0prGpiya6tSwY_nsjr0xtC4" target="_blank">
     <i class="fa fa-instagram"></i>
     <span class="home-social-text">Instagram</span>
+    </a></li>
+    <li><a href="https://www.youtube.com/channel/UClx7DimS-Cl0dx2H13Bz1PQ" target="_blank">
+    <i class="fa fa-youtube"></i>
+    <span class="home-social-text">Youtube</span>
     </a></li>
   </ul>
 </div>

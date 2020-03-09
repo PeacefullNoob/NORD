@@ -8,6 +8,7 @@ use App\Album;
 use Illuminate\Support\Facades\DB;
 use FFMpeg;
 use Storage;
+use Intervention\Image\Facades\Image;
 class PhotoController extends Controller
 {
     public function index(){
@@ -31,8 +32,6 @@ public function store(Request $request){
     'thumbnail' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
     ]);
-
-
     $url = $request-> input('url');
     $description = $request-> input('description');
 
@@ -40,7 +39,8 @@ public function store(Request $request){
      if ($request->hasFile('photo')) {
         //PHOTO
     //Get filename w extension
-    $filenameWithExt = $request->file('photo')->getClientOriginalName();
+    $photo = $request->file('photo');
+    $filenameWithExt = $photo ->getClientOriginalName();
     //Samo ime
     $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
     //samo extension
@@ -48,10 +48,23 @@ public function store(Request $request){
     //create new filename
     $filenameToStore = $filename.'_'.time().'.'.$extension;
     //Upload image
+
+    //thumbnail
+    $thumbnail = Image::make($photo->getRealPath())->fit(410,null, function($constraint){
+        $constraint->aspectRatio();
+    });
+    $ThfilenameToStore = 'TH'. $filenameToStore;
+    $thumbnail->save('images/thumbnail/' . $ThfilenameToStore);
+
+//slika
     $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
-    }else{
+ 
+
+}else{
         $filenameToStore="null";
-        $extension="null";
+        $extension="yt";
+        $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
+
     }
 
 /* if($extension =='mp4'){
@@ -62,31 +75,8 @@ $duration = date('I:s', $file['playtime_seconds']);
     $duration='00:00';
 }
  */
-//
-    //THUMBNAIL
-    if ($request->hasFile('photo')) {
-
-        //Get filename w extension
-        $filenameWithExt1 = $request->file('thumbnail')->getClientOriginalName();
-        //Samo ime
-        $filename1 = pathinfo($filenameWithExt1,PATHINFO_FILENAME);
-        //samo extension
-        $extension1 = $request-> file('thumbnail') ->getclientOriginalExtension();
-        //create new filename
-        $filenameToStore1 = $filename1.'_'.time().'.'.$extension1;
-        //ulaod
-        $thumbnail = $filenameToStore1;
-        //Upload thumbnail
-        $path1 = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);
-    }else{
-        
-            $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
-    }
-  
 
  
- 
-
 
     //Create photo
     $photo = new Photo;
@@ -97,7 +87,7 @@ $duration = date('I:s', $file['playtime_seconds']);
     $photo->media_type = $extension;
     $photo->location = $request-> input('location');
     $photo->photo = $filenameToStore;
-    $photo->thumbnail = $thumbnail;
+    $photo->thumbnail = $ThfilenameToStore;
     $photo->user_id = auth()->user()->id;
     $photo->url = $url;
     $photo->save();
@@ -108,7 +98,8 @@ $duration = date('I:s', $file['playtime_seconds']);
 
 public function edit($id){
     $data = Photo::findOrFail($id);
-    return view('photos.edit_photo', compact('data'));
+    $albums =Album::all();
+    return view('photos.edit_photo', compact('data','albums'));
 }
 
 public function update(Request $request, $id){ 
@@ -124,10 +115,13 @@ $data = Photo::findOrFail($id);
 
 
     ]);
+    $album =  $request->album_id;
     $title =  $request->title;
     $location= $request->location;
     $url = $request->url;
     //THUMBNAIL
+    $ex = $data->media_type;
+    
     if ($request->hasFile('photo')) {
         //PHOTO
             //Get filename w extension
@@ -159,16 +153,21 @@ $data = Photo::findOrFail($id);
   $path = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);;
     }
     else{
+        $filenameToStore1 = $data->thumbnail;
+    } 
+
+    if($ex == 'yt'){
         $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
         $filenameToStore1 = $thumbnail;
-    } 
+    }
     DB::table('photos')->where('id', $photoId)->update([
         'title' => $title,
         'location' => $location ,
         'url' => $url,
         'thumbnail' => $filenameToStore1,
         'photo' => $filenameToStore,
-        'media_type' => $extension
+        'media_type' => $extension,
+        'album_id' => $album
     ]);
 
    return redirect('/admin/ ')->with('success', 'Azuriranje uspesno');

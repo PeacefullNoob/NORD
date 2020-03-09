@@ -42,7 +42,8 @@ document.querySelector(".img-window").remove();
      //Video modal
 $('#modal1').on('hidden.bs.modal', function (e) {
     $("#iframeModal").attr('src',' ');
-    document.body.style.overflow = "auto";
+    document.getElementById("glavniDiv").style.display = "grid";
+
   });
 
   /* function changeItV(video)
@@ -50,7 +51,8 @@ $('#modal1').on('hidden.bs.modal', function (e) {
   $("#modal1").on('show.bs.modal', function(e){
 let getFullVideoUrl=$(e.relatedTarget).data('myvalue');
 let indexx=$(e.relatedTarget).data('index');
-document.body.style.overflow = "hidden";
+document.getElementById("glavniDiv").style.display = "none";
+
 $.ajax({
   headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

@@ -31,10 +31,15 @@
         @php
         $album = DB::table('albums')->where('id', $photo->album_id)->first();
         @endphp
+
+               @if($album)
         <th class="borderT">{{$album->name}}</th> 
+        @else
+        <th class="borderT">Nema Album</th> 
+        @endif
         <th class="borderT">{{$photo->location}}</th>
         <th class="borderT">{{$photo->created_at}}</th> 
-        @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG') 
+        @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG'|| $photo->media_type == 'mp4') 
         <th class="borderT"><img src = "/images/thumbnail/{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>
         @else
         <th class="borderT"><img src = "{{$photo->thumbnail}}" style="height: 73px;width: 100px;"/></th>

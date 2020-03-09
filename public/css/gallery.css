@@ -719,6 +719,11 @@
       }
       /* Extra small devices (phones, 600px and down) */
       @media (max-width: 600px){
+
+        video#bgvideo {
+          top: 70%;
+          left: -130%;
+        }
 /* Admin */
         .main-content1 {
         

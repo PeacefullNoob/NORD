@@ -31,11 +31,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="myFunction()">
+<body>
 <div id="loader-wrapper">     
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div> 
+<img id="loader" src= "/images/animacija/minib.gif " />
       </div>
     <div id="app" >
     <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">

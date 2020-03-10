@@ -17,9 +17,7 @@
 
           </h3>
 </div>
-          <p style="
-    width: 60%;
-">At Nord we specialize in photo sessions and video productions for outdoor & real estate experiences. With our knowledge, creativity and experience
+          <p style="width: 60%;"> At Nord we specialize in photo sessions and video productions for outdoor & real estate experiences. With our knowledge, creativity and experience
           we can always bring beautiful, exciting and compelling visual stories for your brand.</p></br>
         </div> 
       </div>

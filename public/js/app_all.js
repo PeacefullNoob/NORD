@@ -68,22 +68,34 @@ $.ajax({
 });
         $("#iframeModal").attr('src', getFullVideoUrl+"?autoplay=1");
 }); 
-  
+$(document).ready(function() {
+ 
+  setTimeout(function(){
+      $('body').addClass('loaded');
+  }, 400);
+
+});
 //PRELOADER
+/* var animation = lottie.loadAnimation({
+  container:document.getElementById('loader'),
+  renderer: 'svg',
+  loop: true,
+  autoplay:true,
+  path:' loading1.json'
 
-var myVar;
-
+  }) */
+/*  var myVar;
 function myFunction() {
   myVar = setTimeout(showPage, 300);
 }
-
 function showPage() {
   document.getElementById("loader-wrapper").style.display = "none";
   document.getElementById("glavniDiv").style.display = "grid";
-  /* document.body.style.overflow = "auto";
-  document.body.style.height = "auto"; */
+  
+} 
 
-}
+
+ */
 
 //KOPIRANJE BROJA
 function copyToClip() {

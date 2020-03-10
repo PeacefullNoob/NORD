@@ -51,7 +51,8 @@
                     </div>
                     <div class="row form-group mb-5">
 
-                    <div class="g-recaptcha" data-sitekey="6LcYld4UAAAAAAcXi-dluX8kFRrn2G6P3vLps9Ec"></div>
+                    <div class="g-recaptcha" data-sitekey="6Lezpd4UAAAAAFD3rPYhPpB0AqmYnaJIqJHLegeM
+"></div>
 
     </div>
 

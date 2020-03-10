@@ -29,17 +29,14 @@
             'callback_catch' => 'callbackCatch'
         ]) !!}
 </head>
-  <body onload="myFunction()" >
-      <div id="loader-wrapper">     
-        <div id="loader"></div>
-<!--         <div id="tekstLoader">
-<h6> Made by QQRIQ</h6>
-</div> -->
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div> 
-      </div>
+  <body>
 
 
+       <div id="loader-wrapper">     
+ <img id="loader" src= "/images/animacija/minib.gif " />
+        </div>
+
+  
       <div class="modal fade" id="modal1" style="height: 100%; background-color: black;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
              <div class="modal-content">

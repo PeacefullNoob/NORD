@@ -35,18 +35,13 @@
 });
 
 //preloader
-var myVar;
+$(document).ready(function() {
+ 
+  setTimeout(function(){
+      $('body').addClass('loaded');
+  }, 400);
 
-function myFunction() {
-  myVar = setTimeout(showPage, 300);
-}
-
-function showPage() {
-  document.getElementById("loader-wrapper").style.display = "none";
-  document.getElementById("app").style.display = "grid";
-
-
-}
+});
 
 $(document).ready(function(){
     $("form").on("submit", function(){

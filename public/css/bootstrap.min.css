@@ -4446,9 +4446,9 @@ button.close {
         -o-transition: none;
         transition: none; } }
   .modal.show .modal-dialog {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0); }
+    -webkit-transform: translate(0%, 40%);
+    -ms-transform: translate(0%, 40%);
+    transform: translate(0%, 40%); }
 
 .modal-dialog-centered {
   display: -webkit-box;

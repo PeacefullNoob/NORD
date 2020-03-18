@@ -37,15 +37,7 @@
                     </div>
 
 </div>
-                 <div class="form-group mt-3 fas" id="dodajThumb" style="text-align: center;">
-                        <label  class="custom-file-upload">
-                             <i class="fa fa-cloud-upload"></i> +dodaj "Thumbnail"
-                         </label>
-                      <input type="file" class="up" name="thumbnail" />
-                          <div class="invalid-feedback">
-                                  Nijedna datoteka nije odabrana*
-                             </div>
-                        </div>
+               
 
                 <div class="form-group fas " id="dodajVideo">
                   <div style="padding-top: 10px;">

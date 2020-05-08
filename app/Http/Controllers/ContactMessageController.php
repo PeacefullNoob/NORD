@@ -12,6 +12,12 @@ class ContactMessageController extends Controller
     }
     
     public function store(Request $request){
+        $this->validate($request,[
+            'fname'=>'required',
+            'email'=>'required|email',
+            'lname'=>'required',
+            'message'=>'required'
+        ]);
         $data['title'] = $request->message;
         
                Mail::send('emails.contact-message', $data, function($message) use($request) {

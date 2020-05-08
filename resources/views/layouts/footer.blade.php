@@ -1,7 +1,6 @@
-
 <footer class="footer">
-<!--     <script src="/js/lottie.js"></script>
- -->    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="/js/jquery-ui.js"></script>
     <script src="/js/bootstrap.min.js"></script>
@@ -15,19 +14,19 @@
 
 
     <script src="/js/main.js"></script>
-<!-- Boje 
+    <!-- Boje 
 Tamna
 #0A172E
 Svetla
 #134284 -->
 
-        <div class="footer-copyright py-3 copyright" style="
+    <div class="footer-copyright py-3 copyright" style="
             padding-left: 40px;
                display: flex;
     color: white;">
-       <p style="
+        <p style="
     margin-right: 20px;
 ">© 2020 QQRIQ™ </p>
         <span> Made with love. <i class="fa fa-heart" style="margin-left: 20px"></i></span>
-        </div>
+    </div>
 </footer>

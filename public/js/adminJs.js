@@ -35,6 +35,7 @@
 });
 
 //preloader
+//preloader
 $(document).ready(function() {
  
   setTimeout(function(){

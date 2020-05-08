@@ -63,7 +63,7 @@ public function store(Request $request){
 }else{
         $filenameToStore="null";
         $extension="yt";
-        $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
+        $ThfilenameToStore="https://img.youtube.com/vi/".$url."/maxresdefault.jpg";
 
     }
 
@@ -157,7 +157,7 @@ $data = Photo::findOrFail($id);
     } 
 
     if($ex == 'yt'){
-        $thumbnail="http://img.youtube.com/vi/".$url."/maxresdefault.jpg";
+        $thumbnail="https://img.youtube.com/vi/".$url."/maxresdefault.jpg";
         $filenameToStore1 = $thumbnail;
     }
     DB::table('photos')->where('id', $photoId)->update([

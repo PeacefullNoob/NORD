@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'PhotoController@index');
-
+Route::get('/', 'GalleryController@index1');
+ Route::get( '/app/gallery_media/{id}', 'PhotoController@index');
+ 
 Route::get('/about', function(){
     return view('app.about');
 });

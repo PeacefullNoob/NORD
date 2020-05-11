@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
 <main class="myMain adminMain mem">
-  <div class="container-fluid photos">
+  <div class="container-fluid photos padding20">
     <div class="row" style="padding-bottom:20px">
 
       <a class="btn btnDodajMedia" href="/admin/albums/all_albums">Sve Kategorije</a>

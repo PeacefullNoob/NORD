@@ -223,3 +223,8 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('.cat').click(function() {
+    $('#header').addClass('light');
+  });
+});

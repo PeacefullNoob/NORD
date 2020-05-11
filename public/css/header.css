@@ -1,0 +1,39 @@
+body {
+    background-color: #fff;
+}
+#header {
+    background-color: #dfe1e3 !important;
+    position: relative;
+}
+.naslov h1 {
+    margin: 2%;
+    color: #6e6e6e !important;
+    letter-spacing: 5px;
+}
+.naslov h3 {
+    color: #6e6e6e !important;
+}
+.coverAlbum img {
+    width: 40%;
+    object-fit: cover;
+    height: 40%;
+}
+.coverAl {
+    text-align: center;
+    position: relative;
+}
+.naslov {
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 22px 40px 0px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 22px 40px 0px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 22px 40px 0px rgba(0, 0, 0, 0.46);
+}
+#myIndex {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}

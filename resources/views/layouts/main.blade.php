@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/gallery.css">
-  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/responsive.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/jquery-ui.css">
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
@@ -60,10 +60,9 @@
   </div>
 
   @include('layouts.header')
-  <div id="glavniDiv" class="container-fluid">
     @include('layouts.messages')
     @yield('content')
-  </div>
+
 
   @include('layouts.footer')
 

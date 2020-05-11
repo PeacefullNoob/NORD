@@ -28,9 +28,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $photos =DB::table('photos')->latest('created_at')->get();
-    
-        return view('home')->with ('photos',$photos);  
-    
+        $photos = DB::table('photos')->latest('created_at')->get();
+
+        return view('home')->with('photos', $photos);
     }
 }

@@ -50,9 +50,18 @@ body {
     width: 100%;
     border: 1px solid black;
 }
-
+.media {
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+}
+.mediap {
+    height: 100% !important;
+}
+.index {
+    padding: 20px;
+}
 .mediaDiv {
-    height: 43vh;
     display: flex;
     position: relative;
     color: inherit;
@@ -68,7 +77,6 @@ body {
     cursor: pointer;
 }
 .mediaDivV {
-    height: 43vh;
     display: flex;
     position: relative;
     color: inherit;
@@ -85,7 +93,6 @@ body {
 }
 .picInd {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -162,6 +169,7 @@ body {
 .myLogo {
     margin-right: auto;
     margin-bottom: 0;
+    margin-left: 35px;
 }
 .myLogo p {
     font-size: 17px;
@@ -180,13 +188,9 @@ body {
 #header {
     width: 100%;
     position: absolute;
-    float: none;
     height: 96px;
     min-height: 70px;
-    /* overflow: hidden; */
     background-color: transparent;
-    padding: 30px;
-    text-align: right;
     right: 0;
     top: 0;
     display: flex !important;
@@ -195,7 +199,9 @@ body {
     align-items: center !important;
     z-index: 500;
 }
-
+.light {
+    background-color: #dfe1e3;
+}
 .fa {
     padding-right: 5px;
 }
@@ -272,20 +278,13 @@ body {
 }
 
 video#bgvideo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
     background-size: cover;
-    /*   object-fit: cover; */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .home-social {
@@ -317,7 +316,6 @@ video#bgvideo {
     animation-name: fadeIn;
     padding-left: 15%;
     display: inherit !important;
-    color: white;
 }
 .naslov {
     margin-bottom: 25px;
@@ -330,7 +328,6 @@ video#bgvideo {
 }
 .naslov h3 {
     opacity: 0.95;
-    color: white;
 }
 .home-content h1 {
     font-size: 3.5rem;
@@ -359,12 +356,7 @@ hr.hr-short {
     border-top: 6px solid #134284;
     text-align: left;
 }
-.home-social .home-social-title {
-    font-family: "Kanit", sans-serif;
-    padding-right: 1.5rem;
-    margin-right: 0.5rem;
-    position: relative;
-}
+
 .home-social li {
     display: inline-block;
     position: relative;
@@ -383,8 +375,12 @@ hr.hr-short {
 }
 .footer {
     padding-top: 2px;
-    /* background-color: #0A172E;
-  */
+    background-color: #dfe1e3;
+}
+.footer-copyright {
+    padding-left: 40px;
+    display: flex;
+    color: #3c3c3c;
 }
 .footerTxt p {
     margin-top: 5px !important;
@@ -395,7 +391,7 @@ hr.hr-short {
 
 .menu-wrap {
     position: fixed;
-    top: 3%;
+    top: 2%;
     right: 3%;
     z-index: 111;
 }
@@ -568,7 +564,7 @@ hr.hr-short {
 ::-webkit-scrollbar-track {
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    background: #070404;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb {
     background: #353e4e;
@@ -581,17 +577,19 @@ hr.hr-short {
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     box-sizing: border-box;
-    margin-bottom: 30px;
     padding-bottom: 10px;
-    margin-top: 0px;
+}
+#glavniAl {
+    width: 70%;
+    margin: auto;
+}
+#glavni {
+    margin: auto;
+    width: 90%;
 }
 .mojCol {
     width: 33.33%;
     position: relative;
-    min-height: 1px;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-bottom: 0px;
     display: none;
 }
 
@@ -641,356 +639,6 @@ hr.hr-short {
     color: white;
 }
 
-@media screen and (max-width: 320px) {
-    .home-social {
-        font-size: 10px !important;
-    }
-    #picAbout {
-        padding: 10px !important;
-    }
-    .col-5 {
-        width: 100% !important;
-    }
-    .copyright p {
-        padding-left: 10px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-height: 430px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav .nava li a {
-        font-size: 18px;
-    }
-}
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-    video#bgvideo {
-        top: 70%;
-        left: -130%;
-    }
-    /* Admin */
-    .main-content1 {
-        margin: 0px !important;
-        padding-bottom: 50px;
-    }
-    .editAlbum {
-        padding: 20px;
-    }
-    .adminMain {
-        width: 100% !important;
-    }
-    .memd {
-        width: 100% !important;
-    }
-
-    .divEditAl {
-        width: 100%;
-        padding-left: 2%;
-        padding-right: 2%;
-        margin-bottom: 5%;
-    }
-    .uploadOpcija {
-        width: 100% !important;
-    }
-    .uploadFift {
-        max-width: 100% !important;
-    }
-    .divEditAlbum {
-        padding: 0%;
-        margin-bottom: 15%;
-    }
-
-    /* KRAJ ADMINA
- */
-    .brojMob #piid {
-        visibility: hidden;
-    }
-    .dx {
-        margin-bottom: 30px;
-    }
-    .dx button {
-        height: 50px;
-    }
-    .fa-times {
-        display: none !important;
-    }
-    .modal-dialog {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        min-height: calc(100% - (0.5rem * 2));
-    }
-    .menu-wrap .menu > div > div > ul > li > a {
-        font-size: 25px;
-    }
-    .menu-wrap .toggler:checked ~ .menu {
-        visibility: visible;
-        width: 100%;
-        height: 100%;
-        opacity: 0.95;
-    }
-    .menu-wrap .menu > div > div > ul > li > a {
-        font-size: 25px;
-    }
-    .menu-wrap .toggler:checked ~ .menu {
-        visibility: visible;
-        width: 100%;
-        height: 100%;
-        opacity: 0.95;
-    }
-    #myBtnContainer {
-        display: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        visibility: hidden;
-        width: 100vw;
-    }
-    #myBtnContainer button {
-        margin: auto !important;
-    }
-    .img-window img {
-        max-width: 88vw;
-    }
-    .home-content h1 {
-        font-size: 40px !important;
-        padding-bottom: 20px;
-    }
-    #duration p {
-        font-size: 10px;
-    }
-    .ikonica {
-        left: calc(50% - 35px);
-    }
-    .home-content p {
-        font-size: 14px !important;
-        display: none;
-    }
-    .home-content h3 {
-        font-size: 23px;
-    }
-    .home-content__main {
-        padding-top: 90%;
-        padding-left: 25%;
-        padding-right: 20%;
-        letter-spacing: 2px;
-    }
-
-    .home-social {
-        font-size: 14px;
-        bottom: 0.6rem;
-        left: 0;
-    }
-
-    .footerTxt p {
-        font-size: 8px;
-        margin-bottom: 0px !important;
-    }
-    .footerTxt {
-        padding: 0px;
-    }
-    .overlay {
-        padding: 5px;
-        height: auto;
-    }
-    .overlay h4 {
-        font-size: 22px !important;
-    }
-    .overlay .headOver {
-        font-size: 22px !important;
-    }
-    .overlay .bodyOver {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .mediaDiv {
-        height: 40vh !important;
-    }
-    .mediaDivV {
-        height: 40vh !important;
-    }
-    .glavniR {
-        flex-direction: column !important;
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-        -webkit-column-width: 100%;
-        -moz-column-width: 100%;
-        column-width: 100%;
-    }
-    .mojCol {
-        max-width: 100% !important;
-        flex: auto !important;
-        -webkit-box-flex: auto;
-    }
-    .col-md-5 {
-        width: 100%;
-        margin: auto;
-    }
-
-    .myMain {
-        padding-top: 35%;
-    }
-    #picAbout {
-        width: 100%;
-        height: 180;
-    }
-    .modal {
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-    }
-    .modal-footer {
-        height: auto;
-        padding: 3px !important;
-    }
-
-    .modal-dialog {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        overflow: auto;
-    }
-
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav .nava li a {
-        font-size: 16px;
-    }
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    #myBtnContainer {
-        padding-bottom: 10px !important;
-        padding-top: 20px;
-        padding-left: 3px !important;
-        padding-right: 3px !important;
-    }
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 880px) {
-    .img-window img {
-        max-width: 90vw;
-    }
-    .home-content h1 {
-        font-size: 2.6rem;
-    }
-
-    .home-content p {
-        font-size: 17px;
-    }
-    .home-content h3 {
-        font-size: 24px;
-    }
-
-    .home-social {
-        font-size: 14px;
-        bottom: 0.6rem;
-        left: 0;
-    }
-
-    .footerTxt p {
-        font-size: 8px;
-        margin-bottom: 0px !important;
-    }
-    .footerTxt {
-        padding: 0px;
-    }
-    .overlay {
-        padding: 5px;
-        height: auto;
-    }
-    .overlay h4 {
-        font-size: 22px !important;
-    }
-
-    .overlay .bodyOver {
-        font-size: 13px !important;
-    }
-
-    .mojCol {
-        width: auto;
-        flex: 50%;
-    }
-
-    .col-md-5 {
-        width: 100%;
-        margin: auto;
-    }
-
-    .myMain {
-        padding-top: 15%;
-    }
-
-    .modal {
-        position: fixed;
-        background-color: black;
-        justify-content: center;
-        align-items: center;
-    }
-    .modal-footer {
-        height: auto;
-        padding: 3px !important;
-    }
-    .modal-dialog {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        overflow: auto;
-    }
-    .modal-dialog {
-        transform: translate(0%, 0%) !important;
-    }
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav .nava li a {
-        font-size: 16px;
-    }
-    .uploadPDiv {
-        width: 70% !important;
-    }
-}
-@media (max-width: 1500px) {
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 1960px) {
-    .home-content h1 + p {
-        font-size: 2.5rem;
-    }
-    .home-content h1 {
-        font-size: 4rem;
-    }
-    .home-social {
-        list-style: none;
-        font-size: 22px;
-    }
-    .myLogo p {
-        font-size: 22px;
-    }
-    .myLogoSvg {
-        width: 90px;
-        height: 45px;
-    }
-    .menu-wrap .menu > div > div > ul > li > a {
-        padding: 15px 30px 13px 0px;
-        font-size: 26px;
-    }
-    .menu-wrap .menu > div {
-        padding-top: 40%;
-    }
-}
 .memd {
     width: 70%;
     margin: auto;
@@ -1265,4 +913,26 @@ input[class="up"] {
 }
 .modal-dialog {
     transform: translate(0%, 40%);
+}
+.cat {
+    width: 100%;
+}
+.mwa{
+    top: 4% !important;
+}
+.hadm{
+    position: relative !important;
+    top: 35px !important;
+    height: 100px !important;
+}
+.mwdiv {
+    width: 300px !important;
+  
+}
+.ulAd{
+    padding: 0;
+    text-align: right;
+}
+.padding20{
+    padding: 20px;
 }

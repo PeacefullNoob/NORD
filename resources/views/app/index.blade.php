@@ -1,6 +1,10 @@
 @extends('layouts.main')
-
+@section('index.css')
+<link rel="stylesheet" href="/css/index.css">
+@endsection
 @section('content')
+@yield('index.css')
+
 <div class="site-wrap">
   <div id="myIndex" class="herovideo">
     <video playsinline autoplay="autoplay" loop muted id="bgvideo" width="x" height="y">
@@ -22,7 +26,6 @@
       </div>
     </div>
     <ul class="home-social">
-      <li class="home-social-title">Follow Us</li>
       <li><a href="https://www.facebook.com/pg/nordphotosandvideos/about/?ref=page_internal" target="_blank">
           <i class="fa fa-facebook"></i>
           <span class="home-social-text">Facebook</span>
@@ -37,73 +40,36 @@
         </a></li>
     </ul>
   </div>
-  @if(count($photos)>0)
+  @if(count($albums)>0)
 
-</div>
-<main class="main-content">
-  <div class="container-fluid photos">
 
-    <div id="myBtnContainer">
-      <div class="dx">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        @if(count($albums)>0)
+  <main class="main-content">
+    <div class="container-fluid photos">
+
+
+      <div class="glavniR" id="glavni">
         @foreach($albums as $album)
-
-        <button class="btn" onclick="filterSelection('{{$album->id}}')">{{$album->name}} </button>
-
-        @endforeach
-        @endif
-      </div>
-    </div>
-    <div class="glavniR" id="glavni">
-      @foreach($photos as $photo)
-      @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG')
-
-      <div class="mojCol {{$photo->album_id}}" data-aos="zoom-in-up" data-aos-once="true">
-        <div id="mediaContainer" class="mediaDiv glry-img">
-          <img class="picInd" onclick="changeIt(this)" data-src="/images/thumbnail/{{$photo->thumbnail}}" data-value="{{$photo->id}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}">
-          <div class="overlay">
-            <div class="col-md-6 headOver">
-              <h4 class="heading">{{$photo->title}}</h4>
-            </div>
-            <div class="col-md-6 bodyOver">
-              <p class="locationPic"> {{$photo->location}} <i class="fa fa-map-marker" aria-hidden="true"></i></p>
-              <p class="datumPic"> {{$photo->updated_at}} <i class="fa fa-calendar" aria-hidden="true"></i></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      @else
-      <div class="mojCol {{$photo->album_id}}" data-aos="zoom-in-up" data-aos-once="true">
-
-        @if($photo->photo == "null")
-        <div id="mediaContainer" class="mediaDivV" data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index="{{$photo->id}}">
-          <img class="picInd" src="{{$photo->thumbnail}}" />
-          @else
-          <div id="mediaContainer" class="mediaDivV" data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index="{{$photo->id}}">
-            <img class="picInd" data-src="/images/thumbnail/{{$photo->thumbnail}}" />
-            @endif
-            <span class="ikonica"><img src="/images/Play-BUTTON.svg"></span>
-            <div class="overlay">
-              <div class="col-md-6 headOver">
-                <h4 class="heading">{{$photo->title}}</h4>
+        <div class="mojCol index {{$album->id}}" data-aos="zoom-in-up" data-aos-once="true">
+          <div id="mediaContainer" class="mediaDiv glry-img">
+            <a class="cat" href="/app/gallery_media/{{$album->id}}">
+              <img class="picInd" data-src="/images/{{$album->cover_image}}">
+              <div class="overlay">
+                <div class="col-md-6 headOver">
+                  <h4 class="heading">{{$album->name}}</h4>
+                </div>
               </div>
-              <div class="col-md-6 bodyOver">
-                <p class="locationPic"><i class="fa fa-map-marker" aria-hidden="true"></i>{{$photo->location}}</p>
-                <p class="datumPic"> <i class="fa fa-calendar" aria-hidden="true"></i> {{$photo->updated_at}}</p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
 
-        @endif
         @endforeach
       </div>
     </div>
-</main>
+  </main>
 
-@else
-<p style="color:white">No photos</p>
-@endif
+  @else
+  <p style="color:white">No photos</p>
+  @endif
+</div>
 </div>
 @endsection

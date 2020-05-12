@@ -16,8 +16,8 @@
         <div class="menu" id="myMenu">
             <div class="mwdiv">
                 <div>
-                    <ul class="ulAd" >
-                        <li> <a href="/admin" class="menu__link"><i class="fa fa-fw fa-home"></i>Home Panel</a></li>
+                    <ul class="ulAd">
+                        <li> <a href="/admin" class="menu__link" target="_blank"><i class="fa fa-fw fa-home"></i>Home Panel</a></li>
 
                         <li> <a href="/admin/albums/all_albums" class="menu__link"><i class="fa fa-fw fa-home"></i>Sve Kategorije</a></li>
                         <li><a href="/admin/create" class="menu__link"><i class="fa fa-upload"></i>+ Dodaj kategoriju</a></li>

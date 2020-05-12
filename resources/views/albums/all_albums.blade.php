@@ -16,7 +16,7 @@
       <div class="card" style="width: 22rem;    margin: auto;">
 
 
-        <img class="card-img-top allAlimg" src="/images/{{$album->cover_image}}" alt="Card image cap">
+        <img class="card-img-top allAlimg" src="/images/cover_image/{{$album->cover_image}}" alt="Card image cap">
 
 
         <div class="card-body">

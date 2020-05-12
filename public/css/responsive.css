@@ -162,12 +162,12 @@
         margin: 0 !important;
         padding: 0 !important;
     }
-/*     .mediaDiv {
+     .mediaDiv {
         height: 40vh !important;
     }
     .mediaDivV {
         height: 40vh !important;
-    } */
+    } 
     .glavniR {
         flex-direction: column !important;
         -webkit-column-count: 1;

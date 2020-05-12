@@ -95,7 +95,7 @@ class GalleryController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'cover_image' => 'jpeg,png,jpg,svg'
+            'cover_image' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
         ]);
         $name =  $request->name;

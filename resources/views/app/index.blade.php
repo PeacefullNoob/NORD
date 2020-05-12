@@ -42,7 +42,8 @@
   </div>
   @if(count($albums)>0)
 
-
+<div class= "hori_divider">
+<div class="divider"></div></div>
   <main class="main-content">
     <div class="container-fluid photos">
 
@@ -52,7 +53,7 @@
         <div class="mojCol index {{$album->id}}" data-aos="zoom-in-up" data-aos-once="true">
           <div id="mediaContainer" class="mediaDiv glry-img">
             <a class="cat" href="/app/gallery_media/{{$album->id}}">
-              <img class="picInd" data-src="/images/{{$album->cover_image}}">
+              <img class="picInd" data-src="/images/cover_image/{{$album->cover_image}}">
               <div class="overlay">
                 <div class="col-md-6 headOver">
                   <h4 class="heading">{{$album->name}}</h4>

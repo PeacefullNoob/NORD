@@ -4,7 +4,7 @@
 <main class="myMain adminMain">
         <div class="container-fluid memd">
                 <div class="row" style="padding-bottom:20px">
-                        <a class="btn back " href="/admin/"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+                        <a class="btn back " href="/admin/albums/all_albums"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
 
                 </div>
                 <div class="row">
@@ -40,7 +40,7 @@ padding: 20px;
 
                         </div>
                         <div class="divEditAlbum">
-                                <img src="/images/{{$data->cover_image}}" style="    width: 100%;
+                                <img src="/images/cover_image/{{$data->cover_image}}" style="    width: 100%;
 " />
                         </div>
                 </div>

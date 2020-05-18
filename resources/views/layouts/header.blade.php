@@ -2,9 +2,8 @@
 
 
   <div class="myLogo">
-    <a id="brojMob" onclick="copyToClip()" class="brojMob"> <i class="fa fa-phone" aria-hidden="true"></i> <input id="piid" value=" +382 69 215 455"> </input> </a>
-    <!-- <p id = "piid"> <i class="fa fa-phone" aria-hidden="true"></i>+382 69 215 455 </p>
-       <p id = "piidm"> <i class="fa fa-phone" aria-hidden="true"></i> </p> -->
+    <a id="brojMob" onclick="copyToClip()" class="brojMob"> </i> <input id="piid" value=" +382 69 215 455"> </input> </a>
+    
     <a href="/">
       <img class="myLogoSvg" src="/images/Nord-logotype-bijela-bez slogana.svg">
     </a>
@@ -23,6 +22,8 @@
             <li> <a href="/" class="menu__link"><i class="fa fa-fw fa-home"></i>Home</a></li>
             <li><a href="/about" class="menu__link"><i class="fa fa-info-circle"></i>About</a></li>
             <li> <a href="/contact" class="menu__link"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+            <li> <a href="/video_world" class="menu__link"><i class="fa fa-fw fa-envelope"></i>Naš Video Svijet</a></li>
+
           </ul>
         </div>
       </div>

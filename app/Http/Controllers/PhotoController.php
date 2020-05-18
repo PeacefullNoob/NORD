@@ -174,7 +174,7 @@ $duration = date('I:s', $file['playtime_seconds']);
             'album_id' => $album
         ]);
 
-        return redirect('/admin/ ')->with('success', 'Azuriranje uspesno');
+        return redirect()->back()->with('success', 'Azuriranje uspesno');
     }
 
     public function destroy($id)
@@ -193,5 +193,11 @@ $duration = date('I:s', $file['playtime_seconds']);
     {
         $photo = Photo::findOrFail($request->id);
         DB::table('photos')->where('id', $photo->id)->increment('views');
+    }
+    public function video_world()
+    {
+        $photos = DB::table('photos')->orderBy('created_at', 'desc')->get();
+        $albums = Album::with('Photos')->get();
+        return view('app.video_world', compact("photos", "albums"));
     }
 }

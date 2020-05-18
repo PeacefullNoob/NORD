@@ -9,7 +9,7 @@
   <div id="myIndex">
     <div class="coverAl ">
       <div class="coverAlbum">
-        <img src="/images/{{$album->cover_image}}" alt="">
+        <img src="/images/cover_image/{{$album->cover_image}}" alt="">
       </div>
       <div class="naslov">
         <h1>{{$album->name}}</h1>
@@ -19,6 +19,9 @@
     </div>
 
   </div>
+  <div class="hori_divider">
+      <div class="divider"></div>
+    </div>
   @if(count($photos)>0)
 
 

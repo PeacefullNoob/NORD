@@ -28,8 +28,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $photos = DB::table('photos')->latest('created_at')->get();
 
-        return view('home')->with('photos', $photos);
+
+        return view('admin.home');
+    }
+    public function show($id)
+    {
+
+        $photos = DB::table('photos')->where('album_id', $id)->get();
+        $album = Album::findOrFail($id);
+
+        return view('admin.adminMedia', compact("photos", "album"));
     }
 }

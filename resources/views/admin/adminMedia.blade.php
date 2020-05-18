@@ -3,16 +3,14 @@
 @section('content')
 
 <main class="myMain adminMain mem">
-  <div class="container-fluid photos padding20">
+  <div class="container-fluid  padding20">
     <div class="row" style="padding-bottom:20px">
 
-      <a class="btn btnDodajMedia" href="/admin/albums/all_albums">Sve Kategorije</a>
-
+      <a class="btn back " href="/admin/albums/all_albums"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
     </div>
-    <div class="row" style="padding-bottom:20px">
+    <div class="row align-content-center" style="padding-bottom:20px">
 
-      <a class="btn btnDodajMedia" href="/admin/photos/upload_p/">+Dodaj video/fotografiju</a>
-
+      <h1 class="admin_h1">{{$album->name}}</h1>
     </div>
     <table class="table table-hover">
       <thead>

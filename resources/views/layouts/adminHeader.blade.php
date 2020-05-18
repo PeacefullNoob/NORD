@@ -9,11 +9,11 @@
 
 
     <div class="menu-wrap mwa">
-        <input type="checkbox" class="toggler">
+        <input type="checkbox" class="toggler admin_toggler">
         <div class="hamburger">
             <div></div>
         </div>
-        <div class="menu" id="myMenu">
+        <div class="menu admin_menu" id="myMenu">
             <div class="mwdiv">
                 <div>
                     <ul class="ulAd">

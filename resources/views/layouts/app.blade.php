@@ -23,11 +23,7 @@
 
 
     <!-- Styles -->
-    <style>
-        body {
-            background: #1D2733 !important
-        }
-    </style>
+
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/gallery.css">
     <link rel="stylesheet" href="/css/jquery-ui.css">

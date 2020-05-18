@@ -22,6 +22,6 @@ Svetla
 
     <div class="footer-copyright py-3 copyright">
         <p style="   margin: 0 10px;">© 2020 QQRIQ™ </p>
-        <span> Made with love. <i class="fa fa-heart" style="margin-left: 20px"></i></span>
+        <span> Made with love. </span>
     </div>
 </footer>

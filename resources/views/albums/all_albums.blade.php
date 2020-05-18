@@ -4,7 +4,7 @@
 
 @if(count($albums)>0)
 <main class="main-content1">
-  <div class="container-fluid photos">
+  <div class="container-fluid ">
 
     <div class="row" style="padding-bottom:20px">
 
@@ -14,11 +14,11 @@
       @foreach($albums as $album)
 
       <div class="card" style="width: 22rem;    margin: auto;">
+        <a href="/admin/adminMedia/{{$album->id}}">
 
+          <img class="card-img-top allAlimg" src="/images/cover_image/{{$album->cover_image}}" alt="Card image cap">
 
-        <img class="card-img-top allAlimg" src="/images/cover_image/{{$album->cover_image}}" alt="Card image cap">
-
-
+        </a>
         <div class="card-body">
           <h5 class="card-title" style="text-align: center;">
             {{$album->name}}</h5>

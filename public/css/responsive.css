@@ -111,29 +111,15 @@
     .img-window img {
         max-width: 88vw;
     }
-    .home-content h1 {
-        font-size: 40px !important;
-        padding-bottom: 20px;
-    }
+  
     #duration p {
         font-size: 10px;
     }
     .ikonica {
         left: calc(50% - 35px);
     }
-    .home-content p {
-        font-size: 14px !important;
-        display: none;
-    }
-    .home-content h3 {
-        font-size: 23px;
-    }
-    .home-content__main {
-        padding-top: 90%;
-        padding-left: 25%;
-        padding-right: 20%;
-        letter-spacing: 2px;
-    }
+
+
 
     .home-social {
         font-size: 14px;
@@ -177,11 +163,11 @@
         -moz-column-width: 100%;
         column-width: 100%;
     }
-    .mojCol {
+ /*    .mojCol {
         max-width: 100% !important;
         flex: auto !important;
         -webkit-box-flex: auto;
-    }
+    } */
     .col-md-5 {
         width: 100%;
         margin: auto;
@@ -234,14 +220,12 @@
     .img-window img {
         max-width: 90vw;
     }
-    .home-content h1 {
+    .naslov h1 {
         font-size: 2.6rem;
     }
 
-    .home-content p {
-        font-size: 17px;
-    }
-    .home-content h3 {
+  
+    .naslov h3 {
         font-size: 24px;
     }
 
@@ -270,11 +254,11 @@
         font-size: 13px !important;
     }
 
-    .mojCol {
+/*     .mojCol {
         width: auto;
         flex: 50%;
     }
-
+ */
     .col-md-5 {
         width: 100%;
         margin: auto;
@@ -317,17 +301,17 @@
     }
 }
 @media (max-width: 1100px) {
-    .mojCol {
+/*     .mojCol {
         width: auto;
         flex: 50%;
-    }
+    } */
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1960px) {
-    .home-content h1 + p {
+    .naslov h1 + p {
         font-size: 2.5rem;
     }
-    .home-content h1 {
+    .naslov h1 {
         font-size: 4rem;
     }
     .home-social {

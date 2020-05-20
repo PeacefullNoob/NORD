@@ -10,19 +10,12 @@
 
     <title>{{ config('app.name', 'Nord') }}</title>
 
-    <!-- Scripts -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="/js/jquery-ui.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-    <script src="/js/adminJs.js"></script>
 
     <!-- Fonts -->
 
 
     <!-- Styles -->
+    <link rel="stylesheet" href="/css/index.css">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/gallery.css">
@@ -36,6 +29,7 @@
     <div id="loader-wrapper">
         <img id="loader" src="/images/animacija/minic.gif " />
     </div>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">
             <div class="container">
@@ -86,16 +80,28 @@
                 </div>
             </div>
         </nav>
-    
-        @include('layouts.adminHeader')
+        @if(Auth::check())
 
+        @include('layouts.adminHeader')
+        @endif
 
         <main class="py-4">
             @include('layouts.messages')
-
             @yield('content')
         </main>
     </div>
+
+
+    <!-- Scripts -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/google_analytic.js"></script>
+    <script src="/js/adminJs.js"></script>
+
+
 </body>
 
 </html>

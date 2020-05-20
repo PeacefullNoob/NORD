@@ -5,9 +5,15 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta name="description" content="Nord Photography and Video Production">
+  <meta name="keywords" content="camera,photo,nord,pixels">
+  <meta name="author" content="QQRIQ PeacefulNoob">
+
   <meta property="og:image" content="https://nordpixels.me/images/nordLogoK.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nordpixels.me/" />
+  <meta property="og:title" content="Nord Photography and Video Production" />
+  <meta property="og:description" content="Nord Photography and Video Production" />
 
   <link rel="icon" type="image/png" href="/images/Bar-ikonica.png" />
   <link rel="apple-touch-icon-precomposed" href="/images/Bar-ikonica.png" type="image/png" sizes="152x152" />
@@ -24,8 +30,20 @@
   <link rel="stylesheet" href="/css/aos.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166599441-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <title> Nord </title>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-166599441-1');
+  </script>
+
+  <title> Nord Photography and Video Production</title>
   {!! htmlScriptTagJsApi([
   'action' => 'homepage',
   'callback_then' => 'callbackThen',
@@ -58,14 +76,12 @@
 
     </div>
   </div>
+    @include('layouts.header')
+    @include('layouts.messages')
+    @yield('content')
 
-  @include('layouts.header')
-  @include('layouts.messages')
-  @yield('content')
-
-  <a href="#" class="scrollToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-  @include('layouts.footer')
-
+    <a href="#" class="scrollToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    @include('layouts.footer')
 </body>
 
 

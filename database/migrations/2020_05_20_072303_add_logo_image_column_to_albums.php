@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddViewsColumnToPhotos extends Migration
+class AddLogoImageColumnToAlbums extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddViewsColumnToPhotos extends Migration
      */
     public function up()
     {
-        Schema::table('photos', function (Blueprint $table) {
-            $table->integer('views')->nullable();
+        Schema::table('albums', function (Blueprint $table) {
+            $table->string('logo_image')->nullable();
         });
     }
 
@@ -25,8 +25,8 @@ class AddViewsColumnToPhotos extends Migration
      */
     public function down()
     {
-        Schema::table('photos', function (Blueprint $table) {
-                $table->dropColumn('views');
+        Schema::table('albums', function (Blueprint $table) {
+            $table->dropColumn('logo_image');
         });
     }
 }

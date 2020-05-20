@@ -1,4 +1,48 @@
-/* body {
-    background-color: #dfe1e3;
+.menu-wrap .hamburger {
+    transform: translate(21%, 33%) !important;
 }
- */
+.menu-wrap .toggler {
+    transform: translate(0px, 23px);
+}
+
+.googleAna {
+    height: 300px;
+    width: 100%;
+}
+.admin_menu {
+    left: 0 !important;
+    position: fixed;
+    height: 100%;
+    background-color: #18202b;
+    top: 0;
+}
+.mwdiv {
+    width: 300px !important;
+}
+.ulAd {
+    padding: 0;
+    text-align: right;
+    padding-top: 10%;
+}
+.ulAd li {
+    list-style: none;
+    padding: 1rem 1rem 0rem 1rem;
+    text-align: left;
+}
+
+.admin_menu__link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    padding: 13px 30px 13px 0px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+}
+#app {
+    margin-left: 280px !important;
+}
+#header{
+    background-color: transparent !important;
+}

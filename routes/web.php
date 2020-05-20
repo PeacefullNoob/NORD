@@ -21,6 +21,8 @@ Route::get('/contact', "ContactMessageController@create");
 Route::post('/contact', "ContactMessageController@store");
 Route::post('/views', "PhotoController@views");
 Route::get('/video_world', "PhotoController@video_world");
+Route::get('/galeries', "GalleryController@index2");
+
 Auth::routes();
 
 Route::group(

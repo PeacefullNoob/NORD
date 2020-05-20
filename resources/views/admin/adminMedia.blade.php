@@ -16,7 +16,7 @@
       <thead>
         <tr>
           <th>Naslov</th>
-          <th>Kategorija</th>
+          <th>Album</th>
           <th>Lokacija</th>
           <th>Kreirano</th>
           <th>Forma</th>
@@ -44,7 +44,7 @@
           <th class="borderT"><img src="{{$photo->thumbnail}}" style="height: 73px;width: 100px;" /></th>
 
           @endif
-          <th> <a href="/admin/photos/edit_photo/{{$photo->id}}"> <img class="imgEdit" style="color:white;" src="/images/iconfinder_edit_2561427.svg" /></th>
+          <th> <a href="/admin/photos/edit_photo/{{$photo->id}}"> <img class="imgEdit" style="color:white;" src="/images/iconfinder_edit_2561427.svg" alt="Edit picture"/></th>
           <form action="/admin/photos/delete/{{$photo->id}}" method="POST" enctype="multipart/form-data">
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </form>

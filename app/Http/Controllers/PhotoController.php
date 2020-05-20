@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Photo;
 use App\Album;
 use Illuminate\Support\Facades\DB;
-use FFMpeg;
 use Storage;
 use Intervention\Image\Facades\Image;
 

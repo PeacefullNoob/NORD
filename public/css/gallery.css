@@ -117,7 +117,10 @@
 #mediaContainer:hover .overlay {
     opacity: 1;
 }
-
+#mediaContainer:hover .overlay_index,
+#mediaContainer:hover .overlay_index {
+    opacity: 1;
+}
 .mediaDivV:hover #duration {
     display: none;
 }
@@ -148,6 +151,28 @@
     text-align: center;
     height: auto;
     display: flex;
+}
+.headOver img{
+    margin: auto;
+    width: 50%;
+}
+.overlay_index .headOver {
+    width: 100%;
+    margin: auto;
+}
+.overlay_index{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+    opacity: 0;
+    text-align: center;
+    height: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 .overlay .headOver {
     text-align: left;
@@ -186,7 +211,7 @@
 .myLogo {
     margin-right: auto;
     margin-bottom: 0;
-    margin-left: 35px;
+    padding: 0% 8%;
 }
 .myLogo p {
     font-size: 17px;
@@ -274,12 +299,19 @@
 .heroVideo {
     width: 100%;
     height: auto;
-    min-height: 786px;
+     min-height: 786px; 
     background-color: transparent;
     position: relative;
     display: table;
     background: url('/images/47.png') no-repeat center top;
     background-size: cover;
+
+}
+.heroVideo img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
 }
 
 
@@ -417,6 +449,7 @@ hr.hr-short {
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translate(0%, -16%);
 }
 
 /* Hamburger Line */
@@ -467,19 +500,12 @@ hr.hr-short {
 }
 /* ADMIN DEO */
 /* Show Menu Admin*/
-.menu-wrap .admin_toggler:checked ~ .menu {
-    width: 350px !important;
-}
-.admin_toggler{
-    left: 1% !important;
-}
+
 .mwa{
     top: 5% !important;
     left: 3% !important;
 }
-.admin_menu{
-    left: 0 !important;
-}
+
 .admin_h1{
     font-weight: bold;
     color: white;
@@ -715,7 +741,8 @@ table thead th {
 
 .memd {
     width: 70%;
-    margin: auto;
+    margin: auto; 
+    padding-top: 3%;
 }
 .uploadFift {
     -webkit-box-flex: 0;
@@ -951,13 +978,9 @@ input[class="up"] {
 }
 
 
-.mwdiv {
-    width: 300px !important;
-  
-}
-.ulAd{
-    padding: 0;
-    text-align: right;
+
+.paddingTop{
+    padding-top: 3%;
 }
 .padding20{
     padding: 20px;
@@ -1002,6 +1025,7 @@ input[class="up"] {
     transform: translateX(-50%);
     display: block;
     text-align: -webkit-center;
+    bottom: 0;
 }
 .mouse .mouse-icon {
     display: block;
@@ -1015,7 +1039,7 @@ input[class="up"] {
     -webkit-transition: 0.3s all ease-in-out;
     -o-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
-    margin-bottom: 44%;
+    margin-bottom: 10%;
 }
 .smoothscroll{
 color:white;
@@ -1135,4 +1159,9 @@ position: absolute;
 .ourLate{
     padding-bottom: 0 !important;
     margin-bottom: 0 !important ;
+}
+.gallery_naslov{
+    padding-top: 5%;
+    margin: auto;
+    text-align: center
 }

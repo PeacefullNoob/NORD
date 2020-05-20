@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Album;
 use Illuminate\Support\Facades\DB;
 use Storage;
+use Intervention\Image\Facades\Image;
+
 
 class GalleryController extends Controller
 {
@@ -21,6 +23,11 @@ class GalleryController extends Controller
         $albums = Album::with('Photos')->get();
         return view('app.index')->with('albums', $albums);
     }
+    public function index2()
+    {
+        $albums = Album::with('Photos')->get();
+        return view('app.galeries')->with('albums', $albums);
+    }
     //show create form
     public function create()
     {
@@ -29,12 +36,15 @@ class GalleryController extends Controller
     //store gallery
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'name' => 'required',
-            'cover_image' => 'image|max:8000'
-
+            'description' => 'required',
+            'cover_image' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg',
+            'logo' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
         ]);
+
+
         if ($request->hasFile('cover_image')) {
 
             //Get filename w extension
@@ -47,22 +57,49 @@ class GalleryController extends Controller
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
 
             //Upload image
-            $path = $request->file('cover_image')->move(public_path('images'), $filenameToStore);
+            $path = $request->file('cover_image')->move(public_path('images/cover_image'), $filenameToStore);
         } else {
 
             $filenameToStore = "";
         }
-        $description = $request->input('description');
+        if ($request->hasFile('logo')) {
+            //logo
+            //Get filename w extension
+            $logo = $request->file('logo');
+
+            $filenameWithExtl = $logo->getClientOriginalName();
+            //Samo ime
+            $filenamel = pathinfo($filenameWithExtl, PATHINFO_FILENAME);
+            //samo extension
+            $extensionl = $request->file('logo')->getclientOriginalExtension();
+            //create new filename
+            $filenameToStoreLogo = $filenamel . '_' . time() . '.' . $extensionl;
+            //Upload image
+            /*             $path = $request->file('logo')->move(public_path('images/cover_image/logos'), $filenameToStoreLogo);
+ */
+            //thumbnail
+            $thumbnail = Image::make($logo->getRealPath())->fit(210, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+
+            $filenameToStoreLogo = 'logo_' . $filenameToStoreLogo;
+            $thumbnail->save('images/cover_image/logos/' . $filenameToStoreLogo);
+        } else {
+            $filenameToStoreLogo = "null";
+        }
+
+        $description = $request->description;
 
         //Create album
         $album = new Album;
         $album->name = $request->input('name');
-        $album->$description;
+        $album->description = $description;
         $album->cover_image = $filenameToStore;
-        $album->save();
-        //vraca error
+        $album->logo_image = $filenameToStoreLogo;
 
-        return redirect('/admin/ ')->with('success', 'Kategorija kreirana');
+        $album->save();
+
+        return redirect('/admin/ ')->with('success', 'Album je kreiran');
     }
     public function show($id)
     {
@@ -95,7 +132,9 @@ class GalleryController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'cover_image' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
+            'cover_image' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg',
+            'logo' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
+
 
         ]);
         $name =  $request->name;
@@ -115,10 +154,36 @@ class GalleryController extends Controller
         } else {
             $filenameToStore1 = $data->cover_image;
         }
+        if ($request->hasFile('logo')) {
+            //logo
+            //Get filename w extension
+            $logo1 = $request->file('logo');
+
+            $filenameWithExtl1 = $logo1->getClientOriginalName();
+            //Samo ime
+            $filenamel1 = pathinfo($filenameWithExtl1, PATHINFO_FILENAME);
+            //samo extension
+            $extensionl1 = $request->file('logo')->getclientOriginalExtension();
+            //create new filename
+            $filenameToStoreLogo1 = $filenamel1 . '_' . time() . '.' . $extensionl1;
+            //Upload image
+
+            //thumbnail
+            $thumbnail1 = Image::make($logo1->getRealPath())->fit(210, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+
+            $filenameToStoreLogo1 = 'logo_' . $filenameToStoreLogo1;
+            $thumbnail1->save('images/cover_image/logos/' . $filenameToStoreLogo1);
+        } else {
+            $filenameToStoreLogo1 = "null";
+        }
+
         DB::table('albums')->where('id', $albumId)->update([
             'name' => $name,
             'description' => $description,
-            'cover_image' => $filenameToStore1
+            'cover_image' => $filenameToStore1,
+            'logo_image' => $filenameToStoreLogo1
         ]);
 
         return redirect()->back()->with('success', 'Azuriranje uspesno');

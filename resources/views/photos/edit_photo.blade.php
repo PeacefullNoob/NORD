@@ -29,7 +29,7 @@
                             </select>
                         </div>
                         <div class="form-group col-6">
-                            <a href="/admin/create" style="color: white;margin:auto;padding-left:20px">+ Dodaj Kategoriju</a>
+                            <a href="/admin/create" style="color: white;margin:auto;padding-left:20px">+ Dodaj Album</a>
                         </div>
 
                     </div>

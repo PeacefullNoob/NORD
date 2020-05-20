@@ -13,15 +13,7 @@
 .naslov h3 {
     color: #6e6e6e !important;
 }
-.coverAlbum img {
-    width: 40%;
-    object-fit: cover;
-    height: 40%;
-}
-.coverAl {
-    text-align: center;
-    position: relative;
-}
+
 .naslov {
     width: 30%;
     background-color: white;

@@ -1,14 +1,12 @@
 @extends('layouts.main')
-@section('index.css')
-<link rel="stylesheet" href="/css/index.css">
-@endsection
+
 @section('content')
-@yield('index.css')
 
 <div class="site-wrap">
   <section class="section-1" id="section-1">
 
     <div id="myIndex" class="herovideo">
+      <!--      <img src="/images/47.png" alt=""> -->
       <div class="naslov">
         <h3>
           Mi posmatramo svijet kroz piksele
@@ -49,27 +47,28 @@
     $colcount = count($albums);
     $i = 1;
     ?>
-    <div class="jumbotron ourLate">
-      <div class="container">
-        <h2>Our latest projects</h2>
-        <hr class="my-4">
-
-
-      </div>
-    </div>
     <main class="main-content">
+
+      <div class=" jumbotron-fluid ourLate">
+        <div class="container-fluid ">
+          <h1>Our latest projects</h1>
+          <hr class="my-4">
+
+
+        </div>
+      </div>
       <div class="container-fluid ">
 
 
-        <div class="glavniR" id="glavni">
+        <div class="glavniR">
           @foreach($albums as $album)
-          <div class="col-sm-6	col-md-4	col-lg-3	col-xl-3  index {{$album->id}}" data-aos="zoom-in-up" data-aos-once="true">
+          <div class="col-sm-6	col-md-4	col-lg-3	col-xl-3   {{$album->id}}" data-aos="zoom-in-up" data-aos-once="true">
             <div id="mediaContainer" class="mediaDiv glry-img">
               <a class="cat" href="/app/gallery_media/{{$album->id}}">
-                <img class="picInd" data-src="/images/cover_image/{{$album->cover_image}}">
-                <div class="overlay">
-                  <div class="col-md-6 headOver">
-                    <h4 class="heading">{{$album->name}}</h4>
+                <img class="picInd" data-src="/images/cover_image/{{$album->cover_image}}" alt="Cover picture">
+                <div class="overlay_index">
+                  <div class=" headOver">
+                    <img src="/images/cover_image/logos/{{$album->logo_image}}" alt=" Logo Image">
                   </div>
                 </div>
               </a>
@@ -81,6 +80,9 @@
           ?>
 
           @endforeach
+          <div class="showMore">
+            <h4><a href="/galeries"> Show more </a></h4>
+          </div>
         </div>
       </div>
     </main>
@@ -91,34 +93,42 @@
   </section>
 
   <section class="section-3" id="section-3">
-    <div class="jumbotron ">
-      <div class="container">
-        <h2>About Nord Pixels</h2>
-        <hr class="my-4">
+    <main class="main-content">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget. Nullam eget felis eget nunc lobortis. Faucibus ornare suspendisse sed nisi. Sagittis eu volutpat odio facilisis mauris sit amet massa. Erat velit scelerisque in dictum non consectetur a erat. Amet nulla facilisi morbi tempus iaculis urna. Egestas purus viverra accumsan in nisl. Feugiat in ante metus dictum at tempor commodo. Convallis tellus id interdum velit laoreet. Proin sagittis nisl rhoncus mattis rhoncus urna</p>
+      <div class=" jumbotron-fluid ourLate">
+        <div class="container-fluid">
+          <h1>About Nord Pixels</h1>
+          <hr class="my-4">
+
+          <p>VIDEO PRODUCTION
+            There is so much spectacular ways to see things. There are many stories that nature wants you to remember and we are here to document every single one of them. We are highly motivated individuals inspired by nature, architecture & buildings, exteriors, interiors, food and people. We tell outdoor stories in a way that is relatable to your audience. Customer's approach to every task we are working on is crucial thing for success. If you are someone who appreciate these values, we would love to work with you.
+          </p>
+          <p>
+            PHOTO SESSIONS
+            Transfering an ambient, experience or atmosphere in just a single framerate could be very difficult. Despite that, we are always ready for the challenge. Higher challenges motivate us even more so we are always hyped up about these kind of tasks. Even if you think you have a really hard one for us, bring it on because one thing is for sure - there is nohing that can surprise us.</p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6"></div>
-      <div class="col-6"></div>
-    </div>
-
+      <div class="row justify-content-center">
+        <div class="col-3 m-3 "> <img class="card-img-top" src="/images/aleksandarseter.jpg" alt="Card image cap">
+        </div>
+        <div class="col-3 m-3 "> <img class="card-img-top" src="/images/andrej.jpeg" alt="Card image cap">
+        </div>
+        <div class="col-3 m-3 "> <img class="card-img-top" src="/images/NadaVojinovic.jpg" alt="Card image cap">
+        </div>
+      </div>
+    </main>
   </section>
+
   <section class="section-4" id="section-4">
     <div class="jumbotron ">
       <div class="container">
-        <h2>Our Gear</h2>
+        <h1>Our Gear</h1>
         <hr class="my-4">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget. Nullam eget felis eget nunc lobortis. Faucibus ornare suspendisse sed nisi. Sagittis eu volutpat odio facilisis mauris sit amet massa. Erat velit scelerisque in dictum non consectetur a erat. Amet nulla facilisi morbi tempus iaculis urna. Egestas purus viverra accumsan in nisl. Feugiat in ante metus dictum at tempor commodo. Convallis tellus id interdum velit laoreet. Proin sagittis nisl rhoncus mattis rhoncus urna</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-3"></div>
-      <div class="col-3"></div>
-      <div class="col-3"></div>
-      <div class="col-3"></div>
+
     </div>
 
   </section>

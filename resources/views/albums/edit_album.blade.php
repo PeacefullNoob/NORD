@@ -24,8 +24,15 @@ padding: 20px;
                                         </div>
 
                                         <div class="form-group">
-                                                <label style="color:white">Select Media to upload:</label>
+                                                <label style="color:white">COVER Select Media to upload:</label>
                                                 <input type="file" name="cover_image" id="cover_image">
+                                                <div class="invalid-feedback">
+                                                        Please choose a file.
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <label style="color:white">LOGO Select Media to upload:</label>
+                                                <input type="file" name="logo" id="logo">
                                                 <div class="invalid-feedback">
                                                         Please choose a file.
                                                 </div>

@@ -67,15 +67,14 @@
     text-decoration: none;
     overflow: hidden;
     width: 100%;
-    padding: 3%;
 }
 
-.mediaDiv:hover {
+/* .mediaDiv:hover {
     cursor: pointer;
 }
 .mediaDivV:hover {
     cursor: pointer;
-}
+} */
 .mediaDivV {
     height: 43vh;
 
@@ -266,7 +265,7 @@
     margin: auto;
 }
 .myLogoSvg {
-    top: 46%;
+    top: 51%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -302,7 +301,6 @@
      min-height: 786px; 
     background-color: transparent;
     position: relative;
-    display: table;
     background: url('/images/47.png') no-repeat center top;
     background-size: cover;
 
@@ -1143,7 +1141,7 @@ position: absolute;
     margin: 1rem;
 }
 .section-1{
-
+    min-height: 786px;
 }
 .section-2{
     background-color: #1D2733;
@@ -1160,8 +1158,34 @@ position: absolute;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important ;
 }
-.gallery_naslov{
-    padding-top: 5%;
+.gallery_slika{
     margin: auto;
-    text-align: center
+    width: 40%;
+}
+.gallery_naslov{
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+.album_cover{
+    width: 100%;
+    object-fit: cover;
+
+}
+.alDesc{
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 4%;
+}
+
+
+#bm{
+    background-color:black;
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
 }

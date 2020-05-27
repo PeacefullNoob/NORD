@@ -77,7 +77,7 @@ $("#modal1").on("show.bs.modal", function (e) {
 $(document).ready(function () {
     setTimeout(function () {
         $("body").addClass("loaded");
-    }, 400);
+    }, 900);
 });
 
 //KOPIRANJE BROJA
@@ -95,31 +95,7 @@ function copyToClip() {
     /* Alert the copied text */
     alert("Broj kopiran: " + copyText.value);
 }
-/*  const span = document.getElementById("brojMob");
 
-span.onclick = function() {
-  document.execCommand("copy");
-}
-
-span.addEventListener("copy", function(event) {
-  event.preventDefault();
-  if (event.clipboardData) {
-    event.clipboardData.setData("text/plain", "+382 69 215 455");
-  }
-});  */
-/* const span1 = document.getElementById("brojMob");
-
-span1.onclick = function() {
-  document.execCommand("copy");
-}
-
-span1.addEventListener("copy", function(event) {
-  event.preventDefault();
-  if (event.clipboardData) {
-    event.clipboardData.setData("text/plain", "+382 69 215 455");
-  }
-}); 
- */
 $("img").bind("contextmenu", function (e) {
     return false;
 });
@@ -258,5 +234,7 @@ $(window).on("scroll", function (e) {
 $(window).on("scroll", function (e) {
     if ($(this).scrollTop() > parseInt(15)) {
         $(".textUvod").fadeIn();
-    } 
+    }
 });
+
+///////////////////////////////////////

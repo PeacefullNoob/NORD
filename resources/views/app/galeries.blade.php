@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<main class="main-content">
+<main class="main-content  h-100">
     <div class="jumbotron jumbotron-fluid ourLate">
         <div class="container-fluid ">
             <h1>List of all galeries</h1>
@@ -10,6 +10,8 @@
 
         </div>
     </div>
+
+    @if(count($albums)>0)
     <div class="glavniR">
         @foreach($albums as $album)
         <div class="col-sm-6	col-md-4	col-lg-3	col-xl-3   {{$album->id}}" data-aos="zoom-in-up" data-aos-once="true">
@@ -27,5 +29,11 @@
 
         @endforeach
     </div>
+    @else{
+    <div class="h-100">
+        <p style="color:white">No albums</p>
+
+    </div>
+    }
 </main>
 @endsection

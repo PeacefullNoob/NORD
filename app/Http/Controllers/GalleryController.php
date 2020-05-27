@@ -78,7 +78,7 @@ class GalleryController extends Controller
             /*             $path = $request->file('logo')->move(public_path('images/cover_image/logos'), $filenameToStoreLogo);
  */
             //thumbnail
-            $thumbnail = Image::make($logo->getRealPath())->fit(210, null, function ($constraint) {
+            $thumbnail = Image::make($logo->getRealPath())->fit(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
@@ -169,14 +169,14 @@ class GalleryController extends Controller
             //Upload image
 
             //thumbnail
-            $thumbnail1 = Image::make($logo1->getRealPath())->fit(210, null, function ($constraint) {
+            $thumbnail1 = Image::make($logo1->getRealPath())->fit(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
             $filenameToStoreLogo1 = 'logo_' . $filenameToStoreLogo1;
             $thumbnail1->save('images/cover_image/logos/' . $filenameToStoreLogo1);
         } else {
-            $filenameToStoreLogo1 = "null";
+            $filenameToStoreLogo1 = $data->logo_image;
         }
 
         DB::table('albums')->where('id', $albumId)->update([

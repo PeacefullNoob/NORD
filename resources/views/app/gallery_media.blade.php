@@ -5,30 +5,31 @@
 @section('content')
 @yield('header.css')
 
-<div class="site-wrap">
+<div class="site-wrap ">
   <div id="myIndex">
 
     <div class="jumbotron ">
-      <div class="container ">
+      <div class="container alDesc ">
+        <div class="gallery_slika">
+
+          <img class="album_cover" src="/images/cover_image/logos/{{$album->logo_image}}" alt="{{$album->logo_image}}">
+
+        </div>
         <div class="gallery_naslov">
 
-          <h1>{{$album->name}}</h1>
-          <hr class="my-4">
-          <p>{{$album->description}}</p>
-        </div>
+          <h1>{{$album->description}}</h1>
 
+        </div>
 
 
       </div>
     </div>
   </div>
-  <div class="hori_divider">
-    <div class="divider"></div>
-  </div>
+
   @if(count($photos)>0)
 
 
-  <main class="main-content">
+  <main class="main-content ">
 
 
     <div class="glavniR" id="glavniAl">
@@ -41,27 +42,27 @@
 
         </div>
       </div>
+
       @else
       <div class="media {{$photo->album_id}}" data-aos="zoom-in-up" data-aos-once="true">
         @if($photo->photo == "null")
-        <div class="mediaDivV mediap" data-toggle="modal" data-target="#modal1" data-myvalue="https://www.youtube.com/embed/{{$photo->url}}" data-index="{{$photo->id}}">
-          <img class="picInd" src="{{$photo->thumbnail}}" />
-          @else
-          <div class="mediaDivV" data-toggle="modal" data-target="#modal1" data-myvalue="/images/{{$photo->photo}}" data-index="{{$photo->id}}">
-            <img class="picInd" data-src="/images/thumbnail/{{$photo->thumbnail}}" />
-            @endif
-            <span class="ikonica"><img src="/images/Play-BUTTON.svg"></span>
-
-          </div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$photo->url}}"></iframe>
         </div>
-
         @endif
-        @endforeach
-      </div>
-  </main>
 
+      </div>
+
+
+      @endif
+      @endforeach
+    </div>
+  </main>
   @else
-  <p style="color:white">No photos</p>
+  <div class="h-50">
+    <p style="color:white">No media</p>
+
+  </div>
   @endif
 </div>
 </div>

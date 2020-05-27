@@ -109,28 +109,30 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-3 m-3 "> <img class="card-img-top" src="/images/aleksandarseter.jpg" alt="Card image cap">
+        <div class="col-4  "> <img class="card-img-top" src="/images/aleksandarseter.jpg" alt="Card image cap">
         </div>
-        <div class="col-3 m-3 "> <img class="card-img-top" src="/images/andrej.jpeg" alt="Card image cap">
+        <div class="col-4  "> <img class="card-img-top" src="/images/andrej.jpeg" alt="Card image cap">
         </div>
-        <div class="col-3 m-3 "> <img class="card-img-top" src="/images/NadaVojinovic.jpg" alt="Card image cap">
+        <div class="col-4 "> <img class="card-img-top" src="/images/NadaVojinovic.jpg" alt="Card image cap">
         </div>
       </div>
     </main>
   </section>
 
   <section class="section-4" id="section-4">
-    <div class="jumbotron ">
-      <div class="container">
-        <h1>Our Gear</h1>
-        <hr class="my-4">
+    <main class="main-content">
+
+      <div class=" jumbotron-fluid ourLate">
+        <div class="container-fluid">
+          <h1>Our Gear</h1>
+          <hr class="my-4">
+
+        </div>
+      </div>
+      <div class="row">
 
       </div>
-    </div>
-    <div class="row">
-
-    </div>
-
+    </main>
   </section>
 </div>
 </div>

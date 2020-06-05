@@ -107,7 +107,7 @@
 }
 #mediaContainer:hover img,
 #mediaContainer:hover video {
-    transform: scale(1.09);
+    transform: scale(0.98);
     transform-origin: 50% 50%;
     opacity: 1;
 }
@@ -361,13 +361,13 @@ video#bgvideo {
 
 .naslov h3 {
     color: #1D2733;
-    font-weight: 500 !important;
-    font-size: 42px !important;
+    font-weight: 500 ;
+    font-size: 42px ;
 }
 
 .naslov h1 {
-   font-weight: 700 !important;
-   font-size: 80px !important;
+   font-weight: 700 ;
+   font-size: 80px ;
 }
 
 hr.hr-short {
@@ -447,7 +447,7 @@ hr.hr-short {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(0%, -16%);
+    transform: translate(0%, -23%);
 }
 
 /* Hamburger Line */
@@ -1042,6 +1042,9 @@ input[class="up"] {
 .smoothscroll{
 color:white;
 }
+.smoothscroll:hover{
+    color: #1d2733;
+    }
 .mouse .mouse-wheel {
     height: 6px;
     margin: 2px auto 0;
@@ -1164,8 +1167,7 @@ position: absolute;
 }
 .gallery_naslov{
     margin: auto;
-    width: 60%;
-    text-align: center;
+    width: 50%;
 }
 .album_cover{
     width: 100%;
@@ -1188,4 +1190,19 @@ position: absolute;
     transform: translate3d(0,0,0);
     text-align: center;
     opacity: 1;
+}
+.pr10{
+    padding-right: 10px !important;
+}
+.showMore a img {
+    width: 70px;
+    height: 60px;
+
+}
+.showMore{
+    width: 10%;
+    margin: auto;
+}
+.google-visualization-table-table{
+	color:black;
 }

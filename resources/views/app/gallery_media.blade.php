@@ -10,14 +10,14 @@
 
     <div class="jumbotron ">
       <div class="container alDesc ">
-        <div class="gallery_slika">
+        <div class="gallery_slika  col-sm-12 col-md-5 col-lg-5 col-xl-5 mt-4">
 
           <img class="album_cover" src="/images/cover_image/logos/{{$album->logo_image}}" alt="{{$album->logo_image}}">
 
         </div>
-        <div class="gallery_naslov">
+        <div class="gallery_naslov col-sm-12 col-md-7 col-lg-7 col-xl-7 p-4">
 
-          <h1>{{$album->description}}</h1>
+          <p>{{$album->description}}</p>
 
         </div>
 

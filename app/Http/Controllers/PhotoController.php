@@ -95,7 +95,7 @@ $duration = date('I:s', $file['playtime_seconds']);
         $photo->url = $url;
         $photo->save();
         //vraca error
-        return redirect('/admin/ ')->with('success', 'Media uspesno kreirana');
+        return redirect('/admin/ ')->with('success', 'Media uspješno kreirana');
     }
 
 
@@ -173,7 +173,7 @@ $duration = date('I:s', $file['playtime_seconds']);
             'album_id' => $album
         ]);
 
-        return redirect()->back()->with('success', 'Azuriranje uspesno');
+        return redirect()->back()->with('success', 'Ažuriranje uspješno');
     }
 
     public function destroy($id)
@@ -184,7 +184,7 @@ $duration = date('I:s', $file['playtime_seconds']);
             Storage::delete('/public/images/' . $photo->photo);
         }
         $photo->delete();
-        return redirect('/admin/ ')->with('success', 'Uspesno obrisana slika');
+        return redirect('/admin/ ')->with('success', 'Uspješno obrisana slika');
     }
 
 

@@ -56,7 +56,7 @@
 
   <div id="loader-wrapper">
     <!--     <img id="loader" src="/images/animacija/nordlogoloading.mp4 " /> -->
-    <video id="loader" src="/images/animacija/nordlogoloading.mp4 " autoplay loop  muted></video>
+    <video id="loader" src="/images/animacija/nordlogoloading.mp4 " autoplay muted></video>
 
 
 

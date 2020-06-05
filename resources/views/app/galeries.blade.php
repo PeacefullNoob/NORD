@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-<main class="main-content  h-100">
-    <div class="jumbotron jumbotron-fluid ourLate">
+<main class="main-content mt-4">
+    <div class="jumbotron jumbotron-fluid ourLate h-50  ">
         <div class="container-fluid ">
             <h1>List of all galeries</h1>
             <hr class="my-4">
@@ -29,11 +29,11 @@
 
         @endforeach
     </div>
-    @else{
+    @else
     <div class="h-100">
         <p style="color:white">No albums</p>
 
     </div>
-    }
+    @endif
 </main>
 @endsection

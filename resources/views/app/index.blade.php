@@ -15,11 +15,11 @@
         </h1>
       </div>
       <ul class="home-social">
-        <li><a href="https://www.facebook.com/pg/nordphotosandvideos/about/?ref=page_internal" target="_blank">
+        <li><a href="https://www.facebook.com/pg/nordpixels" target="_blank">
             <i class="fa fa-facebook"></i>
             <span class="home-social-text"></span>
           </a></li>
-        <li><a href="https://www.instagram.com/nordphotosandvideos/?fbclid=IwAR3h3gXVaK-BhBNbWXY9N3IFy9J-_5BhxMgx0prGpiya6tSwY_nsjr0xtC4" target="_blank">
+        <li><a href="https://www.instagram.com/nordpixels" target="_blank">
             <i class="fa fa-instagram"></i>
             <span class="home-social-text"></span>
           </a></li>
@@ -62,8 +62,8 @@
 
         <div class="glavniR">
           @foreach($albums as $album)
-          <div class="col-sm-6	col-md-4	col-lg-3	col-xl-3   {{$album->id}}" data-aos="zoom-in-up" data-aos-once="true">
-            <div id="mediaContainer" class="mediaDiv glry-img">
+          <div class="col-sm-6	col-md-6	col-lg-3	col-xl-3   {{$album->id}} pb-2  pl-2" data-aos="zoom-in-up" data-aos-once="true">
+            <div id="mediaContainer" class="mediaDiv glry-img ">
               <a class="cat" href="/app/gallery_media/{{$album->id}}">
                 <img class="picInd" data-src="/images/cover_image/{{$album->cover_image}}" alt="Cover picture">
                 <div class="overlay_index">
@@ -80,9 +80,12 @@
           ?>
 
           @endforeach
-          <div class="showMore">
-            <h4><a href="/galeries"> Show more </a></h4>
-          </div>
+
+        </div>
+        <div class="showMore">
+          <a href="/galeries">
+            <img src="/images/showMoreSvg.svg" alt="">
+          </a>
         </div>
       </div>
     </main>
@@ -109,11 +112,11 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4  "> <img class="card-img-top" src="/images/aleksandarseter.jpg" alt="Card image cap">
+        <div class="col-4 pr10  "> <img class="card-img-top" src="/images/aleksandarseter.jpg" alt="Card image cap">
         </div>
-        <div class="col-4  "> <img class="card-img-top" src="/images/andrej.jpeg" alt="Card image cap">
+        <div class="col-4  pr10 "> <img class="card-img-top" src="/images/andrej.jpeg" alt="Card image cap">
         </div>
-        <div class="col-4 "> <img class="card-img-top" src="/images/NadaVojinovic.jpg" alt="Card image cap">
+        <div class="col-4 pr10 "> <img class="card-img-top" src="/images/NadaVojinovic.jpg" alt="Card image cap">
         </div>
       </div>
     </main>
@@ -129,8 +132,13 @@
 
         </div>
       </div>
-      <div class="row">
-
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pb-1  pl-1  "> <img class="card-img-top" src="/images/home_slike/2.jpg" alt="Card image cap">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pb-1 pl-1 "> <img class="card-img-top" src="/images/home_slike/3.jpg" alt="Card image cap">
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pb-1 pl-1 "> <img class="card-img-top" src="/images/home_slike/4.jpg" alt="Card image cap">
+        </div>
       </div>
     </main>
   </section>

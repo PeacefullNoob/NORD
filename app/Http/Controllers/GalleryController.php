@@ -78,7 +78,7 @@ class GalleryController extends Controller
             /*             $path = $request->file('logo')->move(public_path('images/cover_image/logos'), $filenameToStoreLogo);
  */
             //thumbnail
-            $thumbnail = Image::make($logo->getRealPath())->fit(410, null, function ($constraint) {
+            $thumbnail = Image::make($logo->getRealPath())->resize(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
@@ -117,7 +117,7 @@ class GalleryController extends Controller
             Storage::delete('/public/images/' . $album->cover_image);
         }
         $album->delete();
-        return redirect()->back()->with('success', 'Album Removed');
+        return redirect()->back()->with('success', 'Album je obrisan');
     }
     public function edit($id)
     {
@@ -169,7 +169,7 @@ class GalleryController extends Controller
             //Upload image
 
             //thumbnail
-            $thumbnail1 = Image::make($logo1->getRealPath())->fit(410, null, function ($constraint) {
+            $thumbnail1 = Image::make($logo1->getRealPath())->resize(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
@@ -186,6 +186,6 @@ class GalleryController extends Controller
             'logo_image' => $filenameToStoreLogo1
         ]);
 
-        return redirect()->back()->with('success', 'Azuriranje uspesno');
+        return redirect()->back()->with('success', 'Ažuriranje uspješno');
     }
 }

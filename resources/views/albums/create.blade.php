@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group formaAddAlb">
                             <label style="color:white" for="description">Description</label>
-                            <textarea class="form-control" style="background-color: white; color:black" name="description" rows="3" id="description">  </textarea>
+                            <textarea class="form-control" style="background-color: white; color:black" name="description" rows="3" maxlength="240" id="description">  </textarea>
                         </div>
                         <div class="form-group formaAddAlb" style=" padding-bottom:20px">
                             <label style="color:white">COVER Select file to upload:</label>

@@ -77,7 +77,7 @@ $("#modal1").on("show.bs.modal", function (e) {
 $(document).ready(function () {
     setTimeout(function () {
         $("body").addClass("loaded");
-    }, 900);
+    }, 800);
 });
 
 //KOPIRANJE BROJA

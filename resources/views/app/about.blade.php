@@ -14,10 +14,10 @@
 
   <main class="myMain" style="color:white;">
     <div class="container-fluid">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center m-5">
         <div class="col-md-9">
           <div class="col-md-12 about">
-            <h4>
+            <h4 class="">
               VIDEO PRODUCTION
             </h4>
             <div class="col-md-12 about">

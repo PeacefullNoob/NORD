@@ -1,5 +1,4 @@
-<div class="googleAna" id="embed-api-auth-container"></div>
-<div class="googleAna" id="chart-container"></div>
-<div class="googleAna" id="view-selector-container">
-   
-</div>
+<div id="embed-api-auth-container"></div>
+<div id="view-selector-container"></div>
+<div id="main-chart-container"></div>
+<div id="breakdown-chart-container"></div>

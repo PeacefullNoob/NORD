@@ -17,12 +17,13 @@
     top: 0;
 }
 .mwdiv {
-    width: 300px !important;
+    width: 250px !important;
 }
 .ulAd {
     padding: 0;
     text-align: right;
     padding-top: 10%;
+    padding-left: 5%;
 }
 .ulAd li {
     list-style: none;
@@ -41,8 +42,8 @@
     display: block;
 }
 #app {
-    margin-left: 280px !important;
+    padding-left: 250px !important;
 }
-#header{
+#header {
     background-color: transparent !important;
 }

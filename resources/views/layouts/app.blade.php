@@ -27,7 +27,7 @@
 
 <body>
     <div id="loader-wrapper">
-        <img id="loader" src="/images/animacija/minic.gif " />
+        <video id="loader" src="/images/animacija/nordlogoloading.mp4 " autoplay muted></video>
     </div>
 
     <div id="app">
@@ -61,9 +61,7 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                         </li>
-                        <li class="nav-item" style="margin: auto;">
-                            <img class="adminIkonica" src="/images/2profil.svg" />
-                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link" style="color:white;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -85,7 +83,7 @@
         @include('layouts.adminHeader')
         @endif
 
-        <main class="py-4">
+        <main class="py-4 pl-3">
             @include('layouts.messages')
             @yield('content')
         </main>

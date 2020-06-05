@@ -24,11 +24,17 @@
 }
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
-  
     /* Admin */
+
+    .main-content .container-fluid {
+        text-align: center;
+    }
     .main-content1 {
         margin: 0px !important;
         padding-bottom: 50px;
+    }
+    .smoothscroll h5 {
+        visibility: hidden !important;
     }
     .editAlbum {
         padding: 20px;
@@ -111,7 +117,7 @@
     .img-window img {
         max-width: 88vw;
     }
-  
+
     #duration p {
         font-size: 10px;
     }
@@ -119,12 +125,11 @@
         left: calc(50% - 35px);
     }
 
-
-
     .home-social {
         font-size: 14px;
         bottom: 0.6rem;
-        left: 0;
+        left: 50% !important;
+        transform: translate(-42%, 25%);
     }
 
     .footerTxt p {
@@ -148,12 +153,12 @@
         margin: 0 !important;
         padding: 0 !important;
     }
-     .mediaDiv {
+    .mediaDiv {
         height: 40vh !important;
     }
     .mediaDivV {
         height: 40vh !important;
-    } 
+    }
     .glavniR {
         flex-direction: column !important;
         -webkit-column-count: 1;
@@ -163,7 +168,7 @@
         -moz-column-width: 100%;
         column-width: 100%;
     }
- /*    .mojCol {
+    /*    .mojCol {
         max-width: 100% !important;
         flex: auto !important;
         -webkit-box-flex: auto;
@@ -214,6 +219,16 @@
         padding-left: 3px !important;
         padding-right: 3px !important;
     }
+    .naslov h3 {
+        width: 50%;
+        margin: auto;
+    }
+    .naslov {
+        width: 100%;
+    }
+    #glavniAl {
+        width: 100% !important;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 880px) {
@@ -221,12 +236,11 @@
         max-width: 90vw;
     }
     .naslov h1 {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
     }
 
-  
     .naslov h3 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .home-social {
@@ -254,7 +268,7 @@
         font-size: 13px !important;
     }
 
-/*     .mojCol {
+    /*     .mojCol {
         width: auto;
         flex: 50%;
     }
@@ -301,7 +315,7 @@
     }
 }
 @media (max-width: 1100px) {
-/*     .mojCol {
+    /*     .mojCol {
         width: auto;
         flex: 50%;
     } */

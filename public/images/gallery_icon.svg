@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142" height="79" viewBox="0 0 142 79">
+<defs>
+<style>.a{fill:#fff;}</style>
+</defs>
+<rect class="a" width="28" height="32"/>
+<rect class="a" width="28" height="32" transform="translate(0 47)"/>
+<rect class="a" width="28" height="32" transform="translate(38)"/>
+<rect class="a" width="28" height="32" transform="translate(38 47)"/>
+<rect class="a" width="28" height="32" transform="translate(76)"/>
+<rect class="a" width="28" height="32" transform="translate(114)"/>
+<rect class="a" width="28" height="32" transform="translate(76 47)"/>
+<rect class="a" width="28" height="32" transform="translate(114 47)"/>
+</svg>

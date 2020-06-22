@@ -95,9 +95,10 @@
     object-fit: fill !important;
 }
 .picInd {
-    width: 100%;
+    width: 105%;
     object-fit: cover;
-    height: 100%;
+    height: 105%;
+    margin: -6px;
 }
 
 #mediaContainer img,
@@ -302,7 +303,10 @@
     background-color: transparent;
     position: relative;
     background: url('/images/47.png') no-repeat center top;
-    background-size: cover;
+    
+/*  background: url('/images/home_slike/oprema_iphone.jpg') no-repeat center top;
+ */
+ background-size: cover;
 
 }
 .heroVideo img {
@@ -346,8 +350,8 @@ video#bgvideo {
     color: #fff;
     position: absolute;
     bottom: 5%;
-    left: 35px;
-    padding: 0%;
+    left: 0%;
+    padding: 0% 8%;
 }
 
 .naslov {
@@ -662,6 +666,7 @@ table thead th {
 ::-webkit-scrollbar {
     width: 7px;
     background: transparent;
+    
 }
 ::-webkit-scrollbar-track {
     -webkit-border-radius: 5px;
@@ -1038,6 +1043,7 @@ input[class="up"] {
     -o-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
     margin-bottom: 10%;
+    margin: 10% auto;
 }
 .smoothscroll{
 color:white;
@@ -1200,9 +1206,59 @@ position: absolute;
 
 }
 .showMore{
-    width: 10%;
+    width: 140px;
     margin: auto;
 }
 .google-visualization-table-table{
 	color:black;
 }
+.ov-visible{
+    overflow: visible;
+    transition: 0.5s ease;
+}
+svg:hover #square0{
+    transform: translate(-2px, -2px);}
+ svg:hover #square1{
+    transform: translate(-2px, 27px);
+}
+svg:hover #square2{
+        transform: translate(27px, -2px);
+
+}
+svg:hover #square3{
+    transform: translate(27px, 27px);
+}
+svg:hover #square4{
+    transform: translate(60px,-2px);
+}
+svg:hover #square5{
+    transform:   translate(87px, -2px);
+}
+svg:hover #square6{
+    transform: translate(60px,27px);
+}
+svg:hover #square7{
+    transform: translate(87px ,  27px);
+} 
+.oprema{
+    width: 100%;
+    
+}
+.oprema_div{
+    height: 70vh;
+    overflow: scroll;
+    cursor: n-resize;
+}
+.parallax {
+    /* The image used */
+    background-image: url("/images/home_slike/Oprema_iphone.jpg");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

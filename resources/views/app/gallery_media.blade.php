@@ -38,7 +38,7 @@
 
       <div class=" media {{$photo->album_id}}" data-aos="zoom-in-up" data-aos-once="true">
         <div class="mediaDiv glry-img mediap">
-          <img class="picInd" data-src="/images/{{$photo->photo}}" data-value="{{$photo->id}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}">
+          <img class="picInd" src="/images/{{$photo->photo}}" data-value="{{$photo->id}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}">
 
         </div>
       </div>

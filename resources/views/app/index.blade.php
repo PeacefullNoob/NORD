@@ -62,7 +62,7 @@
 
         <div class="glavniR">
           @foreach($albums as $album)
-          <div class="col-sm-6	col-md-6	col-lg-3	col-xl-3   {{$album->id}} pb-2  pl-2" data-aos="zoom-in-up" data-aos-once="true">
+          <div class="col-sm-6	col-md-6	col-lg-3	col-xl-3   {{$album->id}} p-2" data-aos="zoom-in-up" data-aos-once="true">
             <div id="mediaContainer" class="mediaDiv glry-img ">
               <a class="cat" href="/app/gallery_media/{{$album->id}}">
                 <img class="picInd" data-src="/images/cover_image/{{$album->cover_image}}" alt="Cover picture">
@@ -84,7 +84,22 @@
         </div>
         <div class="showMore">
           <a href="/galeries">
-            <img src="/images/showMoreSvg.svg" alt="">
+           <svg class="ov-visible" xmlns="http://www.w3.org/1500/svg" width="85" height="55" viewBox="0 0 90 55">
+<defs>
+<style>.a{fill:#fff;transition: 0.3s ease;}
+  
+</style>
+</defs>
+<rect class="a" id ="square0" width="15" height="17"/>
+<rect class="a" id ="square1" width="15" height="17" transform="translate(0 25)"/>
+<rect class="a" id ="square2" width="15" height="17" transform="translate(25)"/>
+<rect class="a" id ="square3"  width="15" height="17" transform="translate(25 25)"/>
+<rect class="a" id ="square4" width="15" height="17" transform="translate(50)"/>
+<rect class="a" id ="square5" width="15" height="17" transform="translate(75)"/>
+<rect class="a" id ="square6" width="15" height="17" transform="translate(50 25)"/>
+<rect class="a" id ="square7" width="15" height="17" transform="translate(75 25)"/>
+
+</svg>
           </a>
         </div>
       </div>
@@ -94,8 +109,14 @@
     <p style="color:white">No photos</p><!--  -->
     @endif
   </section>
-
   <section class="section-3" id="section-3">
+    <div class="position-relative">
+    <div class="parallax"></div>
+
+        
+    </div>
+  </section>
+  <section class="section-4" id="section-4">
     <main class="main-content">
 
       <div class=" jumbotron-fluid ourLate">
@@ -122,26 +143,7 @@
     </main>
   </section>
 
-  <section class="section-4" id="section-4">
-    <main class="main-content">
 
-      <div class=" jumbotron-fluid ourLate">
-        <div class="container-fluid">
-          <h1>Our Gear</h1>
-          <hr class="my-4">
-
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pb-1  pl-1  "> <img class="card-img-top" src="/images/home_slike/2.jpg" alt="Card image cap">
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pb-1 pl-1 "> <img class="card-img-top" src="/images/home_slike/3.jpg" alt="Card image cap">
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 pb-1 pl-1 "> <img class="card-img-top" src="/images/home_slike/4.jpg" alt="Card image cap">
-        </div>
-      </div>
-    </main>
-  </section>
 </div>
 </div>
 @endsection

@@ -18,7 +18,7 @@
     <div class="menu" id="myMenu">
       <div>
         <div>
-          <ul style="text-align: right;">
+          <ul >
             <li> <a href="/" class="menu__link"><i class="fa fa-fw fa-home"></i>Home</a></li>
             <li> <a href="/galeries" class="menu__link"><i class="fa fa-fw fa-picture-o"></i>Galeries</a></li>
             <li><a href="/about" class="menu__link"><i class="fa fa-info-circle"></i>About</a></li>

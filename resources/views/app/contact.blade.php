@@ -3,7 +3,7 @@
 @section('content')
 <div class="site-wrap" style="width:100%; padding-bottom:20px;" ;>
 
-  <main class="myMain">
+  <main class="myMain px-3">
     <div class="container-fluid">
       <div class="row justify-content-center">
 
@@ -51,8 +51,7 @@
                     </div>
                     <div class="row form-group mb-5">
 
-                      <div class="g-recaptcha" data-sitekey="6Lezpd4UAAAAAFD3rPYhPpB0AqmYnaJIqJHLegeM
-"></div>
+                      <div class="g-recaptcha" data-sitekey="6LfhZ6gZAAAAAC8fQ7V1EwHuiFHE3DLshMOKsnhH"></div>
 
                     </div>
 

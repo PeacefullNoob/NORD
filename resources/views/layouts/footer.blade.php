@@ -11,7 +11,7 @@
 
     <script src="/js/app_all.js"></script>
     <script src="  https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 
     <script>
@@ -41,7 +41,7 @@ Svetla
 #134284 -->
 
     <div class="footer-copyright py-3 copyright">
-        <p style="   margin: 0 10px;">© 2020 QQRIQ™ </p>
+        <p style="   margin: 0 10px;">© 2020 <a href="https://qqriq.me/">QQRIQ™</a>  </p>
         <span> Made with love. </span>
     </div>
 </footer>

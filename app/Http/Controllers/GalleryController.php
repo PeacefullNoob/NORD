@@ -78,7 +78,7 @@ class GalleryController extends Controller
             /*             $path = $request->file('logo')->move(public_path('images/cover_image/logos'), $filenameToStoreLogo);
  */
             //thumbnail
-            $thumbnail = Image::make($logo->getRealPath())->resize(410, null, function ($constraint) {
+            $thumbnail = Image::make($logo->getRealPath())->resize(210, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
@@ -150,7 +150,9 @@ class GalleryController extends Controller
             //create new filename
             $filenameToStore1 = $filename1 . '_' . time() . '.' . $extension1;
             //Upload cover_image
-            $path = $request->file('cover_image')->move(public_path('images/cover_image'), $filenameToStore1);;
+            $path = $request->file('cover_image')->move(public_path('images/cover_image'), $filenameToStore1);
+
+
         } else {
             $filenameToStore1 = $data->cover_image;
         }
@@ -169,7 +171,7 @@ class GalleryController extends Controller
             //Upload image
 
             //thumbnail
-            $thumbnail1 = Image::make($logo1->getRealPath())->resize(410, null, function ($constraint) {
+            $thumbnail1 = Image::make($logo1->getRealPath())->resize(210, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 

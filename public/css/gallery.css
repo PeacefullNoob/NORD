@@ -54,7 +54,7 @@
 }
 
 .media {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 2%;
 }
@@ -112,7 +112,7 @@
 #mediaContainer img,
 #mediaContainer video {
     display: block;
-    transition: transform 0.6s;
+    transition: transform 0.5s linear;
 }
 
 #mediaContainer:hover img,
@@ -181,7 +181,7 @@
     left: 50%;
     transform: translate(-50%, 50%);
     background: rgba(0, 0, 0, 0.5);
-    transition: 0.5s ease;
+    transition: 0.5s linear;
     opacity: 0;
     text-align: center;
     height: auto;
@@ -1290,8 +1290,8 @@ a.scrollToTop:focus {
 }
 
 .gallery_slika {
-    margin: auto;
     height: 320px;
+    margin: auto;
 }
 
 .gallery_naslov {
@@ -1303,7 +1303,8 @@ a.scrollToTop:focus {
     /*   width: 100%; */
     object-fit: cover;
     max-height: 300px;
-    max-width: 300px
+    max-width: 300px;
+    width: 100%;
 }
 
 .alDesc {
@@ -1343,7 +1344,7 @@ a.scrollToTop:focus {
 }
 
 .showMore {
-    width: 140px;
+    width: 86px;
     margin: auto;
 }
 
@@ -1389,35 +1390,35 @@ a.scrollToTop:focus {
 }
 
 svg:hover #square0 {
-    transform: translate3d(-2px, -2px, 0px) scale(1);
+    transform: translate3d(-5px, -2px, 0px) scale(1);
 }
 
 svg:hover #square1 {
-    transform: translate3d(-2px, 27px, 0px) scale(1);
+    transform: translate3d(-5px, 27px, 0px) scale(1);
 }
 
 svg:hover #square2 {
-    transform: translate3d(27px, -2px, 0px) scale(1);
+    transform: translate3d(24px, -2px, 0px) scale(1);
 }
 
 svg:hover #square3 {
-    transform: translate3d(27px, 27px, 0px) scale(1);
+    transform: translate3d(24px, 27px, 0px) scale(1);
 }
 
 svg:hover #square4 {
-    transform: translate3d(60px, -2px, 0px) scale(1);
+    transform: translate3d(53px, -2px, 0px) scale(1);
 }
 
 svg:hover #square5 {
-    transform: translate3d(87px, -2px, 0px) scale(1);
+    transform: translate3d(81px, -2px, 0px) scale(1);
 }
 
 svg:hover #square6 {
-    transform: translate3d(60px, 27px, 0px) scale(1);
+    transform: translate3d(53px, 27px, 0px) scale(1);
 }
 
 svg:hover #square7 {
-    transform: translate3d(87px, 27px, 0px) scale(1);
+    transform: translate3d(81px, 27px, 0px) scale(1);
 }
 
 .oprema {

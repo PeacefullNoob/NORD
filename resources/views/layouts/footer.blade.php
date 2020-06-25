@@ -4,10 +4,7 @@
     <script src="/js/jquery-ui.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.1/lottie.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.js"></script>
 
     <script src="/js/app_all.js"></script>
     <script src="  https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.min.js"></script>

@@ -648,7 +648,7 @@ h1, h2, h3, h4, h5,
 
 .main-content {
 width:100%;
-padding: 3% 8%;
+padding: 0% 8%;
 }
   @media (max-width: 991.98px) {
     .main-content {

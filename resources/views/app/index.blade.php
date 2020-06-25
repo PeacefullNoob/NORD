@@ -47,7 +47,7 @@
     $colcount = count($albums);
     $i = 1;
     ?>
-    <main class="main-content">
+    <main class="main-content my-5">
 
       <div class=" jumbotron-fluid ourLate">
         <div class="container-fluid ">
@@ -82,7 +82,7 @@
           @endforeach
 
         </div>
-        <div class="showMore">
+        <div class="showMore my-3">
           <a href="/galeries">
            <svg class="ov-visible" xmlns="http://www.w3.org/1500/svg" width="85" height="55" viewBox="0 0 90 55">
 <defs>

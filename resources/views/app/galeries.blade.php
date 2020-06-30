@@ -3,7 +3,7 @@
 @section('content')
 <main class="main-content mt-4">
     <div class="jumbotron jumbotron-fluid ourLate h-50  ">
-        <div class="container-fluid ">
+        <div class="container-fluid galeries ">
             <h1>List of all galeries</h1>
             <hr class="my-4">
 

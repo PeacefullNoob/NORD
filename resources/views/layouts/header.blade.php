@@ -2,7 +2,20 @@
 
 
   <div class="myLogo">
-    <a id="brojMob" onclick="copyToClip()" class="brojMob"> </i> <input id="piid" value=" +382 69 215 455"> </input> </a>
+    <ul class="home-social">
+      <li><a href="https://www.facebook.com/pg/nordpixels" target="_blank">
+          <i class="fa fa-facebook"></i>
+          <span class="home-social-text"></span>
+        </a></li>
+      <li><a href="https://www.instagram.com/nordpixels" target="_blank">
+          <i class="fa fa-instagram"></i>
+          <span class="home-social-text"></span>
+        </a></li>
+      <li><a href="https://www.youtube.com/channel/UClx7DimS-Cl0dx2H13Bz1PQ" target="_blank">
+          <i class="fa fa-youtube"></i>
+          <span class="home-social-text"></span>
+        </a></li>
+    </ul>
     
     <a href="/">
       <img class="myLogoSvg" src="/images/Nord-logotype-bijela-bez slogana.svg">

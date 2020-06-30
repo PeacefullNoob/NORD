@@ -7,27 +7,17 @@
 
     <div id="myIndex" class="herovideo">
       <!--      <img src="/images/47.png" alt=""> -->
-      <div class="naslov">
+      <video playsinline autoplay="autoplay" loop muted id="bgvideo" width="x" height="y">
+        <source src="/images/Dronzasajt.mp4" type="video/mp4">
+      </video>
+     {{--  <div class="naslov">
         <h3>
           Mi posmatramo svijet kroz piksele
         </h3>
         <h1>NORD PIXELS
         </h1>
-      </div>
-      <ul class="home-social">
-        <li><a href="https://www.facebook.com/pg/nordpixels" target="_blank">
-            <i class="fa fa-facebook"></i>
-            <span class="home-social-text"></span>
-          </a></li>
-        <li><a href="https://www.instagram.com/nordpixels" target="_blank">
-            <i class="fa fa-instagram"></i>
-            <span class="home-social-text"></span>
-          </a></li>
-        <li><a href="https://www.youtube.com/channel/UClx7DimS-Cl0dx2H13Bz1PQ" target="_blank">
-            <i class="fa fa-youtube"></i>
-            <span class="home-social-text"></span>
-          </a></li>
-      </ul>
+      </div> --}}
+     
       <div class="scrollDiv">
         <a href="#section-2" class="mouse smoothscroll">
           <span class="mouse-icon">
@@ -60,7 +50,7 @@
       <div class="container-fluid ">
 
 
-        <div class="glavniR">
+        <div class="glavniR ">
           @foreach($albums as $album)
           <div class="col-sm-6	col-md-6	col-lg-3	col-xl-3   {{$album->id}} p-2" data-aos="zoom-in-up" data-aos-once="true">
             <div id="mediaContainer" class="mediaDiv glry-img ">
@@ -116,7 +106,7 @@
         
     </div>
   </section>
-  <section class="section-4" id="section-4">
+  <section class="section-4 my-5" id="section-4">
     <main class="main-content">
 
       <div class=" jumbotron-fluid ourLate">

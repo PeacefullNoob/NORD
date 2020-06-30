@@ -111,14 +111,17 @@
 
 #mediaContainer img,
 #mediaContainer video {
-    display: block;
-    transition: transform 0.5s linear;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    transition: 0.5s ease;
 }
 
 #mediaContainer:hover img,
 #mediaContainer:hover video {
-    transform: scale(0.98);
-    transform-origin: 50% 50%;
+    -webkit-transform: scale(0.98, 0.98);
+    -moz-transform: scale(0.98, 0.98);
+    transform: scale(0.98, 0.98);
+
     opacity: 1;
 }
 
@@ -332,11 +335,6 @@
     min-height: 786px;
     background-color: transparent;
     position: relative;
-    background: url("/images/47.png") no-repeat center top;
-
-    /*  background: url('/images/home_slike/oprema_iphone.jpg') no-repeat center top;
- */
-    background-size: cover;
 }
 
 .heroVideo img {
@@ -353,10 +351,12 @@
     width: 100%;
     height: 100%;
     opacity: 0.4;
-    background: linear-gradient(to right,
-            #0a172e 0%,
-            #0a172e 20%,
-            transparent 100%);
+    background: linear-gradient(
+        to right,
+        #0a172e 0%,
+        #0a172e 20%,
+        transparent 100%
+    );
 }
 
 video#bgvideo {
@@ -365,7 +365,7 @@ video#bgvideo {
     left: 0;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 84vh;
     object-fit: cover;
 }
 
@@ -381,7 +381,7 @@ video#bgvideo {
     padding: 0% 8%;
 }
 
-.naslov {
+/* .naslov {
     position: absolute;
     top: 25%;
     left: 50%;
@@ -399,7 +399,7 @@ video#bgvideo {
 .naslov h1 {
     font-weight: 700;
     font-size: 80px;
-}
+} */
 
 hr.hr-short {
     position: relative;
@@ -485,7 +485,7 @@ hr.hr-short {
 }
 
 /* Hamburger Line */
-.menu-wrap .hamburger>div {
+.menu-wrap .hamburger > div {
     position: relative;
     flex: none;
     width: 100%;
@@ -498,8 +498,8 @@ hr.hr-short {
 }
 
 /* Hamburger Lines - Top & Bottom */
-.menu-wrap .hamburger>div::before,
-.menu-wrap .hamburger>div::after {
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -510,24 +510,24 @@ hr.hr-short {
 }
 
 /* Moves Line Down */
-.menu-wrap .hamburger>div::after {
+.menu-wrap .hamburger > div::after {
     top: 10px;
 }
 
 /* Toggler Animation */
-.menu-wrap .toggler:checked+.hamburger>div {
+.menu-wrap .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
 }
 
 /* Turns Lines Into X */
-.menu-wrap .toggler:checked+.hamburger>div:before,
-.menu-wrap .toggler:checked+.hamburger>div:after {
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
 }
 
 /* Rotate On Hover When Checked */
-.menu-wrap .toggler:checked:hover+.hamburger>div {
+.menu-wrap .toggler:checked:hover + .hamburger > div {
     transform: rotate(225deg);
 }
 
@@ -613,7 +613,7 @@ table thead th {
 }
 
 /* Show Menu */
-.menu-wrap .toggler:checked~.menu {
+.menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
     width: 280px;
 }
@@ -622,12 +622,12 @@ table thead th {
     overflow: hidden;
 } */
 
-.menu-wrap .toggler:checked~.menu>div {
+.menu-wrap .toggler:checked ~ .menu > div {
     transform: scale(1);
     transition-duration: var(--menu-speed);
 }
 
-.menu-wrap .toggler:checked~.menu>div>div {
+.menu-wrap .toggler:checked ~ .menu > div > div {
     opacity: 1;
     transition: opacity 0.4s ease 0.4s;
 }
@@ -646,7 +646,7 @@ table thead th {
     height: 60%;
 }
 
-.menu-wrap .menu>div {
+.menu-wrap .menu > div {
     width: 250px;
     height: 100%;
     display: flex;
@@ -658,7 +658,7 @@ table thead th {
     padding-top: 10px;
 }
 
-.menu-wrap .menu>div>div {
+.menu-wrap .menu > div > div {
     text-align: center;
     max-width: 90vw;
     max-height: 100vh;
@@ -666,12 +666,12 @@ table thead th {
     transition: opacity 0.4s ease;
 }
 
-.menu-wrap .menu>div>div>ul>li {
+.menu-wrap .menu > div > div > ul > li {
     list-style: none;
     padding: 1rem 1rem 1rem 0;
 }
 
-.menu-wrap .menu>div>div>ul>li>a {
+.menu-wrap .menu > div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
@@ -711,7 +711,7 @@ table thead th {
     transition-duration: 0.2s;
 }
 
-.menu-wrap .menu>div>div>ul>li>a:hover {
+.menu-wrap .menu > div > div > ul > li > a:hover {
     color: #a9ced3;
     transition: 0.6s;
 }
@@ -1150,12 +1150,13 @@ input[class="up"] {
     margin: 10% auto;
 }
 
-.smoothscroll {
+.smoothscroll h5 {
+    opacity: 0.5;
     color: white;
 }
 
-.smoothscroll:hover {
-    color: #1d2733;
+.smoothscroll:hover h5 {
+    opacity: 1;
 }
 
 .mouse .mouse-wheel {
@@ -1270,6 +1271,7 @@ a.scrollToTop:focus {
 
 .section-1 {
     min-height: 786px;
+    height: 84vh;
 }
 
 .section-2 {
@@ -1296,7 +1298,6 @@ a.scrollToTop:focus {
 
 .gallery_naslov {
     margin: auto !important;
-
 }
 
 .album_cover {
@@ -1313,7 +1314,6 @@ a.scrollToTop:focus {
     width: 70%;
     margin: auto;
     padding: 2%;
-
 }
 
 .gslika {
@@ -1451,4 +1451,12 @@ svg:hover #square7 {
 
 .ovfHidden {
     overflow: hidden;
+}
+
+.h30 {
+    height: 35vh;
+}
+
+.galeries {
+    margin-top: 8%;
 }

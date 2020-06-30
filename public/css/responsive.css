@@ -2,12 +2,15 @@
     .home-social {
         font-size: 10px !important;
     }
+
     #picAbout {
         padding: 10px !important;
     }
+
     .col-5 {
         width: 100% !important;
     }
+
     .copyright p {
         padding-left: 10px;
         font-size: 12px;
@@ -18,10 +21,12 @@
     .sidenav {
         padding-top: 15px;
     }
+
     .sidenav .nava li a {
         font-size: 18px;
     }
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
     /* Admin */
@@ -30,19 +35,24 @@
         text-align: center;
         margin-top: 30%;
     }
+
     .main-content1 {
         margin: 0px !important;
         padding-bottom: 50px;
     }
+
     .smoothscroll h5 {
         visibility: hidden !important;
     }
+
     .editAlbum {
         padding: 20px;
     }
+
     .adminMain {
         width: 100% !important;
     }
+
     .memd {
         width: 100% !important;
     }
@@ -53,12 +63,15 @@
         padding-right: 2%;
         margin-bottom: 5%;
     }
+
     .uploadOpcija {
         width: 100% !important;
     }
+
     .uploadFift {
         max-width: 100% !important;
     }
+
     .divEditAlbum {
         padding: 0%;
         margin-bottom: 15%;
@@ -69,18 +82,23 @@
     .overlay_index {
         opacity: 1;
     }
+
     .brojMob #piid {
         visibility: hidden;
     }
+
     .dx {
         margin-bottom: 30px;
     }
+
     .dx button {
         height: 50px;
     }
+
     .fa-times {
         display: none !important;
     }
+
     .modal-dialog {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -91,15 +109,17 @@
         min-height: calc(100% - (0.5rem * 2));
     }
 
-    .menu-wrap .menu > div > div > ul > li > a {
+    .menu-wrap .menu>div>div>ul>li>a {
         font-size: 25px;
     }
-    .menu-wrap .toggler:checked ~ .menu {
+
+    .menu-wrap .toggler:checked~.menu {
         visibility: visible;
         width: 100%;
         height: 100%;
         opacity: 0.95;
     }
+
     #myBtnContainer {
         display: none;
         -moz-appearance: none;
@@ -107,9 +127,11 @@
         visibility: hidden;
         width: 100vw;
     }
+
     #myBtnContainer button {
         margin: auto !important;
     }
+
     .img-window img {
         max-width: 88vw;
     }
@@ -117,6 +139,7 @@
     #duration p {
         font-size: 10px;
     }
+
     .ikonica {
         left: calc(50% - 35px);
     }
@@ -132,29 +155,37 @@
         font-size: 8px;
         margin-bottom: 0px !important;
     }
+
     .footerTxt {
         padding: 0px;
     }
+
     .overlay {
         padding: 5px;
         height: auto;
     }
+
     .overlay h4 {
         font-size: 22px !important;
     }
+
     .overlay .headOver {
         font-size: 22px !important;
     }
+
     .overlay .bodyOver {
         margin: 0 !important;
         padding: 0 !important;
     }
+
     .mediaDiv {
         height: 40vh !important;
     }
+
     .mediaDivV {
         height: 40vh !important;
     }
+
     .glavniR {
         flex-direction: column !important;
         -webkit-column-count: 1;
@@ -164,6 +195,7 @@
         -moz-column-width: 100%;
         column-width: 100%;
     }
+
     /*    .mojCol {
         max-width: 100% !important;
         flex: auto !important;
@@ -177,15 +209,18 @@
     .myMain {
         padding-top: 35%;
     }
+
     #picAbout {
         width: 100%;
         height: 180;
     }
+
     .modal {
         background-color: rgba(0, 0, 0, 0.8);
         justify-content: center;
         align-items: center;
     }
+
     .modal-footer {
         height: auto;
         padding: 3px !important;
@@ -203,34 +238,44 @@
     .sidenav {
         padding-top: 15px;
     }
+
     .sidenav .nava li a {
         font-size: 16px;
     }
+
     ::-webkit-scrollbar {
         display: none;
     }
+
     #myBtnContainer {
         padding-bottom: 10px !important;
         padding-top: 20px;
         padding-left: 3px !important;
         padding-right: 3px !important;
     }
+
     .naslov h3 {
         width: 70%;
         margin: auto;
     }
+
     .naslov {
         width: 100%;
     }
+
     #glavniAl {
         width: 100% !important;
     }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 880px) {
+
+
     .img-window img {
         max-width: 90vw;
     }
+
     .naslov h1 {
         font-size: 2.5rem;
     }
@@ -249,13 +294,16 @@
         font-size: 8px;
         margin-bottom: 0px !important;
     }
+
     .footerTxt {
         padding: 0px;
     }
+
     .overlay {
         padding: 5px;
         height: auto;
     }
+
     .overlay h4 {
         font-size: 22px !important;
     }
@@ -284,10 +332,12 @@
         justify-content: center;
         align-items: center;
     }
+
     .modal-footer {
         height: auto;
         padding: 3px !important;
     }
+
     .modal-dialog {
         position: absolute;
         top: 0;
@@ -297,49 +347,61 @@
 
         overflow: auto;
     }
+
     .modal-dialog {
         transform: translate(0%, 0%) !important;
     }
+
     .sidenav {
         padding-top: 15px;
     }
+
     .sidenav .nava li a {
         font-size: 16px;
     }
+
     .uploadPDiv {
         width: 70% !important;
     }
 }
+
 @media (max-width: 1100px) {
     /*     .mojCol {
         width: auto;
         flex: 50%;
     } */
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1960px) {
-    .naslov h1 + p {
+    .naslov h1+p {
         font-size: 2.5rem;
     }
+
     .naslov h1 {
         font-size: 4rem;
     }
+
     .home-social {
         list-style: none;
         font-size: 22px;
     }
+
     .myLogo p {
         font-size: 22px;
     }
+
     .myLogoSvg {
         width: 90px;
         height: 45px;
     }
-    .menu-wrap .menu > div > div > ul > li > a {
+
+    .menu-wrap .menu>div>div>ul>li>a {
         padding: 15px 30px 13px 0px;
         font-size: 26px;
     }
-    .menu-wrap .menu > div {
+
+    .menu-wrap .menu>div {
         padding-top: 40%;
     }
 }

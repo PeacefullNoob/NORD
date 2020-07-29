@@ -35,9 +35,22 @@ class HomeController extends Controller
     public function show($id)
     {
 
-        $photos = DB::table('photos')->where('album_id', $id)->get();
+        $photos = DB::table('photos')->where('album_id', $id)->orderBy('sort_id','asc')->get();;
         $album = Album::findOrFail($id);
 
         return view('admin.adminMedia', compact("photos", "album"));
+    }
+    public function updateOrder(Request $request){
+       
+        if($request->has('ids')){
+            $arr = explode(',',$request->input('ids'));
+       
+            foreach($arr as $sortOrder => $id){
+                $menu = Photo::find($id);
+                $menu->sort_id = $sortOrder;
+                $menu->save();
+            }
+            return ['success'=>true,'message'=>'Updated'];
+        }
     }
 }

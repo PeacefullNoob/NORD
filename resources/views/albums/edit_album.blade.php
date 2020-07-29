@@ -20,7 +20,7 @@ padding: 20px;
                                         </div>
                                         <div class="form-group">
                                                 <!--     <label style="color:white" for="description">Album Description</label>     -->
-                                                <textarea class="form-control" style="background-color: white; color:black" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
+                                                <textarea class="form-control" style="background-color: white; color:black" name="description" rows="3" id="description"  required>{{$data->description}} </textarea>
                                         </div>
 
                                         <div class="form-group">

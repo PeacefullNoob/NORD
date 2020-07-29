@@ -21,6 +21,7 @@ class CreatePhotosTable extends Migration
             $table->string('description')->nullable();
             $table->string('photo')->nullable();
             $table->string('media_type')->nullable();
+            $table->string('sort_id')->nullable();
             $table->timestamps();
 
 

@@ -248,9 +248,14 @@ $(window).on("scroll", function (e) {
         $(".textUvod").fadeIn();
     }
 });
-/* if ($('#myMenu').is(':visible')) {
-    $('body').addClass("ovfHidden");
-} else {
-    $('body').removeClass("ovfHidden");
-} */
+
 ///////////////////////////////////////
+$(".projekti a").hover(
+    function () {
+        var imageUrl = $(this).attr('name');
+        $(".js_backgroundCover").css('background-image', 'url(' + imageUrl + ')');
+        $(".js_backgroundCover").css('opacity', '1');
+    },
+    function () {
+        $(".js_backgroundCover").css('opacity', '0.01');
+    });

@@ -15,10 +15,10 @@ class PhotoController extends Controller
     public function index($id)
     {
 
-        $photos = DB::table('photos')->where('album_id', $id)->get();
+        $photos = DB::table('photos')->where('album_id', $id)->orderBy('sort_id','asc')->get();;
         $album = Album::findOrFail($id);
-
-        return view('app.gallery_media', compact("photos", "album"));
+        $albums=Album::all();
+        return view('app.gallery_media', compact("photos", "album","albums"));
     }
 
     public function upload()
@@ -63,7 +63,8 @@ class PhotoController extends Controller
             $thumbnail->save('images/thumbnail/' . $ThfilenameToStore);
 
             //slika
-            $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
+            Image::make($request->file('photo'))->resize(1200,null , function($constraint) {  $constraint->aspectRatio();}) ->save('images/'.$filenameToStore);
+
         } else {
             $filenameToStore = "null";
             $extension = "yt";
@@ -95,7 +96,8 @@ $duration = date('I:s', $file['playtime_seconds']);
         $photo->url = $url;
         $photo->save();
         //vraca error
-        return redirect('/admin/ ')->with('success', 'Media uspješno kreirana');
+        return redirect()->back()->withSuccess('Media uspješno kreirana');
+
     }
 
 
@@ -138,7 +140,8 @@ $duration = date('I:s', $file['playtime_seconds']);
             //create new filename
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
             //Upload image
-            $path = $request->file('photo')->move(public_path('images'), $filenameToStore);
+
+            Image::make($request->file('photo'))->resize(1200, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/'.$filenameToStore);
         } else {
             $filenameToStore = $data->photo;
             $extension = $data->media_type;
@@ -154,6 +157,9 @@ $duration = date('I:s', $file['playtime_seconds']);
             //create new filename
             $filenameToStore1 = $filename1 . '_' . time() . '.' . $extension1;
             //Upload thumbnail
+            $thumbnail = Image::make($photo->getRealPath())->fit(410, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
             $path = $request->file('thumbnail')->move(public_path('images/thumbnail'), $filenameToStore1);;
         } else {
             $filenameToStore1 = $data->thumbnail;

@@ -15,8 +15,10 @@ Route::get('/', 'GalleryController@index1');
 Route::get('/app/gallery_media/{id}', 'PhotoController@index');
 
 Route::get('/about', function () {
-    return view('app.about');
+    $albums = \App\Album::all();
+    return view('app.about',compact("albums"));
 });
+
 Route::get('/contact', "ContactMessageController@create");
 Route::post('/contact', "ContactMessageController@store");
 Route::post('/views', "PhotoController@views");
@@ -45,5 +47,9 @@ Route::group(
         Route::get('/albums/all_albums', 'GalleryController@index');
         Route::get('/albums/{id}', 'GalleryController@show');
         Route::post('/create', 'GalleryController@store');
+        Route::post('/menu/update-order','HomeController@updateOrder');  
     }
 );
+/* Route::get('menu/index','MenuController@index');
+Route::post('menu/update-order','MenuController@updateOrder');  */
+

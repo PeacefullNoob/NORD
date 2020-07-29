@@ -15,17 +15,17 @@ class GalleryController extends Controller
     // List Galleries
     public function index()
     {
-        $albums = Album::with('Photos')->get();
+        $albums = Album::with('Photos')->orderBy('created_at', 'DESC')->get();
         return view('albums.all_albums')->with('albums', $albums);
     }
     public function index1()
     {
-        $albums = Album::with('Photos')->get();
+        $albums = Album::with('Photos')->orderBy('created_at', 'DESC')->get();
         return view('app.index')->with('albums', $albums);
     }
     public function index2()
     {
-        $albums = Album::with('Photos')->get();
+        $albums = Album::with('Photos')->orderBy('created_at', 'DESC')->get();
         return view('app.galeries')->with('albums', $albums);
     }
     //show create form
@@ -55,9 +55,9 @@ class GalleryController extends Controller
             $extension = $request->file('cover_image')->getclientOriginalExtension();
             //create new filename
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
+          //Upload image
+            Image::make($request->file('cover_image'))->resize(500, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore);
 
-            //Upload image
-            $path = $request->file('cover_image')->move(public_path('images/cover_image'), $filenameToStore);
         } else {
 
             $filenameToStore = "";
@@ -75,10 +75,9 @@ class GalleryController extends Controller
             //create new filename
             $filenameToStoreLogo = $filenamel . '_' . time() . '.' . $extensionl;
             //Upload image
-            /*             $path = $request->file('logo')->move(public_path('images/cover_image/logos'), $filenameToStoreLogo);
- */
+
             //thumbnail
-            $thumbnail = Image::make($logo->getRealPath())->resize(210, null, function ($constraint) {
+            $thumbnail = Image::make($logo->getRealPath())->resize(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
@@ -150,8 +149,8 @@ class GalleryController extends Controller
             //create new filename
             $filenameToStore1 = $filename1 . '_' . time() . '.' . $extension1;
             //Upload cover_image
-            $path = $request->file('cover_image')->move(public_path('images/cover_image'), $filenameToStore1);
-
+      
+            Image::make($request->file('cover_image'))->resize(500, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore1);
 
         } else {
             $filenameToStore1 = $data->cover_image;
@@ -171,7 +170,7 @@ class GalleryController extends Controller
             //Upload image
 
             //thumbnail
-            $thumbnail1 = Image::make($logo1->getRealPath())->resize(210, null, function ($constraint) {
+            $thumbnail1 = Image::make($logo1->getRealPath())->resize(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 

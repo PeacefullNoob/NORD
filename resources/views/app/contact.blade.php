@@ -3,7 +3,7 @@
 @section('content')
 <div class="site-wrap" style="width:100%; padding-bottom:20px;" ;>
 
-  <main class="myMain px-3">
+  <main class="myMain p-3">
     <div class="container-fluid">
       <div class="row justify-content-center">
 

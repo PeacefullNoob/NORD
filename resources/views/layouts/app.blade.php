@@ -89,14 +89,15 @@
         </main>
     </div>
 
-
     <!-- Scripts -->
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="/js/jquery-ui.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/js/google_analytic.js"></script>
+   {{-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> --}}
+    <script src="/js/bootstrap.min.js"></script>
+   
+  {{--   <script src="/js/google_analytic.js"></script> --}}
     <script src="/js/adminJs.js"></script>
 
 

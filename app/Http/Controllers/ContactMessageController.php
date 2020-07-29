@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Mail;
 use Illuminate\Http\Request;
-
+use App\Album;
 
 class ContactMessageController extends Controller
 {
     public function create()
     {
-        return view('app.contact');
+        $albums = Album::all();
+        return view('app.contact',compact("albums"));
     }
 
     public function store(Request $request)

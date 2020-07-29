@@ -37,7 +37,7 @@
     $colcount = count($albums);
     $i = 1;
     ?>
-    <main class="main-content my-5">
+    <main class="main-content mb-5">
 
       <div class=" jumbotron-fluid ourLate">
         <div class="container-fluid ">

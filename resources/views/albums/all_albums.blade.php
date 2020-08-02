@@ -18,7 +18,7 @@
         </a>
         <div class="card-body">
           <h5 class="card-title" style="text-align: center;">
-          Add Album</h5>
+          DODAJ ALBUM</h5>
         </div>
       </div>
     </div>
@@ -32,10 +32,10 @@
           <h5 class="card-title" style="text-align: center;">
             {{$album->name}}</h5>
           <div class="row">
-            <div class="col-md-6 ml-auto deleteAlbum ">
+            <div class="col-md-8 ml-auto deleteAlbum ">
               <form action="/admin/albums/delete/{{$album->id}}" method="POST" enctype="multipart/form-data">
                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
-                <button type="submit" class="btnError1">Delete</button>
+                <button type="submit" class="btnError1">IZBRISI ALBUM</button>
               </form>
             </div>
           </div>

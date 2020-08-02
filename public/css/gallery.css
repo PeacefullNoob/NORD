@@ -963,7 +963,7 @@ table thead th {
 .btnError1 {
     border-width: 1px !important;
     border-color: red !important;
-    width: 75px;
+    width: 100%;
     height: auto;
 }
 
@@ -1859,4 +1859,16 @@ svg:hover #square7 {
 
 .ng-globalnav .ng-background__cover--visible {
     opacity: 1;
+}
+
+.adminImageLi {
+    height: 130px;
+    width: 170px;
+    object-fit: cover;
+}
+
+.list-group-item {
+
+    padding: 0.75rem 0rem !important;
+
 }

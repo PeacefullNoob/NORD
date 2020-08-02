@@ -190,7 +190,7 @@ $duration = date('I:s', $file['playtime_seconds']);
             Storage::delete('/public/images/' . $photo->photo);
         }
         $photo->delete();
-        return redirect('/admin/ ')->with('success', 'Uspješno obrisana slika');
+        return redirect()->back()->withSuccess('Media uspješno obrisana');
     }
 
 

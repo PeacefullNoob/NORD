@@ -13,7 +13,7 @@
       <h1 class="admin_h1">{{$album->name}}</h1>
       <div class="col-md-6 editAlbum ">
         <a href="/admin/albums/edit_album/{{$album->id}}">
-          <button type="button" class="btnEdit">Edit</button>
+          <button type="button" class="btnEdit">Uredi Album</button>
         </a>
       </div>
     </div>
@@ -23,29 +23,37 @@
 <div class="container">
   <div class="row w-100">
       <div class="col-md-12">
-        <div class="row w-100">
-          <div class="col-3 colLi">
-            Redosled
+        <div class="row w-100 " style="    border: 1px solid white;  background-color: #134284;">
+          <div class="col-1 colLi">#
           </div>
           <div class="col-3 colLi">
             Naziv
           </div>
-          <div class="col-3 colLi">
+          <div class="col-5 colLi">
             Slika
           </div>
           <div class="col-3 colLi">
-            Uredi
+            Uredi Sliku
           </div>
         </div>
           <ul class="sort_menu list-group">
+        
             @foreach ($photos as $photo)
             <li class="list-group-item" data-id="{{$photo->id}}">
               <div class="row w-100">
-                <div class="col-3 colLi"> <span class="handle"></span></div>
+                <div class="col-1 colLi"> <span class="handle"></span></div>
              <div class="col-3 colLi">  {{$photo->title}}</div> 
-             <div class="col-3 colLi"> 
-               <img src="/images/thumbnail/{{$photo->thumbnail}}" style="height: 73px;width: 100px;" />
+             @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG'|| $photo->media_type == 'mp4')
+             <div class="col-5 colLi"> 
+               <img src="/images/thumbnail/{{$photo->thumbnail}}" class="adminImageLi" />
              </div>
+             @else
+             <div class="col-5 colLi"> 
+              <img src="{{$photo->thumbnail}}" class="adminImageLi" />
+              YT
+            </div>
+            @endif
+
                 <div class="col-3 colLi"> 
                   <a href="/admin/photos/edit_photo/{{$photo->id}}"> 
                   <img class="imgEdit" style="color:white;" src="/images/iconfinder_edit_2561427.svg" alt="Edit picture"/>
@@ -63,16 +71,20 @@
   </div>
 </div>
 <style>
+  .sort_menu{
+    border: 1px solid white;
+
+  }
   .list-group-item {
       display: flex;
       align-items: center;
       background-color: transparent;
-      border: 1px solid white;
-
+      border-bottom: 1px solid white;
   }
   .colLi{
     text-align: center;
     border-right: 1px solid white;
+    margin: auto
   }
   .liHead{
     border: 1px solid;

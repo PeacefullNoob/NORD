@@ -56,7 +56,7 @@ class GalleryController extends Controller
             //create new filename
             $filenameToStore = $filename . '_' . time() . '.' . $extension;
           //Upload image
-            Image::make($request->file('cover_image'))->resize(500, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore);
+            Image::make($request->file('cover_image'))->resize(900, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore);
 
         } else {
 
@@ -98,7 +98,7 @@ class GalleryController extends Controller
 
         $album->save();
 
-        return redirect('/admin/ ')->with('success', 'Album je kreiran');
+        return redirect('/admin/albums/all_albums ')->with('success', 'Album je kreiran');
     }
     public function show($id)
     {
@@ -150,7 +150,7 @@ class GalleryController extends Controller
             $filenameToStore1 = $filename1 . '_' . time() . '.' . $extension1;
             //Upload cover_image
       
-            Image::make($request->file('cover_image'))->resize(500, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore1);
+            Image::make($request->file('cover_image'))->resize(900, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore1);
 
         } else {
             $filenameToStore1 = $data->cover_image;

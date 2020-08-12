@@ -4,7 +4,7 @@
 <main class="main-content my-5">
     <div class="jumbotron jumbotron-fluid ourLate  ">
         <div class="container-fluid galeries ">
-            <h1>List of all our projects</h1>
+            <h1>All our projects</h1>
             <hr class="my-4">
 
 

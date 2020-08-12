@@ -33,6 +33,6 @@ class ContactMessageController extends Controller
 
 
 
-        return redirect()->back()->with('contact', 'Uspesno ste poslali poruku! ');
+        return redirect()->back()->with('contact', 'Uspješno ste poslali poruku! ');
     }
 }

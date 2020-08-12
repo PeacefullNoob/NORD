@@ -54,9 +54,9 @@ class GalleryController extends Controller
             //samo extension
             $extension = $request->file('cover_image')->getclientOriginalExtension();
             //create new filename
-            $filenameToStore = $filename . '_' . time() . '.' . $extension;
+            $filenameToStore = $filename . '_' . time() . '.webp';
           //Upload image
-            Image::make($request->file('cover_image'))->resize(900, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore);
+            Image::make($request->file('cover_image'))->encode('webp', 90)->resize(1200, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore);
 
         } else {
 
@@ -77,7 +77,7 @@ class GalleryController extends Controller
             //Upload image
 
             //thumbnail
-            $thumbnail = Image::make($logo->getRealPath())->resize(410, null, function ($constraint) {
+            $thumbnail = Image::make($logo->getRealPath())->encode('webp', 90)->resize(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 
@@ -147,10 +147,10 @@ class GalleryController extends Controller
             //samo extension
             $extension1 = $request->file('cover_image')->getclientOriginalExtension();
             //create new filename
-            $filenameToStore1 = $filename1 . '_' . time() . '.' . $extension1;
+            $filenameToStore1 = $filename1 . '_' . time() . '.webp';
             //Upload cover_image
       
-            Image::make($request->file('cover_image'))->resize(900, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore1);
+            Image::make($request->file('cover_image'))->encode('webp', 90)->resize(1200, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/cover_image/'.$filenameToStore1);
 
         } else {
             $filenameToStore1 = $data->cover_image;
@@ -170,7 +170,7 @@ class GalleryController extends Controller
             //Upload image
 
             //thumbnail
-            $thumbnail1 = Image::make($logo1->getRealPath())->resize(410, null, function ($constraint) {
+            $thumbnail1 = Image::make($logo1->getRealPath())->encode('webp', 90)->resize(410, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
 

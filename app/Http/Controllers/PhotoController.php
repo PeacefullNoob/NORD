@@ -52,7 +52,7 @@ class PhotoController extends Controller
             //samo extension
             $extension = $request->file('photo')->getclientOriginalExtension();
             //create new filename
-            $filenameToStore = $filename . '_' . time() . '.' . $extension;
+            $filenameToStore = $filename . '_' . time() . '.webp';
             //Upload image
 
             //thumbnail
@@ -63,7 +63,7 @@ class PhotoController extends Controller
             $thumbnail->save('images/thumbnail/' . $ThfilenameToStore);
 
             //slika
-            Image::make($request->file('photo'))->resize(1200,null , function($constraint) {  $constraint->aspectRatio();}) ->save('images/'.$filenameToStore);
+            Image::make($request->file('photo'))->encode('webp', 90)->resize(1200,null , function($constraint) {  $constraint->aspectRatio();}) ->save('images/'.$filenameToStore);
 
         } else {
             $filenameToStore = "null";
@@ -138,10 +138,10 @@ $duration = date('I:s', $file['playtime_seconds']);
             //samo extension
             $extension = $request->file('photo')->getclientOriginalExtension();
             //create new filename
-            $filenameToStore = $filename . '_' . time() . '.' . $extension;
+            $filenameToStore = $filename . '_' . time() . '.webp';
             //Upload image
 
-            Image::make($request->file('photo'))->resize(1200, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/'.$filenameToStore);
+            Image::make($request->file('photo'))->encode('webp', 90)->resize(1200, null, function($constraint) {  $constraint->aspectRatio();}) ->save('images/'.$filenameToStore);
         } else {
             $filenameToStore = $data->photo;
             $extension = $data->media_type;
